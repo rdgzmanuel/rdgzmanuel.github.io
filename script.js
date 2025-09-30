@@ -15,6 +15,7 @@ function initializePortfolio() {
     renderEducation();
     renderProjects();
     renderSkills();
+    renderAwards();
 }
 
 // ===================================

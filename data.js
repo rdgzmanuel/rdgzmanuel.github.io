@@ -126,7 +126,28 @@ const portfolioData = {
             "French (Basic)",
             "German (Learning)"
         ]
-    }
+    },
+
+    awards: [
+        {
+            title: "Winner – UNIJES Social Tech Challenge",
+            year: "2024",
+            description: "Voice-controlled wheelchair project",
+            icon: "🏆"
+        },
+        {
+            title: "Academic Excellence Scholarship",
+            year: "2021, 2023, 2024",
+            description: "Top-scoring students across Community of Madrid",
+            icon: "🎓"
+        },
+        {
+            title: "Baccalaureate Honorific Mention",
+            year: "2021",
+            description: "2nd highest GPA in Community of Madrid",
+            icon: "⭐"
+        }
+    ]
 };
 
 // Export for use in script.js
