@@ -94,20 +94,17 @@ const portfolioData = {
             "Python (Advanced)",
             "R",
             "C#",
-            "SQL",
-            "JavaScript"
+            "SQL"
         ],
         "AI & Machine Learning": [
             "Deep Learning",
             "Computer Vision",
             "Natural Language Processing",
             "Reinforcement Learning",
-            "Neural ODEs",
             "Physics-Informed NNs"
         ],
         "Tools & Frameworks": [
             "PyTorch",
-            "TensorFlow",
             "ROS 2",
             "OpenCV",
             "MATLAB",

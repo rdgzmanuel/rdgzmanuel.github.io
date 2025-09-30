@@ -177,10 +177,23 @@ nav {
     text-decoration: none;
     font-weight: 500;
     transition: var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 .social-links a:hover {
     color: var(--accent-dark);
+}
+
+.social-links svg {
+    width: 20px;
+    height: 20px;
+    transition: var(--transition);
+}
+
+.social-links a:hover svg {
+    transform: translateY(-2px);
 }
 
 .hero-image {
