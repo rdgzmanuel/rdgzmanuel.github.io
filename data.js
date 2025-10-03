@@ -84,9 +84,9 @@ const portfolioData = {
         },
         {
             title: "Multi-Object Tracking System",
-            tech: "YOLO, Computer Vision, Real-time Processing",
-            description: "Real-time tracking system for automated camera control in sports events. Implemented advanced object detection and tracking algorithms for seamless broadcast automation.",
-            link: null,
+            tech: "YOLO, Computer Vision, Optical Flow",
+            description: "Real-time tracking system for automated camera control in sports events. Implemented advanced object detection and tracking algorithms for efficient broadcast automation.",
+            link: "https://github.com/rdgzmanuel/ai_camera",
             icon: "🎥"
         }
     ],
