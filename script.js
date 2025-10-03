@@ -35,6 +35,10 @@ function createExperienceCard(exp) {
     const card = document.createElement('div');
     card.className = 'card';
     
+    const linkHTML = exp.link 
+        ? `<a href="${exp.link}" class="project-link" target="_blank" rel="noopener">Visit Website →</a>`
+        : '';
+    
     card.innerHTML = `
         <div class="card-header">
             <div>
@@ -44,6 +48,7 @@ function createExperienceCard(exp) {
             <span class="card-date">${exp.date}</span>
         </div>
         <p class="card-description">${exp.description}</p>
+        ${linkHTML}
     `;
     
     return card;
@@ -66,6 +71,10 @@ function createEducationCard(edu) {
     const card = document.createElement('div');
     card.className = 'card';
     
+    const linkHTML = edu.link 
+        ? `<a href="${edu.link}" class="project-link" target="_blank" rel="noopener">View Program →</a>`
+        : '';
+    
     card.innerHTML = `
         <div class="card-header">
             <div>
@@ -75,6 +84,7 @@ function createEducationCard(edu) {
             <span class="card-date">${edu.date}</span>
         </div>
         <p class="card-description">${edu.description}</p>
+        ${linkHTML}
     `;
     
     return card;
