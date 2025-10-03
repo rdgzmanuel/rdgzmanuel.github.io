@@ -146,6 +146,35 @@ function createSkillCard(category, skills) {
 }
 
 // ===================================
+// Render Awards Section
+// ===================================
+function renderAwards() {
+    const container = document.getElementById('awards-container');
+    
+    portfolioData.awards.forEach((award, index) => {
+        const card = createAwardCard(award);
+        card.style.animation = `fadeInUp 0.6s ease ${index * 0.1}s backwards`;
+        container.appendChild(card);
+    });
+}
+
+function createAwardCard(award) {
+    const card = document.createElement('div');
+    card.className = 'award-card';
+    
+    card.innerHTML = `
+        <div class="award-icon">${award.icon}</div>
+        <div class="award-content">
+            <h3 class="award-title">${award.title}</h3>
+            <p class="award-year">${award.year}</p>
+            <p class="award-description">${award.description}</p>
+        </div>
+    `;
+    
+    return card;
+}
+
+// ===================================
 // Smooth Scrolling for Navigation
 // ===================================
 function setupSmoothScrolling() {
