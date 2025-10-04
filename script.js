@@ -112,7 +112,7 @@ function clearContainers() {
 function updateHeroSection() {
     const t = translations[currentLanguage].hero;
     document.querySelector('.hero-content .subtitle').textContent = t.subtitle;
-    document.querySelector('.hero-content p').textContent = t.description;
+    document.querySelector('.hero-content .hero-description').textContent = t.description;
     document.querySelector('.btn-primary').textContent = t.contactBtn;
     document.querySelector('.btn-secondary').textContent = t.projectsBtn;
 }

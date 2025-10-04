@@ -173,6 +173,13 @@ nav {
     animation: fadeInUp 0.8s ease 0.4s backwards;
 }
 
+.hero-content .hero-description {
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    animation: fadeInUp 0.8s ease 0.4s backwards;
+}
+
 .cta-buttons {
     display: flex;
     gap: 1rem;
