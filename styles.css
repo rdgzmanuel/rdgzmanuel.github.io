@@ -93,6 +93,51 @@ nav {
     width: 100%;
 }
 
+/* Language Switcher */
+.language-switcher {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.lang-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0.5rem;
+    border-radius: 6px;
+    transition: var(--transition);
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.lang-btn .flag {
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+.lang-btn .lang-code {
+    font-size: 0.9rem;
+}
+
+.lang-btn:hover {
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+}
+
+.lang-btn.active {
+    color: var(--accent-dark);
+    font-weight: 600;
+}
+
+.lang-divider {
+    color: var(--text-secondary);
+    font-weight: 300;
+}
+
 /* ===================================
    Hero Section
    =================================== */
@@ -565,9 +610,21 @@ footer p {
         font-size: 1.2rem;
     }
 
+    .nav-container {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
     .nav-links {
         gap: 1rem;
         font-size: 0.9rem;
+        order: 3;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .language-switcher {
+        order: 2;
     }
 
     .profile-pic {
@@ -608,5 +665,13 @@ footer p {
 
     section {
         padding: 4rem 1rem;
+    }
+
+    .lang-btn .lang-code {
+        display: none;
+    }
+
+    .lang-btn .flag {
+        font-size: 1.5rem;
     }
 }

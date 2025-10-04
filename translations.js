@@ -1,0 +1,367 @@
+// ===================================
+// Translations Data
+// ===================================
+
+const translations = {
+    en: {
+        nav: {
+            about: "About",
+            experience: "Experience",
+            education: "Education",
+            projects: "Projects",
+            skills: "Skills"
+        },
+        hero: {
+            subtitle: "MSc in Artificial Intelligence @ ICAI",
+            description: "Curious mind focused on AI for human benefit, deep learning and the pursuit of elegant, efficient solutions.",
+            contactBtn: "Get in Touch",
+            projectsBtn: "View Projects"
+        },
+        sections: {
+            about: "About Me",
+            experience: "Experience",
+            education: "Education",
+            projects: "Featured Projects",
+            skills: "Skills & Technologies",
+            awards: "Honors & Awards"
+        },
+        about: {
+            p1: "Hi! I'm Manuel, MSc student in Artificial Intelligence at Comillas Pontifical University (Madrid) with a BSc in Mathematical Engineering and AI. My journey academic journey has taken me from Madrid to Cornell University and Imperial College London, where I've explored different architectures in computer vision, robotics, and generative AI.",
+            p2: "I would describe myself as a rigorous individual, obsessed with excellence, optimization, and the search for meaning in a field as complex as AI. Given my academic background, which combines deep mathematical foundations with their applications to AI, I consider my profile to bridge the gap between mathematical rigor and state-of-the-art AI systems. Only by deeply understanding the core foundations of today's technologies are we able to extract their full potential, optimize them, and build the future from there.",
+            p3: "Beyond my professional interests, I enjoy fitness, nature, and reading. I consider these essential to living a balanced life, especially when shared with others."
+        },
+        links: {
+            viewWebsite: "Visit Website →",
+            viewProgram: "View Program →",
+            viewProject: "View Project →"
+        },
+        footer: {
+            rights: "All rights reserved."
+        }
+    },
+    es: {
+        nav: {
+            about: "Sobre mí",
+            experience: "Experiencia",
+            education: "Educación",
+            projects: "Proyectos",
+            skills: "Habilidades"
+        },
+        hero: {
+            subtitle: "MSc en Inteligencia Artificial @ ICAI",
+            description: "Mente curiosa enfocada en la IA para el beneficio humano, el aprendizaje profundo y la búsqueda de soluciones elegantes y eficientes.",
+            contactBtn: "Contactar",
+            projectsBtn: "Ver Proyectos"
+        },
+        sections: {
+            about: "Sobre mí",
+            experience: "Experiencia",
+            education: "Educación",
+            projects: "Proyectos Destacados",
+            skills: "Habilidades y Tecnologías",
+            awards: "Honores y Premios"
+        },
+        about: {
+            p1: "¡Hola! Soy Manuel, estudiante de Máster en Inteligencia Artificial en la Universidad Pontificia Comillas (Madrid) con un Grado en Ingeniería Matemática e IA. Mi viaje académico me ha llevado desde Madrid a la Universidad de Cornell y el Imperial College de Londres, donde he explorado diferentes arquitecturas en visión por computador, robótica e IA generativa.",
+            p2: "Me describiría como un individuo riguroso, obsesionado con la excelencia, la optimización y la búsqueda de significado en un campo tan complejo como la IA. Dado mi formación académica, que combina fundamentos matemáticos profundos con sus aplicaciones a la IA, considero que mi perfil cierra la brecha entre el rigor matemático y los sistemas de IA de última generación. Solo comprendiendo profundamente los fundamentos de las tecnologías actuales podemos extraer todo su potencial, optimizarlas y construir el futuro desde ahí.",
+            p3: "Más allá de mis intereses profesionales, disfruto del fitness, la naturaleza y la lectura. Los considero esenciales para vivir una vida equilibrada, especialmente cuando se comparten con otros."
+        },
+        links: {
+            viewWebsite: "Visitar Web →",
+            viewProgram: "Ver Programa →",
+            viewProject: "Ver Proyecto →"
+        },
+        footer: {
+            rights: "Todos los derechos reservados."
+        }
+    }
+};
+
+// Portfolio data with translations
+const portfolioDataTranslations = {
+    en: {
+        experience: [
+            {
+                title: "LLM Research Assistant",
+                company: "Comillas Pontifical University",
+                location: "Madrid, Spain",
+                date: "Sep 2025 – Apr 2026",
+                description: "I'm currently working as a Research Assistant at my university, exploring the latest open-source Large Language Models (LLMs) and investigating their potential for real-world applications.",
+                link: "https://www.comillas.edu/en/"
+            },
+            {
+                title: "Computer Vision Intern",
+                company: "Azzulei Technologies",
+                location: "Madrid, Spain",
+                date: "Jun – Aug 2025",
+                description: "For my third summer internship I joined the startup Azzulei Technologies, where my role consisted on developing an automated camera control system for sports events. I successfully achieved this task by implementing a real-time Multi-Object Tracking system using YOLO, significantly improving broadcast quality and reducing manual operation requirements. I also designed a virtual commentary generator using open-source LLMs and text-to-speech (TTS) models for automated commentary of matches.",
+                link: "https://azzulei.com/en/"
+            },
+            {
+                title: "Research Assistant",
+                company: "Imperial College London",
+                location: "Remote (London, UK)",
+                date: "Jun – Aug 2024",
+                description: "During the summer of 2024, I participated in the Undergraduate Research Opportunities Programme at Imperial College London. My work focused on reproducing complex dynamical systems (Lotka–Volterra, SIR, Lorenz) using Neural Ordinary Differential Equations (Neural ODEs) and Physics-Informed Neural Networks (PINNs). I successfully developed robust models in PyTorch that generalized well across varying initial conditions.",
+                link: "https://www.imperial.ac.uk/urop/"
+            },
+            {
+                title: "Energy Data Analyst Intern",
+                company: "Endesa",
+                location: "Madrid, Spain",
+                date: "Jun – Aug 2023",
+                description: "For my first internship I joined Endesa, one of Spain's biggest energy companies. I focused on estimating daily Iberian ancillary services costs, achieving >90% accuracy using regression and MLP techniques, providing valuable insights for energy market forecasting.",
+                link: "https://www.endesa.com/en"
+            }
+        ],
+        education: [
+            {
+                degree: "MSc in Artificial Intelligence",
+                institution: "Comillas Pontifical University, ETSI ICAI",
+                location: "Madrid, Spain",
+                date: "Sep 2025 – 2026",
+                description: "Class Representative. Focused on Deep Generative Models, Differential Geometry & Calculus, MLOps, Deep Reinforcement Learning, Probabilistic AI and Explainability.",
+                link: "https://www.comillas.edu/en/master-en-inteligencia-artificial-avanzada/"
+            },
+            {
+                degree: "Exchange Student - Electrical & Computer Engineering",
+                institution: "Cornell University",
+                location: "Ithaca, NY, USA",
+                date: "Jan – May 2025",
+                description: "Writer for Cornell Healthcare Review, focusing on AI applications in the healthcare industry. Explored topics on data science, ethical guidelines for engineers and strategic technology and management.",
+                link: "https://www.engineering.cornell.edu/ece/"
+            },
+            {
+                degree: "BSc in Mathematical Engineering and AI",
+                institution: "Comillas Pontifical University, ETSI ICAI",
+                location: "Madrid, Spain",
+                date: "2021 – 2025",
+                description: "GPA: 8.75/10. Winner of UNIJES Social Tech Challenge for AI-powered autonomous wheelchair project. Strong foundation in mathematics and artificial intelligence, with relevant subjects like Linear Algebra, Calculus, Probability & Statistics, Machine Learning, Deep Learning, Autonomous Mobile Robots, Natural Language Processing, Computer Vision, and Cybersecurity, among others. Honors in Probability & Statistics, Dynamic Systems, Big Data Architectures, Differential Geometry, Cybersecurity, Advanced Mathematics, and Computer Vision II.",
+                link: "https://www.comillas.edu/en/degrees/bachelors-degree-in-engineering-mathematics-and-artificial-intelligence/"
+            }
+        ],
+        projects: [
+            {
+                title: "Visual Topological SLAM",
+                tech: "ROS2, Pytorch, Deep Learning, Computer Vision, NLP",
+                description: "Implemented a visual SLAM system integrating vision foundation models (CNN, AutoEncoder) with NLP for voice-controlled indoor navigation. Features real-time mapping and autonomous navigation capabilities. The project was developed as part of the UNIJES SocialTech Challenge, a competition where different Spanish universities build an autonomous wheelchair that faces indoor challenges.",
+                link: "https://github.com/rdgzmanuel/visual_topological_slam",
+                icon: "🗺️"
+            },
+            {
+                title: "Multi-Object Tracking System",
+                tech: "YOLO, Computer Vision, Optical Flow",
+                description: "Real-time tracking system for automated camera control in sports events. Implemented advanced object detection and tracking algorithms for efficient broadcast automation.",
+                link: "https://github.com/rdgzmanuel/ai_camera",
+                icon: "🎥"
+            }
+        ],
+        skills: {
+            "Programming Languages": [
+                "Python (Advanced)",
+                "R",
+                "C#",
+                "SQL"
+            ],
+            "AI & Machine Learning": [
+                "Deep Learning",
+                "Computer Vision",
+                "Natural Language Processing",
+                "Robotics",
+                "Reinforcement Learning",
+                "Physics-Informed NNs"
+            ],
+            "Tools & Frameworks": [
+                "PyTorch",
+                "ROS 2",
+                "OpenCV",
+                "MATLAB",
+                "Git"
+            ],
+            "Mathematics": [
+                "Linear Algebra",
+                "Calculus & Analysis",
+                "Optimization",
+                "Dynamical Systems",
+                "Differential Equations",
+                "Differential Geometry"
+            ],
+            "Languages": [
+                "Spanish (Native)",
+                "English (Advanced)",
+                "French (Basic)"
+            ]
+        },
+        awards: [
+            {
+                title: "Winner – UNIJES Social Tech Challenge",
+                year: "2024",
+                description: "Voice-controlled wheelchair project",
+                icon: "🏆"
+            },
+            {
+                title: "Academic Excellence Scholarship",
+                year: "2021, 2023, 2024",
+                description: "Top-scoring students across Community of Madrid",
+                icon: "🎓"
+            },
+            {
+                title: "Baccalaureate Honorific Mention",
+                year: "2021",
+                description: "2nd highest GPA in Community of Madrid",
+                icon: "⭐"
+            },
+            {
+                title: "Kumon Mathematics Programme",
+                year: "2020",
+                description: "Completed the Kumon Mathematics Programme",
+                icon: "⭐"
+            }
+        ]
+    },
+    es: {
+        experience: [
+            {
+                title: "Asistente de Investigación en LLMs",
+                company: "Universidad Pontificia Comillas",
+                location: "Madrid, España",
+                date: "Sep 2025 – Abr 2026",
+                description: "Actualmente trabajo como Asistente de Investigación en mi universidad, explorando los últimos Modelos de Lenguaje de Gran Escala (LLMs) de código abierto e investigando su potencial para aplicaciones del mundo real.",
+                link: "https://www.comillas.edu/"
+            },
+            {
+                title: "Becario en Visión por Computador",
+                company: "Azzulei Technologies",
+                location: "Madrid, España",
+                date: "Jun – Ago 2025",
+                description: "Para mi tercera práctica de verano me uní a la startup Azzulei Technologies, donde mi rol consistió en desarrollar un sistema automatizado de control de cámara para eventos deportivos. Logré esto implementando un sistema de seguimiento de múltiples objetos en tiempo real usando YOLO, mejorando significativamente la calidad de transmisión y reduciendo los requisitos de operación manual. También diseñé un generador de comentarios virtuales usando LLMs de código abierto y modelos de texto a voz (TTS) para comentarios automatizados de partidos.",
+                link: "https://azzulei.com/"
+            },
+            {
+                title: "Asistente de Investigación",
+                company: "Imperial College London",
+                location: "Remoto (Londres, Reino Unido)",
+                date: "Jun – Ago 2024",
+                description: "Durante el verano de 2024, participé en el Programa de Oportunidades de Investigación para Estudiantes del Imperial College London. Mi trabajo se centró en reproducir sistemas dinámicos complejos (Lotka–Volterra, SIR, Lorenz) utilizando Ecuaciones Diferenciales Ordinarias Neuronales (Neural ODEs) y Redes Neuronales Informadas por la Física (PINNs). Desarrollé con éxito modelos robustos en PyTorch que generalizaban bien en diferentes condiciones iniciales.",
+                link: "https://www.imperial.ac.uk/urop/"
+            },
+            {
+                title: "Becario Analista de Datos Energéticos",
+                company: "Endesa",
+                location: "Madrid, España",
+                date: "Jun – Ago 2023",
+                description: "Para mi primera práctica me uní a Endesa, una de las compañías energéticas más grandes de España. Me centré en estimar los costos diarios de servicios auxiliares ibéricos, logrando >90% de precisión usando técnicas de regresión y MLP, proporcionando información valiosa para la predicción del mercado energético.",
+                link: "https://www.endesa.com/"
+            }
+        ],
+        education: [
+            {
+                degree: "Máster en Inteligencia Artificial",
+                institution: "Universidad Pontificia Comillas, ETSI ICAI",
+                location: "Madrid, España",
+                date: "Sep 2025 – 2026",
+                description: "Delegado de Clase. Programa enfocado en Modelos Generativos Profundos, Geometría Diferencial y Cálculo, MLOps, Aprendizaje por Refuerzo Profundo, IA Probabilística y Explicabilidad.",
+                link: "https://www.comillas.edu/master-en-inteligencia-artificial-avanzada/"
+            },
+            {
+                degree: "Estudiante de Intercambio - Ingeniería Eléctrica e Informática",
+                institution: "Cornell University",
+                location: "Ithaca, NY, EE.UU.",
+                date: "Ene – May 2025",
+                description: "Escritor para Cornell Healthcare Review, enfocándome en aplicaciones de IA en la industria de la salud. Exploré temas sobre ciencia de datos, directrices éticas para ingenieros y gestión y tecnología estratégica.",
+                link: "https://www.engineering.cornell.edu/ece/"
+            },
+            {
+                degree: "Grado en Ingeniería Matemática e IA",
+                institution: "Universidad Pontificia Comillas, ETSI ICAI",
+                location: "Madrid, España",
+                date: "2021 – 2025",
+                description: "Nota media: 8.75/10. Ganador del Reto Social Tech de UNIJES por proyecto de silla de ruedas autónoma impulsada por IA. Sólida base en matemáticas e inteligencia artificial, con asignaturas relevantes como Álgebra Lineal, Cálculo, Probabilidad y Estadística, Machine Learning, Deep Learning, Robots Móviles Autónomos, Procesamiento del Lenguaje Natural, Visión por Computador y Ciberseguridad, entre otras. Matrículas de Honor en Probabilidad y Estadística, Sistemas Dinámicos, Arquitecturas Big Data, Geometría Diferencial, Ciberseguridad, Matemáticas Avanzadas y Visión por Computador II.",
+                link: "https://www.comillas.edu/grado-en-ingenieria-matematica-e-inteligencia-artificial/"
+            }
+        ],
+        projects: [
+            {
+                title: "SLAM Topológico Visual",
+                tech: "ROS2, Pytorch, Deep Learning, Visión por Computador, NLP",
+                description: "Implementé un sistema SLAM visual integrando modelos de visión fundacionales (CNN, AutoEncoder) con NLP para navegación interior controlada por voz. Incluye capacidades de mapeo en tiempo real y navegación autónoma. El proyecto fue desarrollado como parte del Reto SocialTech de UNIJES, una competición donde diferentes universidades españolas construyen una silla de ruedas autónoma que enfrenta desafíos interiores.",
+                link: "https://github.com/rdgzmanuel/visual_topological_slam",
+                icon: "🗺️"
+            },
+            {
+                title: "Sistema de Seguimiento Multi-Objeto",
+                tech: "YOLO, Visión por Computador, Flujo Óptico",
+                description: "Sistema de seguimiento en tiempo real para control automatizado de cámara en eventos deportivos. Implementé algoritmos avanzados de detección y seguimiento de objetos para automatización eficiente de transmisiones.",
+                link: "https://github.com/rdgzmanuel/ai_camera",
+                icon: "🎥"
+            }
+        ],
+        skills: {
+            "Lenguajes de Programación": [
+                "Python (Avanzado)",
+                "R",
+                "C#",
+                "SQL"
+            ],
+            "IA y Machine Learning": [
+                "Deep Learning",
+                "Visión por Computador",
+                "Procesamiento del Lenguaje Natural (NLP)",
+                "Robótica",
+                "Aprendizaje por Refuerzo",
+                "Redes Neuronales Informadas por Física (PIINs)"
+            ],
+            "Herramientas y Frameworks": [
+                "PyTorch",
+                "ROS 2",
+                "OpenCV",
+                "MATLAB",
+                "Git"
+            ],
+            "Matemáticas": [
+                "Álgebra Lineal",
+                "Cálculo y Análisis",
+                "Optimización",
+                "Sistemas Dinámicos",
+                "Ecuaciones Diferenciales",
+                "Geometría Diferencial"
+            ],
+            "Idiomas": [
+                "Español (Nativo)",
+                "Inglés (Avanzado)",
+                "Francés (Básico)"
+            ]
+        },
+        awards: [
+            {
+                title: "Ganador – Reto Social Tech UNIJES",
+                year: "2024",
+                description: "Proyecto de silla de ruedas autónoma controlada por voz",
+                icon: "🏆"
+            },
+            {
+                title: "Beca de Excelencia Académica",
+                year: "2021, 2023, 2024",
+                description: "Estudiantes con mejores notas de la Comunidad de Madrid",
+                icon: "🎓"
+            },
+            {
+                title: "Mención Honorífica de Bachillerato",
+                year: "2021",
+                description: "2ª nota más alta de la Comunidad de Madrid",
+                icon: "⭐"
+            },
+            {
+                title: "Programa de Matemáticas Kumon",
+                year: "2020",
+                description: "Programa de matemáticas Kumon completado",
+                icon: "⭐"
+            }
+        ]
+    }
+};
+
+// Export for use in script.js
+if (typeof module !== 'undefined' && module.exports) {
+    module.exports = { translations, portfolioDataTranslations };
+}

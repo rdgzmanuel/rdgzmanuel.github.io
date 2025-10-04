@@ -2,10 +2,144 @@
 // DOM Content Loaded
 // ===================================
 document.addEventListener('DOMContentLoaded', () => {
+    initializeLanguage();
     initializePortfolio();
     setupSmoothScrolling();
     setupNavbarScroll();
+    setupLanguageSwitcher();
 });
+
+// ===================================
+// Language Management
+// ===================================
+let currentLanguage = 'en';
+
+function initializeLanguage() {
+    // Check for saved language preference
+    const savedLang = localStorage.getItem('preferredLanguage');
+    if (savedLang && (savedLang === 'en' || savedLang === 'es')) {
+        currentLanguage = savedLang;
+    } else {
+        // Detect browser language
+        const browserLang = navigator.language.slice(0, 2);
+        currentLanguage = (browserLang === 'es') ? 'es' : 'en';
+    }
+    
+    // Update active button
+    updateLanguageButtons();
+}
+
+function setupLanguageSwitcher() {
+    const langButtons = document.querySelectorAll('.lang-btn');
+    
+    langButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const lang = btn.dataset.lang;
+            if (lang !== currentLanguage) {
+                currentLanguage = lang;
+                localStorage.setItem('preferredLanguage', lang);
+                updateLanguageButtons();
+                updatePageLanguage();
+            }
+        });
+    });
+}
+
+function updateLanguageButtons() {
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+        if (btn.dataset.lang === currentLanguage) {
+            btn.classList.add('active');
+        } else {
+            btn.classList.remove('active');
+        }
+    });
+}
+
+function updatePageLanguage() {
+    // Update static translations
+    document.querySelectorAll('[data-i18n]').forEach(element => {
+        const key = element.dataset.i18n;
+        const translation = getTranslation(key);
+        if (translation) {
+            element.textContent = translation;
+        }
+    });
+    
+    // Re-render dynamic content
+    clearContainers();
+    renderExperience();
+    renderEducation();
+    renderProjects();
+    renderSkills();
+    renderAwards();
+    
+    // Update hero section
+    updateHeroSection();
+    
+    // Update about section
+    updateAboutSection();
+    
+    // Update section titles
+    updateSectionTitles();
+    
+    // Update footer
+    updateFooter();
+}
+
+function getTranslation(key) {
+    const keys = key.split('.');
+    let value = translations[currentLanguage];
+    
+    for (const k of keys) {
+        if (value && value[k]) {
+            value = value[k];
+        } else {
+            return null;
+        }
+    }
+    
+    return value;
+}
+
+function clearContainers() {
+    document.getElementById('experience-container').innerHTML = '';
+    document.getElementById('education-container').innerHTML = '';
+    document.getElementById('projects-container').innerHTML = '';
+    document.getElementById('skills-container').innerHTML = '';
+    document.getElementById('awards-container').innerHTML = '';
+}
+
+function updateHeroSection() {
+    const t = translations[currentLanguage].hero;
+    document.querySelector('.hero-content .subtitle').textContent = t.subtitle;
+    document.querySelector('.hero-content p').textContent = t.description;
+    document.querySelector('.btn-primary').textContent = t.contactBtn;
+    document.querySelector('.btn-secondary').textContent = t.projectsBtn;
+}
+
+function updateAboutSection() {
+    const about = translations[currentLanguage].about;
+    const descriptions = document.querySelectorAll('#about .card-description');
+    descriptions[0].textContent = about.p1;
+    descriptions[1].textContent = about.p2;
+    descriptions[2].textContent = about.p3;
+}
+
+function updateSectionTitles() {
+    const sections = translations[currentLanguage].sections;
+    document.querySelector('#about .section-title').textContent = sections.about;
+    document.querySelector('#experience .section-title').textContent = sections.experience;
+    document.querySelector('#education .section-title').textContent = sections.education;
+    document.querySelector('#projects .section-title').textContent = sections.projects;
+    document.querySelector('#skills .section-title').textContent = sections.skills;
+    document.querySelector('#awards .section-title').textContent = sections.awards;
+}
+
+function updateFooter() {
+    const year = new Date().getFullYear();
+    const rights = translations[currentLanguage].footer.rights;
+    document.querySelector('footer p').textContent = `© ${year} Manuel Rodríguez Villegas. ${rights}`;
+}
 
 // ===================================
 // Initialize Portfolio Content
@@ -16,6 +150,7 @@ function initializePortfolio() {
     renderProjects();
     renderSkills();
     renderAwards();
+    updatePageLanguage();
 }
 
 // ===================================
@@ -23,8 +158,9 @@ function initializePortfolio() {
 // ===================================
 function renderExperience() {
     const container = document.getElementById('experience-container');
+    const data = portfolioDataTranslations[currentLanguage].experience;
     
-    portfolioData.experience.forEach((exp, index) => {
+    data.forEach((exp, index) => {
         const card = createExperienceCard(exp);
         card.style.animation = `fadeInUp 0.6s ease ${index * 0.1}s backwards`;
         container.appendChild(card);
@@ -35,8 +171,9 @@ function createExperienceCard(exp) {
     const card = document.createElement('div');
     card.className = 'card';
     
+    const linkText = translations[currentLanguage].links.viewWebsite;
     const linkHTML = exp.link 
-        ? `<a href="${exp.link}" class="project-link" target="_blank" rel="noopener">Visit Website →</a>`
+        ? `<a href="${exp.link}" class="project-link" target="_blank" rel="noopener">${linkText}</a>`
         : '';
     
     card.innerHTML = `
@@ -59,8 +196,9 @@ function createExperienceCard(exp) {
 // ===================================
 function renderEducation() {
     const container = document.getElementById('education-container');
+    const data = portfolioDataTranslations[currentLanguage].education;
     
-    portfolioData.education.forEach((edu, index) => {
+    data.forEach((edu, index) => {
         const card = createEducationCard(edu);
         card.style.animation = `fadeInUp 0.6s ease ${index * 0.1}s backwards`;
         container.appendChild(card);
@@ -71,8 +209,9 @@ function createEducationCard(edu) {
     const card = document.createElement('div');
     card.className = 'card';
     
+    const linkText = translations[currentLanguage].links.viewProgram;
     const linkHTML = edu.link 
-        ? `<a href="${edu.link}" class="project-link" target="_blank" rel="noopener">View Program →</a>`
+        ? `<a href="${edu.link}" class="project-link" target="_blank" rel="noopener">${linkText}</a>`
         : '';
     
     card.innerHTML = `
@@ -95,8 +234,9 @@ function createEducationCard(edu) {
 // ===================================
 function renderProjects() {
     const container = document.getElementById('projects-container');
+    const data = portfolioDataTranslations[currentLanguage].projects;
     
-    portfolioData.projects.forEach((project, index) => {
+    data.forEach((project, index) => {
         const card = createProjectCard(project);
         card.style.animation = `fadeInUp 0.6s ease ${index * 0.1}s backwards`;
         container.appendChild(card);
@@ -107,8 +247,9 @@ function createProjectCard(project) {
     const card = document.createElement('div');
     card.className = 'project-card';
     
+    const linkText = translations[currentLanguage].links.viewProject;
     const linkHTML = project.link 
-        ? `<a href="${project.link}" class="project-link" target="_blank" rel="noopener">View Project →</a>`
+        ? `<a href="${project.link}" class="project-link" target="_blank" rel="noopener">${linkText}</a>`
         : '';
     
     card.innerHTML = `
@@ -129,8 +270,9 @@ function createProjectCard(project) {
 // ===================================
 function renderSkills() {
     const container = document.getElementById('skills-container');
+    const data = portfolioDataTranslations[currentLanguage].skills;
     
-    Object.entries(portfolioData.skills).forEach(([category, skills], index) => {
+    Object.entries(data).forEach(([category, skills], index) => {
         const skillCard = createSkillCard(category, skills);
         skillCard.style.animation = `fadeInUp 0.6s ease ${index * 0.1}s backwards`;
         container.appendChild(skillCard);
@@ -160,8 +302,9 @@ function createSkillCard(category, skills) {
 // ===================================
 function renderAwards() {
     const container = document.getElementById('awards-container');
+    const data = portfolioDataTranslations[currentLanguage].awards;
     
-    portfolioData.awards.forEach((award, index) => {
+    data.forEach((award, index) => {
         const card = createAwardCard(award);
         card.style.animation = `fadeInUp 0.6s ease ${index * 0.1}s backwards`;
         container.appendChild(card);
