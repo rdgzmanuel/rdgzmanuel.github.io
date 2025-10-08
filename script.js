@@ -252,8 +252,13 @@ function createProjectCard(project) {
         ? `<a href="${project.link}" class="project-link" target="_blank" rel="noopener">${linkText}</a>`
         : '';
     
+    // Use image if available, otherwise use icon with gradient
+    const imageHTML = project.image 
+        ? `<img src="${project.image}" alt="${project.title}" onerror="this.parentElement.innerHTML='<span>${project.icon}</span>'">`
+        : project.icon;
+    
     card.innerHTML = `
-        <div class="project-image">${project.icon}</div>
+        <div class="project-image">${imageHTML}</div>
         <div class="project-content">
             <h3 class="project-title">${project.title}</h3>
             <p class="project-tech">${project.tech}</p>
