@@ -12,7 +12,7 @@ const translations = {
             skills: "Skills"
         },
         hero: {
-            subtitle: "MSc in Artificial Intelligence @ ICAI",
+            subtitle: "MSc in Advanced Artificial Intelligence @ ICAI",
             description: "Curious mind focused on AI for human benefit, deep learning and the pursuit of elegant, efficient solutions.",
             contactBtn: "Get in Touch",
             projectsBtn: "View Projects",
@@ -50,7 +50,7 @@ const translations = {
             skills: "Habilidades"
         },
         hero: {
-            subtitle: "MSc en Inteligencia Artificial @ ICAI",
+            subtitle: "MSc en Inteligencia Artificial Avanzada @ ICAI",
             description: "Estudiante curioso y proactivo enfocado en la IA para el beneficio humano, el aprendizaje profundo y la búsqueda de soluciones elegantes y eficientes.",
             contactBtn: "Contactar",
             projectsBtn: "Ver Proyectos",
@@ -62,11 +62,11 @@ const translations = {
             education: "Educación",
             projects: "Proyectos Destacados",
             skills: "Habilidades y Tecnologías",
-            awards: "Honores y Premios"
+            awards: "Premios y Reconocimientos"
         },
         about: {
             p1: "¡Hola! Soy Manuel, estudiante de Máster en Inteligencia Artificial en la Universidad Pontificia Comillas (Madrid) con un Grado en Ingeniería Matemática e IA. Mi trayectoria académica me ha llevado de Madrid a <strong>Cornell University</strong> (Nueva York) e <strong>Imperial College London</strong>, donde he trabajado con diferentes arquitecturas en visión por computador, robótica e IA generativa.",
-            p2: "Me describiría como un chico riguroso, obsesionado con la excelencia, la optimización y la búsqueda de significado en un campo tan complejo como la IA. Dada mi formación académica, que profundiza en sistemas de IA a partir de su fundamento matemático, considero que mi perfil cierra la brecha entre el rigor matemático y los sistemas de IA de última generación. Solo comprendiendo profundamente los fundamentos de las tecnologías actuales podemos extraer todo su potencial, optimizarlas y construir el futuro a partir de ellas.",
+            p2: "Me describiría como un chico riguroso, obsesionado con la excelencia, la optimización y la búsqueda de significado en un campo tan complejo como la IA. Dada mi formación académica, que profundiza en sistemas de IA a partir de su fundamento matemático, considero que mi perfil cierra la brecha entre el rigor matemático y los sistemas de IA de última generación.",
             p3: "Más allá de mis intereses profesionales, disfruto del deporte, la naturaleza y la lectura, actividades que considero esenciales para vivir una vida equilibrada, especialmente cuando se comparten con otros."
         },
         links: {
