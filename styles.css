@@ -347,6 +347,13 @@ section {
     border-top: 1px solid var(--bg-secondary);
 }
 
+.award-image {
+    width: 3rem;
+    height: 3rem;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
 .card-title {
     font-size: 1.5rem;
     font-weight: 700;
