@@ -26,8 +26,8 @@ const translations = {
             awards: "Honors & Awards"
         },
         about: {
-            p1: "Hi! I'm Manuel, MSc student in Artificial Intelligence at Comillas Pontifical University (Madrid) with a BSc in Mathematical Engineering and AI. My journey academic journey has taken me from Madrid to Cornell University and Imperial College London, where I've explored different architectures in computer vision, robotics, and generative AI.",
-            p2: "I would describe myself as a rigorous individual, obsessed with excellence, optimization, and the search for meaning in a field as complex as AI. Given my academic background, which combines deep mathematical foundations with their applications to AI, I consider my profile to bridge the gap between mathematical rigor and state-of-the-art AI systems. Only by deeply understanding the core foundations of today's technologies are we able to extract their full potential, optimize them, and build the future from there.",
+            p1: "Hi! I'm Manuel, MSc student in Artificial Intelligence at Comillas Pontifical University (Madrid) with a BSc in Mathematical Engineering and AI. My journey academic journey has taken me from Madrid to Cornell University and Imperial College London, where I've worked on computer vision, robotics, and generative AI systems.",
+            p2: "I would describe myself as a rigorous individual, obsessed with excellence, optimization, and the search for meaning in a field as complex as AI. Given my academic background, which combines deep mathematical foundations with their applications to AI, I consider my profile to bridge the gap between mathematical rigor and state-of-the-art AI systems.",
             p3: "Beyond my professional interests, I enjoy fitness, nature, and reading. I consider these essential to living a balanced life, especially when shared with others."
         },
         links: {
@@ -136,7 +136,7 @@ const portfolioDataTranslations = {
                 institution: "Comillas Pontifical University, ETSI ICAI",
                 location: "Madrid, Spain",
                 date: "2021 – 2025",
-                description: "GPA: 8.75/10. Winner of UNIJES Social Tech Challenge for AI-powered autonomous wheelchair project. Strong foundation in mathematics and artificial intelligence, with relevant subjects like Linear Algebra, Calculus, Probability & Statistics, Machine Learning, Deep Learning, Autonomous Mobile Robots, Natural Language Processing, Computer Vision, and Cybersecurity, among others. Honors in Probability & Statistics, Dynamic Systems, Big Data Architectures, Differential Geometry, Cybersecurity, Advanced Mathematics, and Computer Vision II.",
+                description: "GPA: 8.75/10. Winner of UNIJES Social Tech Challenge for AI-powered autonomous wheelchair project. Strong foundation in mathematics and artificial intelligence.\nHonors in Probability & Statistics, Dynamic Systems, Big Data Architectures, Differential Geometry, Cybersecurity, Advanced Mathematics, and Computer Vision II.",
                 link: "https://www.comillas.edu/en/degrees/bachelors-degree-in-engineering-mathematics-and-artificial-intelligence/"
             }
         ],
@@ -156,7 +156,7 @@ const portfolioDataTranslations = {
                 description: "During my internship at Azzulei Techonologies, I developed from scratch a real-time tracking system for automated camera control in sports events. It included advanced object detection and tracking algorithms for efficient broadcast automation, as well as a digitial commenatry generator based on LLMs and Text-to-Speech (TTS) systems.",
                 link: "https://github.com/rdgzmanuel/ai_camera",
                 icon: "🎥",
-                image: "assets/projects/multi-object-tracking.jpg",
+                image: "assets/projects/azzulei.png",
                 imageId: "multi-object-tracking"
             }
         ],
@@ -281,7 +281,7 @@ const portfolioDataTranslations = {
                 institution: "Universidad Pontificia Comillas, ETSI ICAI",
                 location: "Madrid, España",
                 date: "2021 – 2025",
-                description: "Nota media: 8.75/10. Ganador del UNIJES SocialTech Challenge por un proyecto de silla de ruedas autónoma impulsada por IA. Sólida base en matemáticas e inteligencia artificial, con asignaturas relevantes como Álgebra Lineal, Cálculo, Probabilidad y Estadística, Machine Learning, Deep Learning, Robots Móviles Autónomos, Procesamiento del Lenguaje Natural, Visión por Computador y Ciberseguridad, entre otras. Matrículas de Honor en Probabilidad y Estadística, Sistemas Dinámicos, Arquitecturas Big Data, Geometría Diferencial, Ciberseguridad, Matemáticas Avanzadas y Visión por Computador II.",
+                description: "Nota media: 8.75/10. Ganador del UNIJES SocialTech Challenge por un proyecto de silla de ruedas autónoma impulsada por IA. Fundamentos teorico-prácticos en matemáticas e inteligencia artificial.\nMatrículas de Honor en Probabilidad y Estadística, Sistemas Dinámicos, Arquitecturas Big Data, Geometría Diferencial, Ciberseguridad, Matemáticas Avanzadas y Visión por Computador II.",
                 link: "https://www.comillas.edu/grado-en-ingenieria-matematica-e-inteligencia-artificial/"
             }
         ],
@@ -301,7 +301,7 @@ const portfolioDataTranslations = {
                 description: "Durante mis prácticas en Azzulei Technologies, desarrollé desde cero un sistema de seguimiento en tiempo real enfocado en el control automático de la cámara en eventos deportivos. Implementé algoritmos avanzados de detección y seguimiento de objetos, así como un sistema de generación de comentarios virtuales.",
                 link: "https://github.com/rdgzmanuel/ai_camera",
                 icon: "🎥",
-                image: "assets/projects/multi-object-tracking.jpg",
+                image: "assets/projects/azzulei.png",
                 imageId: "multi-object-tracking"
             }
         ],
