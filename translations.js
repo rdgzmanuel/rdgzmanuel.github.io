@@ -283,7 +283,7 @@ const portfolioDataTranslations = {
                 institution: "Cornell University",
                 location: "Ithaca, NY, EE.UU.",
                 date: "Ene – May 2025",
-                description: "Escritor para Cornell Healthcare Review, enfocándome en aplicaciones de IA en la industria de la salud en Cornell University. Exploré temas sobre ciencia de datos, directrices éticas para ingenieros y gestión estratégica de la tecnología.",
+                description: "Escritor para Cornell Healthcare Review, enfocándome en aplicaciones de IA en la industria de la salud. Estudié temas relacionados con la ciencia de datos, directrices éticas para ingenieros y gestión estratégica de la tecnología.",
                 link: "https://www.engineering.cornell.edu/ece/"
             },
             {
@@ -291,7 +291,7 @@ const portfolioDataTranslations = {
                 institution: "Universidad Pontificia Comillas, ETSI ICAI",
                 location: "Madrid, España",
                 date: "2021 – 2025",
-                description: "Nota media: 8.75/10. Ganador del UNIJES SocialTech Challenge por un proyecto de silla de ruedas autónoma impulsada por IA. Fundamentos teorico-prácticos en matemáticas e inteligencia artificial.",
+                description: "Nota media: 8.75/10. Ganador del UNIJES SocialTech Challenge por un proyecto de silla de ruedas autónoma con IA integrada. Fundamentos teorico-prácticos en matemáticas e inteligencia artificial.",
                 honors: "Matrículas de Honor en Probabilidad y Estadística, Sistemas Dinámicos, Arquitecturas Big Data, Geometría Diferencial, Ciberseguridad, Matemáticas Avanzadas y Visión por Computador II.",
                 link: "https://www.comillas.edu/grado-en-ingenieria-matematica-e-inteligencia-artificial/"
             }

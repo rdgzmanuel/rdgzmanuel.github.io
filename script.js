@@ -121,9 +121,9 @@ function updateHeroSection() {
 function updateAboutSection() {
     const about = translations[currentLanguage].about;
     const descriptions = document.querySelectorAll('#about .card-description');
-    descriptions[0].textContent = about.p1;
-    descriptions[1].textContent = about.p2;
-    descriptions[2].textContent = about.p3;
+    descriptions[0].innerHTML = about.p1;
+    descriptions[1].innerHTML = about.p2;
+    descriptions[2].innerHTML = about.p3;
 }
 
 function updateSectionTitles() {
@@ -217,7 +217,7 @@ function createEducationCard(edu) {
     
     // Handle honors section separately if it exists
     const honorsHTML = edu.honors 
-        ? `<p class="card-description card-honors">${edu.honors}</p>`
+        ? `<p class="card-description card-honors"><strong>Honors:</strong> ${edu.honors}</p>`
         : '';
     
     card.innerHTML = `
