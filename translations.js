@@ -27,7 +27,7 @@ const translations = {
             awards: "Honors & Awards"
         },
         about: {
-            p1: "Hi! I'm Manuel, MSc student in Artificial Intelligence at Comillas Pontifical University (Madrid) with a BSc in Mathematical Engineering and AI. My journey academic journey has taken me from Madrid to Cornell University and Imperial College London, where I've worked on computer vision, robotics, and generative AI systems.",
+            p1: "Hi! I'm Manuel, MSc student in Artificial Intelligence at Comillas Pontifical University (Madrid) with a BSc in Mathematical Engineering and AI. My journey academic journey has taken me from Madrid to <strong>Cornell University</strong> and <strong>Imperial College London</strong>, where I've worked on computer vision, robotics, and generative AI systems.",
             p2: "I would describe myself as a rigorous individual, obsessed with excellence, optimization, and the search for meaning in a field as complex as AI. Given my academic background, which combines deep mathematical foundations with their applications to AI, I consider my profile to bridge the gap between mathematical rigor and state-of-the-art AI systems.",
             p3: "Beyond my professional interests, I enjoy fitness, nature, and reading. I consider these essential to living a balanced life, especially when shared with others."
         },
@@ -65,7 +65,7 @@ const translations = {
             awards: "Honores y Premios"
         },
         about: {
-            p1: "¡Hola! Soy Manuel, estudiante de Máster en Inteligencia Artificial en la Universidad Pontificia Comillas (Madrid) con un Grado en Ingeniería Matemática e IA. Mi trayectoria académica me ha llevado de Madrid a Cornell University (Nueva York) e Imperial College London, donde he trabajado con diferentes arquitecturas en visión por computador, robótica e IA generativa.",
+            p1: "¡Hola! Soy Manuel, estudiante de Máster en Inteligencia Artificial en la Universidad Pontificia Comillas (Madrid) con un Grado en Ingeniería Matemática e IA. Mi trayectoria académica me ha llevado de Madrid a <strong>Cornell University</strong> (Nueva York) e <strong>Imperial College London</strong>, donde he trabajado con diferentes arquitecturas en visión por computador, robótica e IA generativa.",
             p2: "Me describiría como un chico riguroso, obsesionado con la excelencia, la optimización y la búsqueda de significado en un campo tan complejo como la IA. Dada mi formación académica, que profundiza en sistemas de IA a partir de su fundamento matemático, considero que mi perfil cierra la brecha entre el rigor matemático y los sistemas de IA de última generación. Solo comprendiendo profundamente los fundamentos de las tecnologías actuales podemos extraer todo su potencial, optimizarlas y construir el futuro a partir de ellas.",
             p3: "Más allá de mis intereses profesionales, disfruto del deporte, la naturaleza y la lectura, actividades que considero esenciales para vivir una vida equilibrada, especialmente cuando se comparten con otros."
         },
@@ -106,7 +106,7 @@ const portfolioDataTranslations = {
                 company: "Imperial College London",
                 location: "Remote (London, UK)",
                 date: "Jun – Aug 2024",
-                description: "During the summer of 2024, I participated in the Undergraduate Research Opportunities Programme (UROP) at <strong>Imperial College London</strong>. My work focused on reproducing complex dynamical systems (Lotka–Volterra, SIR, Lorenz) using Neural Ordinary Differential Equations (Neural ODEs) and Physics-Informed Neural Networks (PINNs). I successfully developed robust models in PyTorch that generalized well across varying initial conditions, collaborating actively with international PhD students.",
+                description: "During the summer of 2024, I participated in the Undergraduate Research Opportunities Programme (UROP) at Imperial College London. My work focused on reproducing complex dynamical systems (Lotka–Volterra, SIR, Lorenz) using Neural Ordinary Differential Equations (Neural ODEs) and Physics-Informed Neural Networks (PINNs). I successfully developed robust models in PyTorch that generalized well across varying initial conditions, collaborating actively with international PhD students.",
                 link: "https://www.imperial.ac.uk/urop/"
             },
             {
@@ -132,7 +132,7 @@ const portfolioDataTranslations = {
                 institution: "Cornell University",
                 location: "Ithaca, NY, USA",
                 date: "Jan – May 2025",
-                description: "Writer for Cornell Healthcare Review, focusing on AI applications in the healthcare industry at <strong>Cornell University</strong>. Explored topics on data science, ethical guidelines for engineers and strategic technology and management.",
+                description: "Writer for Cornell Healthcare Review, focusing on AI applications in the healthcare industry at Cornell University. Explored topics on data science, ethical guidelines for engineers and strategic technology and management.",
                 link: "https://www.engineering.cornell.edu/ece/"
             },
             {
@@ -208,14 +208,14 @@ const portfolioDataTranslations = {
                 year: "2024",
                 description: "Voice-controlled wheelchair project",
                 icon: "🏆",
-                link: ""
+                link: "https://socialtech-challenge.org"
             },
             {
                 title: "Academic Excellence Scholarship",
                 year: "2021, 2023, 2024",
                 description: "Top-scoring students across Community of Madrid",
                 icon: "🎓",
-                link: ""
+                link: "https://www.comunidad.madrid/servicios/educacion/becas-excelencia-universitarios"
             },
             {
                 title: "Baccalaureate Honorific Mention",
@@ -229,7 +229,7 @@ const portfolioDataTranslations = {
                 year: "2020",
                 description: "Completed the Kumon Mathematics Programme",
                 icon: "⭐",
-                link: "",
+                link: "https://www.kumon.org",
                 image: "assets/pictures/kumon.png"
             }
         ]
@@ -257,7 +257,7 @@ const portfolioDataTranslations = {
                 company: "Imperial College London",
                 location: "Remoto (Londres, Reino Unido)",
                 date: "Jun – Ago 2024",
-                description: "Durante el verano de 2024, participé en el Undergraduate Research Opportunities Programme (UROP) del <strong>Imperial College London</strong>. Mi trabajo se centró en reproducir sistemas dinámicos complejos (Lotka–Volterra, SIR, Lorenz) utilizando Ecuaciones Diferenciales Ordinarias Neuronales (Neural ODEs) y Physicis-Informed Neural Networks (PINNs). Desarrollé modelos robustos en PyTorch que generalizaban bien para diferentes condiciones iniciales, colaborando activamente con estudiantes de doctorado internacionales.",
+                description: "Durante el verano de 2024, participé en el Undergraduate Research Opportunities Programme (UROP) del Imperial College London. Mi trabajo se centró en reproducir sistemas dinámicos complejos (Lotka–Volterra, SIR, Lorenz) utilizando Ecuaciones Diferenciales Ordinarias Neuronales (Neural ODEs) y Physicis-Informed Neural Networks (PINNs). Desarrollé modelos robustos en PyTorch que generalizaban bien para diferentes condiciones iniciales, colaborando activamente con estudiantes de doctorado internacionales.",
                 link: "https://www.imperial.ac.uk/urop/"
             },
             {
@@ -283,7 +283,7 @@ const portfolioDataTranslations = {
                 institution: "Cornell University",
                 location: "Ithaca, NY, EE.UU.",
                 date: "Ene – May 2025",
-                description: "Escritor para Cornell Healthcare Review, enfocándome en aplicaciones de IA en la industria de la salud en <strong>Cornell University</strong>. Exploré temas sobre ciencia de datos, directrices éticas para ingenieros y gestión estratégica de la tecnología.",
+                description: "Escritor para Cornell Healthcare Review, enfocándome en aplicaciones de IA en la industria de la salud en Cornell University. Exploré temas sobre ciencia de datos, directrices éticas para ingenieros y gestión estratégica de la tecnología.",
                 link: "https://www.engineering.cornell.edu/ece/"
             },
             {
@@ -359,14 +359,14 @@ const portfolioDataTranslations = {
                 year: "2024",
                 description: "Proyecto de silla de ruedas autónoma controlada por voz",
                 icon: "🏆",
-                link: ""
+                link: "https://socialtech-challenge.org"
             },
             {
                 title: "Beca de Excelencia Académica",
                 year: "2021, 2023, 2024",
                 description: "Estudiantes con mejores notas de la Comunidad de Madrid",
                 icon: "🎓",
-                link: ""
+                link: "https://www.comunidad.madrid/servicios/educacion/becas-excelencia-universitarios"
             },
             {
                 title: "Mención Honorífica de Bachillerato",
@@ -380,7 +380,7 @@ const portfolioDataTranslations = {
                 year: "2020",
                 description: "Programa de matemáticas Kumon completado",
                 icon: "⭐",
-                link: "",
+                link: "https://www.kumon.org",
                 image: "assets/pictures/kumon.png"
             }
         ]
