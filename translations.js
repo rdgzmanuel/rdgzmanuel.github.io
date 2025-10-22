@@ -62,8 +62,8 @@ const translations = {
             awards: "Honores y Premios"
         },
         about: {
-            p1: "¡Hola! Soy Manuel, estudiante de Máster en Inteligencia Artificial en la Universidad Pontificia Comillas (Madrid) con un Grado en Ingeniería Matemática e IA. Mi trayectoria académica me ha llevado de Madrid a Cornell University (Nueva York) e Imperial College London, donde he explorado diferentes arquitecturas en visión por computador, robótica e IA generativa.",
-            p2: "Me describiría como un chico riguroso, obsesionado con la excelencia, la optimización y la búsqueda de significado en un campo tan complejo como la IA. Dada mi formación académica, que profundiza en sistemas de IA a partir de su fundamento matemático, base combina fundamentos matemáticos profundos con sus aplicaciones en IA, considero que mi perfil cierra la brecha entre el rigor matemático y los sistemas de IA de última generación. Solo comprendiendo profundamente los fundamentos de las tecnologías actuales podemos extraer todo su potencial, optimizarlas y construir el futuro a partir de ellas.",
+            p1: "¡Hola! Soy Manuel, estudiante de Máster en Inteligencia Artificial en la Universidad Pontificia Comillas (Madrid) con un Grado en Ingeniería Matemática e IA. Mi trayectoria académica me ha llevado de Madrid a Cornell University (Nueva York) e Imperial College London, donde he trabajado con diferentes arquitecturas en visión por computador, robótica e IA generativa.",
+            p2: "Me describiría como un chico riguroso, obsesionado con la excelencia, la optimización y la búsqueda de significado en un campo tan complejo como la IA. Dada mi formación académica, que profundiza en sistemas de IA a partir de su fundamento matemático, considero que mi perfil cierra la brecha entre el rigor matemático y los sistemas de IA de última generación. Solo comprendiendo profundamente los fundamentos de las tecnologías actuales podemos extraer todo su potencial, optimizarlas y construir el futuro a partir de ellas.",
             p3: "Más allá de mis intereses profesionales, disfruto del deporte, la naturaleza y la lectura, actividades que considero esenciales para vivir una vida equilibrada, especialmente cuando se comparten con otros."
         },
         links: {
@@ -102,7 +102,7 @@ const portfolioDataTranslations = {
                 company: "Imperial College London",
                 location: "Remote (London, UK)",
                 date: "Jun – Aug 2024",
-                description: "During the summer of 2024, I participated in the Undergraduate Research Opportunities Programme at Imperial College London. My work focused on reproducing complex dynamical systems (Lotka–Volterra, SIR, Lorenz) using Neural Ordinary Differential Equations (Neural ODEs) and Physics-Informed Neural Networks (PINNs). I successfully developed robust models in PyTorch that generalized well across varying initial conditions.",
+                description: "During the summer of 2024, I participated in the Undergraduate Research Opportunities Programme (UROP) at Imperial College London. My work focused on reproducing complex dynamical systems (Lotka–Volterra, SIR, Lorenz) using Neural Ordinary Differential Equations (Neural ODEs) and Physics-Informed Neural Networks (PINNs). I successfully developed robust models in PyTorch that generalized well across varying initial conditions, collaborating actively with international PhD students.",
                 link: "https://www.imperial.ac.uk/urop/"
             },
             {
@@ -147,7 +147,7 @@ const portfolioDataTranslations = {
                 description: "For my Bachelor Thesis, I implemented a visual SLAM system integrating vision foundation models (CNN, AutoEncoder) with NLP and graph theory for voice-controlled indoor navigation. Features real-time mapping and autonomous navigation capabilities. The project was developed as part of the UNIJES SocialTech Challenge, a competition with social purposes where different Spanish universities build an autonomous wheelchair.",
                 link: "https://github.com/rdgzmanuel/visual_topological_slam",
                 icon: "🗺️",
-                image: "assets/projects/visual-slam.jpg",
+                image: "assets/projects/tfg_preview.png",
                 imageId: "visual-slam"
             },
             {
@@ -180,7 +180,8 @@ const portfolioDataTranslations = {
                 "ROS 2",
                 "OpenCV",
                 "MATLAB",
-                "Git"
+                "Git",
+                "Docker"
             ],
             "Mathematics": [
                 "Linear Algebra",
@@ -238,7 +239,7 @@ const portfolioDataTranslations = {
                 company: "Azzulei Technologies",
                 location: "Madrid, España",
                 date: "Jun – Ago 2025",
-                description: "Durante mis terceras prácticas de verano me uní a la startup Azzulei Technologies, donde desarrollé desde cero un sistema de control automático de cámara para eventos deportivos. Para ello implementé un sistema de seguimiento de múltiples objetivos en tiempo real usando YOLO, mejorando significativamente la calidad de transmisión y reduciendo los requisitos de operación manual. También diseñé un generador de comentarios virtuales usando LLMs de código abierto y modelos Text-to-Speech (TTS).",
+                description: "Durante mis terceras prácticas de verano trabajé en la startup Azzulei Technologies, donde desarrollé desde cero un sistema de control automático de cámara para eventos deportivos. Para ello implementé un sistema de seguimiento de múltiples objetivos en tiempo real usando YOLO, mejorando significativamente la calidad de transmisión y reduciendo los requisitos de operación manual. También diseñé un generador de comentarios virtuales usando LLMs de código abierto y modelos Text-to-Speech (TTS).",
                 link: "https://azzulei.com/"
             },
             {
@@ -246,7 +247,7 @@ const portfolioDataTranslations = {
                 company: "Imperial College London",
                 location: "Remoto (Londres, Reino Unido)",
                 date: "Jun – Ago 2024",
-                description: "Durante el verano de 2024, participé en el Undergraduate Research Opportunities Programme (UROP) del Imperial College London. Mi trabajo se centró en reproducir sistemas dinámicos complejos (Lotka–Volterra, SIR, Lorenz) utilizando Ecuaciones Diferenciales Ordinarias Neuronales (Neural ODEs) y Physicis-Informed Neural Networks (PINNs). Desarrollé modelos robustos en PyTorch que generalizaban bien para diferentes condiciones iniciales.",
+                description: "Durante el verano de 2024, participé en el Undergraduate Research Opportunities Programme (UROP) del Imperial College London. Mi trabajo se centró en reproducir sistemas dinámicos complejos (Lotka–Volterra, SIR, Lorenz) utilizando Ecuaciones Diferenciales Ordinarias Neuronales (Neural ODEs) y Physicis-Informed Neural Networks (PINNs). Desarrollé modelos robustos en PyTorch que generalizaban bien para diferentes condiciones iniciales, colaborando activamente con estudiantes de doctorado internacionales.",
                 link: "https://www.imperial.ac.uk/urop/"
             },
             {
@@ -291,7 +292,7 @@ const portfolioDataTranslations = {
                 description: "Para mi Trabajo de Fin de Grado (TFG) implementé un sistema de SLAM visual integrando modelos fundamentales de visión (CNN, AutoEncoder) con NLP y teoría de grafos, habilitando la navegación interior controlada por voz. Incluye capacidades de mapeo en tiempo real y navegación autónoma. El proyecto fue desarrollado como parte del UNIJES SocialTech Challenge, una competición con fines sociales donde diferentes universidades españolas construyen una silla de ruedas autónoma.",
                 link: "https://github.com/rdgzmanuel/visual_topological_slam",
                 icon: "🗺️",
-                image: "assets/projects/visual-slam.jpg",
+                image: "assets/projects/tfg_preview.png",
                 imageId: "visual-slam"
             },
             {
@@ -324,7 +325,8 @@ const portfolioDataTranslations = {
                 "ROS 2",
                 "OpenCV",
                 "MATLAB",
-                "Git"
+                "Git",
+                "Docker"
             ],
             "Matemáticas": [
                 "Álgebra Lineal",
