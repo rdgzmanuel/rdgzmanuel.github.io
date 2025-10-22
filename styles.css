@@ -337,6 +337,16 @@ section {
     margin-bottom: 1rem;
 }
 
+.card-description:last-child {
+    margin-bottom: 0;
+}
+
+.card-honors {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--bg-secondary);
+}
+
 .card-title {
     font-size: 1.5rem;
     font-weight: 700;

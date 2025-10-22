@@ -15,7 +15,8 @@ const translations = {
             subtitle: "MSc in Artificial Intelligence @ ICAI",
             description: "Curious mind focused on AI for human benefit, deep learning and the pursuit of elegant, efficient solutions.",
             contactBtn: "Get in Touch",
-            projectsBtn: "View Projects"
+            projectsBtn: "View Projects",
+            cvBtn: "View CV"
         },
         sections: {
             about: "About Me",
@@ -33,7 +34,8 @@ const translations = {
         links: {
             viewWebsite: "Visit Website →",
             viewProgram: "View Program →",
-            viewProject: "View Project →"
+            viewProject: "View Project →",
+            viewAward: "Learn More →"
         },
         footer: {
             rights: "All rights reserved."
@@ -51,7 +53,8 @@ const translations = {
             subtitle: "MSc en Inteligencia Artificial @ ICAI",
             description: "Estudiante curioso y proactivo enfocado en la IA para el beneficio humano, el aprendizaje profundo y la búsqueda de soluciones elegantes y eficientes.",
             contactBtn: "Contactar",
-            projectsBtn: "Ver Proyectos"
+            projectsBtn: "Ver Proyectos",
+            cvBtn: "Ver CV"
         },
         sections: {
             about: "Sobre mí",
@@ -69,7 +72,8 @@ const translations = {
         links: {
             viewWebsite: "Visitar Web →",
             viewProgram: "Ver Programa →",
-            viewProject: "Ver Proyecto →"
+            viewProject: "Ver Proyecto →",
+            viewAward: "Más Información →"
         },
         footer: {
             rights: "Todos los derechos reservados."
@@ -102,7 +106,7 @@ const portfolioDataTranslations = {
                 company: "Imperial College London",
                 location: "Remote (London, UK)",
                 date: "Jun – Aug 2024",
-                description: "During the summer of 2024, I participated in the Undergraduate Research Opportunities Programme (UROP) at Imperial College London. My work focused on reproducing complex dynamical systems (Lotka–Volterra, SIR, Lorenz) using Neural Ordinary Differential Equations (Neural ODEs) and Physics-Informed Neural Networks (PINNs). I successfully developed robust models in PyTorch that generalized well across varying initial conditions, collaborating actively with international PhD students.",
+                description: "During the summer of 2024, I participated in the Undergraduate Research Opportunities Programme (UROP) at <strong>Imperial College London</strong>. My work focused on reproducing complex dynamical systems (Lotka–Volterra, SIR, Lorenz) using Neural Ordinary Differential Equations (Neural ODEs) and Physics-Informed Neural Networks (PINNs). I successfully developed robust models in PyTorch that generalized well across varying initial conditions, collaborating actively with international PhD students.",
                 link: "https://www.imperial.ac.uk/urop/"
             },
             {
@@ -128,7 +132,7 @@ const portfolioDataTranslations = {
                 institution: "Cornell University",
                 location: "Ithaca, NY, USA",
                 date: "Jan – May 2025",
-                description: "Writer for Cornell Healthcare Review, focusing on AI applications in the healthcare industry. Explored topics on data science, ethical guidelines for engineers and strategic technology and management.",
+                description: "Writer for Cornell Healthcare Review, focusing on AI applications in the healthcare industry at <strong>Cornell University</strong>. Explored topics on data science, ethical guidelines for engineers and strategic technology and management.",
                 link: "https://www.engineering.cornell.edu/ece/"
             },
             {
@@ -136,7 +140,8 @@ const portfolioDataTranslations = {
                 institution: "Comillas Pontifical University, ETSI ICAI",
                 location: "Madrid, Spain",
                 date: "2021 – 2025",
-                description: "GPA: 8.75/10. Winner of UNIJES Social Tech Challenge for AI-powered autonomous wheelchair project. Strong foundation in mathematics and artificial intelligence.\nHonors in Probability & Statistics, Dynamic Systems, Big Data Architectures, Differential Geometry, Cybersecurity, Advanced Mathematics, and Computer Vision II.",
+                description: "GPA: 8.75/10. Winner of UNIJES Social Tech Challenge for AI-powered autonomous wheelchair project. Strong foundation in mathematics and artificial intelligence.",
+                honors: "Honors in Probability & Statistics, Dynamic Systems, Big Data Architectures, Differential Geometry, Cybersecurity, Advanced Mathematics, and Computer Vision II.",
                 link: "https://www.comillas.edu/en/degrees/bachelors-degree-in-engineering-mathematics-and-artificial-intelligence/"
             }
         ],
@@ -147,7 +152,7 @@ const portfolioDataTranslations = {
                 description: "For my Bachelor Thesis, I implemented a visual SLAM system integrating vision foundation models (CNN, AutoEncoder) with NLP and graph theory for voice-controlled indoor navigation. Features real-time mapping and autonomous navigation capabilities. The project was developed as part of the UNIJES SocialTech Challenge, a competition with social purposes where different Spanish universities build an autonomous wheelchair.",
                 link: "https://github.com/rdgzmanuel/visual_topological_slam",
                 icon: "🗺️",
-                image: "assets/projects/tfg_preview.png",
+                image: "assets/projects/tfg_map.png",
                 imageId: "visual-slam"
             },
             {
@@ -202,25 +207,30 @@ const portfolioDataTranslations = {
                 title: "Winner – UNIJES Social Tech Challenge",
                 year: "2024",
                 description: "Voice-controlled wheelchair project",
-                icon: "🏆"
+                icon: "🏆",
+                link: ""
             },
             {
                 title: "Academic Excellence Scholarship",
                 year: "2021, 2023, 2024",
                 description: "Top-scoring students across Community of Madrid",
-                icon: "🎓"
+                icon: "🎓",
+                link: ""
             },
             {
                 title: "Baccalaureate Honorific Mention",
                 year: "2021",
                 description: "2nd highest GPA in Community of Madrid",
-                icon: "⭐"
+                icon: "⭐",
+                link: null
             },
             {
                 title: "Kumon Mathematics Programme",
                 year: "2020",
                 description: "Completed the Kumon Mathematics Programme",
-                icon: "⭐"
+                icon: "⭐",
+                link: "",
+                image: "assets/pictures/kumon.png"
             }
         ]
     },
@@ -247,7 +257,7 @@ const portfolioDataTranslations = {
                 company: "Imperial College London",
                 location: "Remoto (Londres, Reino Unido)",
                 date: "Jun – Ago 2024",
-                description: "Durante el verano de 2024, participé en el Undergraduate Research Opportunities Programme (UROP) del Imperial College London. Mi trabajo se centró en reproducir sistemas dinámicos complejos (Lotka–Volterra, SIR, Lorenz) utilizando Ecuaciones Diferenciales Ordinarias Neuronales (Neural ODEs) y Physicis-Informed Neural Networks (PINNs). Desarrollé modelos robustos en PyTorch que generalizaban bien para diferentes condiciones iniciales, colaborando activamente con estudiantes de doctorado internacionales.",
+                description: "Durante el verano de 2024, participé en el Undergraduate Research Opportunities Programme (UROP) del <strong>Imperial College London</strong>. Mi trabajo se centró en reproducir sistemas dinámicos complejos (Lotka–Volterra, SIR, Lorenz) utilizando Ecuaciones Diferenciales Ordinarias Neuronales (Neural ODEs) y Physicis-Informed Neural Networks (PINNs). Desarrollé modelos robustos en PyTorch que generalizaban bien para diferentes condiciones iniciales, colaborando activamente con estudiantes de doctorado internacionales.",
                 link: "https://www.imperial.ac.uk/urop/"
             },
             {
@@ -273,7 +283,7 @@ const portfolioDataTranslations = {
                 institution: "Cornell University",
                 location: "Ithaca, NY, EE.UU.",
                 date: "Ene – May 2025",
-                description: "Escritor para Cornell Healthcare Review, enfocándome en aplicaciones de IA en la industria de la salud. Exploré temas sobre ciencia de datos, directrices éticas para ingenieros y gestión estratégica de la tecnología.",
+                description: "Escritor para Cornell Healthcare Review, enfocándome en aplicaciones de IA en la industria de la salud en <strong>Cornell University</strong>. Exploré temas sobre ciencia de datos, directrices éticas para ingenieros y gestión estratégica de la tecnología.",
                 link: "https://www.engineering.cornell.edu/ece/"
             },
             {
@@ -281,7 +291,8 @@ const portfolioDataTranslations = {
                 institution: "Universidad Pontificia Comillas, ETSI ICAI",
                 location: "Madrid, España",
                 date: "2021 – 2025",
-                description: "Nota media: 8.75/10. Ganador del UNIJES SocialTech Challenge por un proyecto de silla de ruedas autónoma impulsada por IA. Fundamentos teorico-prácticos en matemáticas e inteligencia artificial.\nMatrículas de Honor en Probabilidad y Estadística, Sistemas Dinámicos, Arquitecturas Big Data, Geometría Diferencial, Ciberseguridad, Matemáticas Avanzadas y Visión por Computador II.",
+                description: "Nota media: 8.75/10. Ganador del UNIJES SocialTech Challenge por un proyecto de silla de ruedas autónoma impulsada por IA. Fundamentos teorico-prácticos en matemáticas e inteligencia artificial.",
+                honors: "Matrículas de Honor en Probabilidad y Estadística, Sistemas Dinámicos, Arquitecturas Big Data, Geometría Diferencial, Ciberseguridad, Matemáticas Avanzadas y Visión por Computador II.",
                 link: "https://www.comillas.edu/grado-en-ingenieria-matematica-e-inteligencia-artificial/"
             }
         ],
@@ -292,7 +303,7 @@ const portfolioDataTranslations = {
                 description: "Para mi Trabajo de Fin de Grado (TFG) implementé un sistema de SLAM visual integrando modelos fundamentales de visión (CNN, AutoEncoder) con NLP y teoría de grafos, habilitando la navegación interior controlada por voz. Incluye capacidades de mapeo en tiempo real y navegación autónoma. El proyecto fue desarrollado como parte del UNIJES SocialTech Challenge, una competición con fines sociales donde diferentes universidades españolas construyen una silla de ruedas autónoma.",
                 link: "https://github.com/rdgzmanuel/visual_topological_slam",
                 icon: "🗺️",
-                image: "assets/projects/tfg_preview.png",
+                image: "assets/projects/tfg_map.png",
                 imageId: "visual-slam"
             },
             {
@@ -347,25 +358,30 @@ const portfolioDataTranslations = {
                 title: "Ganador – UNIJES SocialTech Challenge",
                 year: "2024",
                 description: "Proyecto de silla de ruedas autónoma controlada por voz",
-                icon: "🏆"
+                icon: "🏆",
+                link: ""
             },
             {
                 title: "Beca de Excelencia Académica",
                 year: "2021, 2023, 2024",
                 description: "Estudiantes con mejores notas de la Comunidad de Madrid",
-                icon: "🎓"
+                icon: "🎓",
+                link: ""
             },
             {
                 title: "Mención Honorífica de Bachillerato",
                 year: "2021",
                 description: "2ª nota más alta de la Comunidad de Madrid",
-                icon: "⭐"
+                icon: "⭐",
+                link: null
             },
             {
                 title: "Programa de Matemáticas Kumon",
                 year: "2020",
                 description: "Programa de matemáticas Kumon completado",
-                icon: "⭐"
+                icon: "⭐",
+                link: "",
+                image: "assets/pictures/kumon.png"
             }
         ]
     }

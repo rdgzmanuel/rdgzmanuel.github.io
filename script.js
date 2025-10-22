@@ -115,6 +115,7 @@ function updateHeroSection() {
     document.querySelector('.hero-content .hero-description').textContent = t.description;
     document.querySelector('.btn-primary').textContent = t.contactBtn;
     document.querySelector('.btn-secondary').textContent = t.projectsBtn;
+    document.querySelector('.btn-cv').textContent = t.cvBtn;
 }
 
 function updateAboutSection() {
@@ -214,6 +215,11 @@ function createEducationCard(edu) {
         ? `<a href="${edu.link}" class="project-link" target="_blank" rel="noopener">${linkText}</a>`
         : '';
     
+    // Handle honors section separately if it exists
+    const honorsHTML = edu.honors 
+        ? `<p class="card-description card-honors"><strong>Honors:</strong> ${edu.honors}</p>`
+        : '';
+    
     card.innerHTML = `
         <div class="card-header">
             <div>
@@ -223,6 +229,7 @@ function createEducationCard(edu) {
             <span class="card-date">${edu.date}</span>
         </div>
         <p class="card-description">${edu.description}</p>
+        ${honorsHTML}
         ${linkHTML}
     `;
     
@@ -320,12 +327,23 @@ function createAwardCard(award) {
     const card = document.createElement('div');
     card.className = 'award-card';
     
+    const linkText = translations[currentLanguage].links.viewAward;
+    const linkHTML = (award.link !== null && award.link !== undefined) 
+        ? `<a href="${award.link}" class="project-link" target="_blank" rel="noopener">${linkText}</a>`
+        : '';
+    
+    // Use image if available, otherwise use icon
+    const iconHTML = award.image 
+        ? `<img src="${award.image}" alt="${award.title}" class="award-image">`
+        : `<div class="award-icon">${award.icon}</div>`;
+    
     card.innerHTML = `
-        <div class="award-icon">${award.icon}</div>
+        ${iconHTML}
         <div class="award-content">
             <h3 class="award-title">${award.title}</h3>
             <p class="award-year">${award.year}</p>
             <p class="award-description">${award.description}</p>
+            ${linkHTML}
         </div>
     `;
     
