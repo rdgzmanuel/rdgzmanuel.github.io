@@ -27,7 +27,7 @@ const translations = {
             awards: "Honors & Awards"
         },
         about: {
-            p1: "Hi! I'm Manuel, MSc student in Artificial Intelligence at Comillas Pontifical University (Madrid) with a BSc in Mathematical Engineering and AI. My journey academic journey has taken me from Madrid to <strong>Cornell University</strong> and <strong>Imperial College London</strong>, where I've worked on computer vision, robotics, and generative AI systems.",
+            p1: "Hi! I'm Manuel, MSc student in Advanced Artificial Intelligence at Comillas Pontifical University (Madrid) with a BSc in Mathematical Engineering and AI. My journey academic journey has taken me from Madrid to <strong>Cornell University</strong> and <strong>Imperial College London</strong>, where I've worked on computer vision, robotics, and generative AI systems.",
             p2: "I would describe myself as a rigorous individual, obsessed with excellence, optimization, and the search for meaning in a field as complex as AI. Given my academic background, which combines deep mathematical foundations with their applications to AI, I consider my profile to bridge the gap between mathematical rigor and state-of-the-art AI systems.",
             p3: "Beyond my professional interests, I enjoy fitness, nature, and reading. I consider these essential to living a balanced life, especially when shared with others."
         },
@@ -65,7 +65,7 @@ const translations = {
             awards: "Premios y Reconocimientos"
         },
         about: {
-            p1: "¡Hola! Soy Manuel, estudiante de Máster en Inteligencia Artificial en la Universidad Pontificia Comillas (Madrid) con un Grado en Ingeniería Matemática e IA. Mi trayectoria académica me ha llevado de Madrid a <strong>Cornell University</strong> (Nueva York) e <strong>Imperial College London</strong>, donde he trabajado con diferentes arquitecturas en visión por computador, robótica e IA generativa.",
+            p1: "¡Hola! Soy Manuel, estudiante de Máster en Inteligencia Artificial Avanzada en la Universidad Pontificia Comillas (Madrid) con un Grado en Ingeniería Matemática e IA. Mi trayectoria académica me ha llevado de Madrid a <strong>Cornell University</strong> (Nueva York) e <strong>Imperial College London</strong>, donde he trabajado con diferentes arquitecturas en visión por computador, robótica e IA generativa.",
             p2: "Me describiría como un chico riguroso, obsesionado con la excelencia, la optimización y la búsqueda de significado en un campo tan complejo como la IA. Dada mi formación académica, que profundiza en sistemas de IA a partir de su fundamento matemático, considero que mi perfil cierra la brecha entre el rigor matemático y los sistemas de IA de última generación.",
             p3: "Más allá de mis intereses profesionales, disfruto del deporte, la naturaleza y la lectura, actividades que considero esenciales para vivir una vida equilibrada, especialmente cuando se comparten con otros."
         },
@@ -120,7 +120,7 @@ const portfolioDataTranslations = {
         ],
         education: [
             {
-                degree: "MSc in Artificial Intelligence",
+                degree: "MSc in Advanced Artificial Intelligence",
                 institution: "Comillas Pontifical University, ETSI ICAI",
                 location: "Madrid, Spain",
                 date: "Sep 2025 – 2026",
@@ -271,7 +271,7 @@ const portfolioDataTranslations = {
         ],
         education: [
             {
-                degree: "Máster en Inteligencia Artificial",
+                degree: "Máster en Inteligencia Artificial Avanzada",
                 institution: "Universidad Pontificia Comillas, ETSI ICAI",
                 location: "Madrid, España",
                 date: "Sep 2025 – 2026",
