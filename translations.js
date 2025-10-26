@@ -124,7 +124,7 @@ const portfolioDataTranslations = {
                 institution: "Comillas Pontifical University, ETSI ICAI",
                 location: "Madrid, Spain",
                 date: "Sep 2025 – 2026",
-                description: "Class Representative & Member of the Academic Council. Program focused on Deep Generative Models, Differential Geometry & Calculus, MLOps, Deep Reinforcement Learning, Probabilistic AI and Explainability.",
+                description: "Class Representative & Member of the Academic Council. Winner of the 10th Smart Industry Hackathon. Program focused on Deep Generative Models, Differential Geometry & Calculus, MLOps, Deep Reinforcement Learning, Probabilistic AI and Explainability.",
                 link: "https://www.comillas.edu/en/master-en-inteligencia-artificial-avanzada/"
             },
             {
@@ -157,13 +157,22 @@ const portfolioDataTranslations = {
             },
             {
                 title: "Multi-Object Tracking System",
-                tech: "YOLO, Computer Vision, Optical Flow",
+                tech: "YOLO, Computer Vision, Optical Flow, PyTorch, ONNX",
                 description: "During my internship at Azzulei Techonologies, I developed from scratch a real-time tracking system for automated camera control in sports events. It included advanced object detection and tracking algorithms for efficient broadcast automation, as well as a digitial commenatry generator based on LLMs and Text-to-Speech (TTS) systems.",
                 link: "https://github.com/rdgzmanuel/ai_camera",
                 icon: "🎥",
                 image: "assets/projects/azzulei.png",
                 imageId: "multi-object-tracking"
-            }
+            },
+            {
+                title: "Virtual Assistant for Train Operators",
+                tech: "PyTorch, Machine Learning, NLP",
+                description: "As the winning project of the 10th Smart Industry Hackathon, I developed a virtual assistant with an intelligent recommendation system for train operators. The operator enters the symptom of the malfunction, and the agent recommends the most likely faulty components along with their associated repairs. The project was developed in a single morning and won first prize, competing against 9 other teams from Madrid and Seville.",
+                link: "https://github.com/rdgzmanuel/hackathon_kearney",
+                icon: "🚂",
+                image: "assets/projects/hackathon.png",
+                imageId: "hackathon"
+            },            
         ],
         skills: {
             "Programming Languages": [
@@ -204,7 +213,14 @@ const portfolioDataTranslations = {
         },
         awards: [
             {
-                title: "Winner – UNIJES Social Tech Challenge",
+                title: "Winner of the 10th Smart Industry Hackathon",
+                year: "2025",
+                description: "Virtual assistant with recommendation system for train operators",
+                icon: "🥇",
+                link: "https://github.com/rdgzmanuel/hackathon_kearney"
+            },
+            {
+                title: "Winner of UNIJES Social Tech Challenge",
                 year: "2024",
                 description: "Voice-controlled wheelchair project",
                 icon: "🏆",
@@ -275,7 +291,7 @@ const portfolioDataTranslations = {
                 institution: "Universidad Pontificia Comillas, ETSI ICAI",
                 location: "Madrid, España",
                 date: "Sep 2025 – 2026",
-                description: "Delegado de Clase y Miembro del Claustro Universitario. Programa enfocado en Modelos Generativos Profundos, Geometría y Cálculo Diferencial, MLOps, Aprendizaje por Refuerzo Profundo, IA Probabilística y Explicabilidad.",
+                description: "Delegado de Clase y Miembro del Claustro Universitario. Ganador del X Hackathon de Industria Inteligente. Programa enfocado en Modelos Generativos Profundos, Geometría y Cálculo Diferencial, MLOps, Aprendizaje por Refuerzo Profundo, IA Probabilística y Explicabilidad.",
                 link: "https://www.comillas.edu/master-en-inteligencia-artificial-avanzada/"
             },
             {
@@ -308,13 +324,22 @@ const portfolioDataTranslations = {
             },
             {
                 title: "Sistema de Seguimiento Multi-Objetivo",
-                tech: "YOLO, Visión por Computador, Flujo Óptico",
+                tech: "PyTroch, YOLO, Visión por Computador, Flujo Óptico, ONNX",
                 description: "Durante mis prácticas en Azzulei Technologies, desarrollé desde cero un sistema de seguimiento en tiempo real enfocado en el control automático de la cámara en eventos deportivos. Implementé algoritmos avanzados de detección y seguimiento de objetos, así como un sistema de generación de comentarios virtuales.",
                 link: "https://github.com/rdgzmanuel/ai_camera",
                 icon: "🎥",
                 image: "assets/projects/azzulei.png",
                 imageId: "multi-object-tracking"
-            }
+            },
+            {
+                title: "Asistente Virtual para Operarios de Trenes",
+                tech: "PyTorch, Machine Learning, NLP",
+                description: "Como proyecto ganador del X Hackathon de Industria Inteligente, desarrollé una asistente virtual con un sistema de recomendaciones inteligente para operarios de trenes. El operario introduce el síntome a de la avería y el agente le recomienda los componentes estropeados más probables junto a sus reparaciones asociadas. EL proyecto fue elaborado en una sola mañana y obtuvo el primer premio, enfrentándose a otros 9 equipos de Madrid y Sevilla.",
+                link: "https://github.com/rdgzmanuel/hackathon_kearney",
+                icon: "🚂",
+                image: "assets/projects/hackathon.png",
+                imageId: "hackathon"
+            },
         ],
         skills: {
             "Lenguajes de Programación": [
@@ -355,7 +380,14 @@ const portfolioDataTranslations = {
         },
         awards: [
             {
-                title: "Ganador – UNIJES SocialTech Challenge",
+                title: "Ganador del X Hackathon de Industria Inteligente",
+                year: "2025",
+                description: "Asistente virtual con sistema de recomendaciones para operarios de trenes",
+                icon: "🥇",
+                link: "https://github.com/rdgzmanuel/hackathon_kearney"
+            },
+            {
+                title: "Ganador de UNIJES SocialTech Challenge",
                 year: "2024",
                 description: "Proyecto de silla de ruedas autónoma controlada por voz",
                 icon: "🏆",
