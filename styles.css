@@ -119,6 +119,13 @@ nav {
     line-height: 1;
 }
 
+.lang-btn .flag {
+    width: 1.2rem;
+    height: 1.2rem;
+    object-fit: contain;
+    display: block;
+}
+
 .lang-btn .lang-code {
     font-size: 0.9rem;
 }
@@ -337,6 +344,19 @@ section {
     margin-bottom: 1rem;
 }
 
+.card-header-content {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.card-logo {
+    width: 3rem;
+    height: 3rem;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
 .card-description:last-child {
     margin-bottom: 0;
 }
@@ -423,6 +443,12 @@ section {
     height: 100%;
     object-fit: cover;
     transition: var(--transition);
+}
+
+.project-placeholder {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--accent), var(--accent-dark));
 }
 
 .project-card:hover .project-image img {
@@ -540,10 +566,11 @@ section {
     box-shadow: 0 8px 30px var(--shadow);
 }
 
-.award-icon {
-    font-size: 3rem;
+.award-icon-svg {
+    width: 3rem;
+    height: 3rem;
+    object-fit: contain;
     flex-shrink: 0;
-    line-height: 1;
 }
 
 .award-content {

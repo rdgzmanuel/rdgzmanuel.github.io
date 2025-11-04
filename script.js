@@ -177,11 +177,18 @@ function createExperienceCard(exp) {
         ? `<a href="${exp.link}" class="project-link" target="_blank" rel="noopener">${linkText}</a>`
         : '';
     
+    const logoHTML = exp.logo
+        ? `<img src="${exp.logo}" alt="${exp.company}" class="card-logo">`
+        : '';
+    
     card.innerHTML = `
         <div class="card-header">
-            <div>
-                <h3 class="card-title">${exp.title}</h3>
-                <p class="card-subtitle">${exp.company}</p>
+            <div class="card-header-content">
+                ${logoHTML}
+                <div>
+                    <h3 class="card-title">${exp.title}</h3>
+                    <p class="card-subtitle">${exp.company}</p>
+                </div>
             </div>
             <span class="card-date">${exp.date}</span>
         </div>
@@ -215,6 +222,10 @@ function createEducationCard(edu) {
         ? `<a href="${edu.link}" class="project-link" target="_blank" rel="noopener">${linkText}</a>`
         : '';
     
+    const logoHTML = edu.logo
+        ? `<img src="${edu.logo}" alt="${edu.institution}" class="card-logo">`
+        : '';
+    
     // Handle honors section separately if it exists
     const honorsHTML = edu.honors 
         ? `<p class="card-description card-honors"><strong>Honors:</strong> ${edu.honors}</p>`
@@ -222,9 +233,12 @@ function createEducationCard(edu) {
     
     card.innerHTML = `
         <div class="card-header">
-            <div>
-                <h3 class="card-title">${edu.degree}</h3>
-                <p class="card-subtitle">${edu.institution}</p>
+            <div class="card-header-content">
+                ${logoHTML}
+                <div>
+                    <h3 class="card-title">${edu.degree}</h3>
+                    <p class="card-subtitle">${edu.institution}</p>
+                </div>
             </div>
             <span class="card-date">${edu.date}</span>
         </div>
@@ -259,10 +273,10 @@ function createProjectCard(project) {
         ? `<a href="${project.link}" class="project-link" target="_blank" rel="noopener">${linkText}</a>`
         : '';
     
-    // Use image if available, otherwise use icon with gradient
+    // Projects don't use icons anymore, only images
     const imageHTML = project.image 
-        ? `<img src="${project.image}" alt="${project.title}" onerror="this.parentElement.innerHTML='<span>${project.icon}</span>'">`
-        : project.icon;
+        ? `<img src="${project.image}" alt="${project.title}">`
+        : `<div class="project-placeholder"></div>`;
     
     card.innerHTML = `
         <div class="project-image">${imageHTML}</div>
@@ -332,10 +346,10 @@ function createAwardCard(award) {
         ? `<a href="${award.link}" class="project-link" target="_blank" rel="noopener">${linkText}</a>`
         : '';
     
-    // Use image if available, otherwise use icon
+    // Use image if available, otherwise use icon as SVG
     const iconHTML = award.image 
         ? `<img src="${award.image}" alt="${award.title}" class="award-image">`
-        : `<div class="award-icon">${award.icon}</div>`;
+        : `<img src="${award.icon}" alt="${award.title}" class="award-icon-svg">`;
     
     card.innerHTML = `
         ${iconHTML}
