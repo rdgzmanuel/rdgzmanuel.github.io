@@ -92,7 +92,7 @@ const portfolioDataTranslations = {
                 date: "Sep 2025 – Apr 2026",
                 description: "I'm currently working as a Research Assistant at my university, exploring the latest open-source Large Language Models (LLMs) and investigating their potential for real-world applications.",
                 link: "https://www.comillas.edu/en/",
-                logo: "assets/icons/experience/comillas.svg"
+                logo: "assets/icons/experience/comillas.png"
             },
             {
                 title: "Computer Vision Intern",
@@ -101,7 +101,7 @@ const portfolioDataTranslations = {
                 date: "Jun – Aug 2025",
                 description: "For my third summer internship I joined the startup Azzulei Technologies, where my role consisted on developing an automated camera control system for sports events. I successfully achieved this task by implementing a real-time Multi-Object Tracking system using YOLO, significantly improving broadcast quality and reducing manual operation requirements. I also designed a virtual commentary generator using open-source LLMs and text-to-speech (TTS) models for automated commentary of matches.",
                 link: "https://azzulei.com/en/",
-                logo: "assets/icons/experience/azzulei.svg"
+                logo: "assets/icons/experience/azzulei.png"
             },
             {
                 title: "Research Assistant",
@@ -110,7 +110,7 @@ const portfolioDataTranslations = {
                 date: "Jun – Aug 2024",
                 description: "During the summer of 2024, I participated in the Undergraduate Research Opportunities Programme (UROP) at Imperial College London. My work focused on reproducing complex dynamical systems (Lotka–Volterra, SIR, Lorenz) using Neural Ordinary Differential Equations (Neural ODEs) and Physics-Informed Neural Networks (PINNs). I successfully developed robust models in PyTorch that generalized well across varying initial conditions, collaborating actively with international PhD students.",
                 link: "https://www.imperial.ac.uk/urop/",
-                logo: "assets/icons/experience/imperial.svg"
+                logo: "assets/icons/experience/imperial.png"
             },
             {
                 title: "Energy Data Analyst Intern",
@@ -119,7 +119,7 @@ const portfolioDataTranslations = {
                 date: "Jun – Aug 2023",
                 description: "For my first internship I joined Endesa, one of Spain's biggest energy companies. I focused on estimating daily Iberian ancillary services costs, achieving >90% accuracy using regression and MLP techniques, providing valuable insights for energy market forecasting.",
                 link: "https://www.endesa.com/en",
-                logo: "assets/icons/experience/endesa.svg"
+                logo: "assets/icons/experience/endesa.png"
             }
         ],
         education: [
@@ -130,7 +130,7 @@ const portfolioDataTranslations = {
                 date: "Sep 2025 – 2026",
                 description: "Class Representative & Member of the Academic Council. Winner of the 10th Smart Industry Hackathon. Program focused on Deep Generative Models, Differential Geometry & Calculus, MLOps, Deep Reinforcement Learning, Probabilistic AI and Explainability.",
                 link: "https://www.comillas.edu/en/master-en-inteligencia-artificial-avanzada/",
-                logo: "assets/icons/experience/comillas.svg"
+                logo: "assets/icons/experience/comillas.png"
             },
             {
                 degree: "Exchange Student - Electrical & Computer Engineering",
@@ -139,7 +139,7 @@ const portfolioDataTranslations = {
                 date: "Jan – May 2025",
                 description: "Writer for Cornell Healthcare Review, focusing on AI applications in the healthcare industry at Cornell University. Explored topics on data science, ethical guidelines for engineers and strategic technology and management.",
                 link: "https://www.engineering.cornell.edu/ece/",
-                logo: "assets/icons/experience/cornell.svg"
+                logo: "assets/icons/experience/cornell.png"
             },
             {
                 degree: "BSc in Mathematical Engineering and AI",
@@ -149,7 +149,7 @@ const portfolioDataTranslations = {
                 description: "GPA: 8.75/10. Winner of UNIJES Social Tech Challenge for AI-powered autonomous wheelchair project. Strong foundation in mathematics and artificial intelligence.",
                 honors: "Honors in Probability & Statistics, Dynamic Systems, Big Data Architectures, Differential Geometry, Cybersecurity, Advanced Mathematics, and Computer Vision II.",
                 link: "https://www.comillas.edu/en/degrees/bachelors-degree-in-engineering-mathematics-and-artificial-intelligence/",
-                logo: "assets/icons/experience/comillas.svg"
+                logo: "assets/icons/experience/comillas.png"
             }
         ],
         projects: [
@@ -223,37 +223,37 @@ const portfolioDataTranslations = {
                 title: "Winner of the 10th Smart Industry Hackathon",
                 year: "2025",
                 description: "Virtual assistant with recommendation system for train operators",
-                icon: "assets/icons/awards/caf.svg",
+                icon: "assets/icons/awards/caf.png",
                 link: "https://github.com/rdgzmanuel/hackathon_kearney"
             },
             {
                 title: "Winner of UNIJES Social Tech Challenge",
                 year: "2024",
                 description: "Voice-controlled wheelchair project",
-                icon: "assets/icons/awards/trophy.svg",
+                icon: "assets/icons/awards/trophy.png",
                 link: "https://socialtech-challenge.org"
             },
             {
                 title: "Academic Excellence Scholarship",
                 year: "2021, 2023, 2024",
                 description: "Top-scoring students across Community of Madrid",
-                icon: "assets/icons/awards/madrid.svg",
+                icon: "assets/icons/awards/madrid.png",
                 link: "https://www.comunidad.madrid/servicios/educacion/becas-excelencia-universitarios"
             },
             {
                 title: "Baccalaureate Honorific Mention",
                 year: "2021",
                 description: "2nd highest GPA in Community of Madrid",
-                icon: "assets/icons/awards/madrid.svg",
+                icon: "assets/icons/awards/madrid.png",
                 link: null
             },
             {
                 title: "Kumon Mathematics Programme",
                 year: "2020",
                 description: "Completed the Kumon Mathematics Programme",
-                icon: "assets/icons/awards/kumon.svg",
+                icon: "assets/icons/awards/kumon.png",
                 link: "https://www.kumon.org",
-                image: "assets/icons/awards/kumon.svg"
+                image: "assets/icons/awards/kumon.png"
             }
         ]
     },
@@ -266,7 +266,7 @@ const portfolioDataTranslations = {
                 date: "Sep 2025 – Abr 2026",
                 description: "Actualmente trabajo como Asistente de Investigación en mi universidad, explorando los últimos Large Language Models (LLMs) de código abierto e investigando su potencial para aplicaciones del mundo real.",
                 link: "https://www.comillas.edu/",
-                logo: "assets/icons/experience/comillas.svg"
+                logo: "assets/icons/experience/comillas.png"
             },
             {
                 title: "Becario en Visión por Computador",
@@ -275,7 +275,7 @@ const portfolioDataTranslations = {
                 date: "Jun – Ago 2025",
                 description: "Durante mis terceras prácticas de verano trabajé en la startup Azzulei Technologies, donde desarrollé desde cero un sistema de control automático de cámara para eventos deportivos. Para ello implementé un sistema de seguimiento de múltiples objetivos en tiempo real usando YOLO, mejorando significativamente la calidad de transmisión y reduciendo los requisitos de operación manual. También diseñé un generador de comentarios virtuales usando LLMs de código abierto y modelos Text-to-Speech (TTS).",
                 link: "https://azzulei.com/",
-                logo: "assets/icons/experience/azzulei.svg"
+                logo: "assets/icons/experience/azzulei.png"
             },
             {
                 title: "Asistente de Investigación",
@@ -284,7 +284,7 @@ const portfolioDataTranslations = {
                 date: "Jun – Ago 2024",
                 description: "Durante el verano de 2024, participé en el Undergraduate Research Opportunities Programme (UROP) del Imperial College London. Mi trabajo se centró en reproducir sistemas dinámicos complejos (Lotka–Volterra, SIR, Lorenz) utilizando Ecuaciones Diferenciales Ordinarias Neuronales (Neural ODEs) y Physicis-Informed Neural Networks (PINNs). Desarrollé modelos robustos en PyTorch que generalizaban bien para diferentes condiciones iniciales, colaborando activamente con estudiantes de doctorado internacionales.",
                 link: "https://www.imperial.ac.uk/urop/",
-                logo: "assets/icons/experience/imperial.svg"
+                logo: "assets/icons/experience/imperial.png"
             },
             {
                 title: "Becario Analista de Datos Energéticos",
@@ -293,7 +293,7 @@ const portfolioDataTranslations = {
                 date: "Jun – Ago 2023",
                 description: "Durante mis primeras prácticas trabajé en Endesa, una de las compañías energéticas más grandes de España. Me centré en estimar los costes diarios de servicios auxiliares ibéricos, logrando >90% de precisión usando técnicas de regresión y MLP, proporcionando información valiosa para la predicción del mercado energético.",
                 link: "https://www.endesa.com/",
-                logo: "assets/icons/experience/endesa.svg"
+                logo: "assets/icons/experience/endesa.png"
             }
         ],
         education: [
@@ -304,7 +304,7 @@ const portfolioDataTranslations = {
                 date: "Sep 2025 – 2026",
                 description: "Delegado de Clase y Miembro del Claustro Universitario. Ganador del X Hackathon de Industria Inteligente. Programa enfocado en Modelos Generativos Profundos, Geometría y Cálculo Diferencial, MLOps, Aprendizaje por Refuerzo Profundo, IA Probabilística y Explicabilidad.",
                 link: "https://www.comillas.edu/master-en-inteligencia-artificial-avanzada/",
-                logo: "assets/icons/experience/comillas.svg"
+                logo: "assets/icons/experience/comillas.png"
             },
             {
                 degree: "Estudiante de Intercambio - Electric & Computer Engineering",
@@ -313,7 +313,7 @@ const portfolioDataTranslations = {
                 date: "Ene – May 2025",
                 description: "Escritor para Cornell Healthcare Review, enfocándome en aplicaciones de IA en la industria de la salud. Estudié temas relacionados con la ciencia de datos, directrices éticas para ingenieros y gestión estratégica de la tecnología.",
                 link: "https://www.engineering.cornell.edu/ece/",
-                logo: "assets/icons/experience/cornell.svg"
+                logo: "assets/icons/experience/cornell.png"
             },
             {
                 degree: "Grado en Ingeniería Matemática e Inteligencia Artificial",
@@ -323,7 +323,7 @@ const portfolioDataTranslations = {
                 description: "Nota media: 8.75/10. Ganador del UNIJES SocialTech Challenge por un proyecto de silla de ruedas autónoma con IA integrada. Fundamentos teorico-prácticos en matemáticas e inteligencia artificial.",
                 honors: "Matrículas de Honor en Probabilidad y Estadística, Sistemas Dinámicos, Arquitecturas Big Data, Geometría Diferencial, Ciberseguridad, Matemáticas Avanzadas y Visión por Computador II.",
                 link: "https://www.comillas.edu/grado-en-ingenieria-matematica-e-inteligencia-artificial/",
-                logo: "assets/icons/experience/comillas.svg"
+                logo: "assets/icons/experience/comillas.png"
             }
         ],
         projects: [
@@ -397,37 +397,37 @@ const portfolioDataTranslations = {
                 title: "Ganador del X Hackathon de Industria Inteligente",
                 year: "2025",
                 description: "Asistente virtual con sistema de recomendaciones para operarios de trenes",
-                icon: "assets/icons/awards/caf.svg",
+                icon: "assets/icons/awards/caf.png",
                 link: "https://github.com/rdgzmanuel/hackathon_kearney"
             },
             {
                 title: "Ganador de UNIJES SocialTech Challenge",
                 year: "2024",
                 description: "Proyecto de silla de ruedas autónoma controlada por voz",
-                icon: "assets/icons/awards/trophy.svg",
+                icon: "assets/icons/awards/trophy.png",
                 link: "https://socialtech-challenge.org"
             },
             {
                 title: "Beca de Excelencia Académica",
                 year: "2021, 2023, 2024",
                 description: "Estudiantes con mejores notas de la Comunidad de Madrid",
-                icon: "assets/icons/awards/madrid.svg",
+                icon: "assets/icons/awards/madrid.png",
                 link: "https://www.comunidad.madrid/servicios/educacion/becas-excelencia-universitarios"
             },
             {
                 title: "Mención Honorífica de Bachillerato",
                 year: "2021",
                 description: "2ª nota más alta de la Comunidad de Madrid",
-                icon: "assets/icons/awards/madrid.svg",
+                icon: "assets/icons/awards/madrid.png",
                 link: null
             },
             {
                 title: "Programa de Matemáticas Kumon",
                 year: "2020",
                 description: "Programa de matemáticas Kumon completado",
-                icon: "assets/icons/awards/kumon.svg",
+                icon: "assets/icons/awards/kumon.png",
                 link: "https://www.kumon.org",
-                image: "assets/icons/awards/kumon.svg"
+                image: "assets/icons/awards/kumon.png"
             }
         ]
     }
