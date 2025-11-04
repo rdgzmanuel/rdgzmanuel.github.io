@@ -130,7 +130,7 @@ const portfolioDataTranslations = {
                 date: "Sep 2025 – 2026",
                 description: "Class Representative & Member of the Academic Council. Winner of the 10th Smart Industry Hackathon. Program focused on Deep Generative Models, Differential Geometry & Calculus, MLOps, Deep Reinforcement Learning, Probabilistic AI and Explainability.",
                 link: "https://www.comillas.edu/en/master-en-inteligencia-artificial-avanzada/",
-                logo: "assets/icons/experience/comillas.png"
+                logo: "assets/icons/education/comillas.png"
             },
             {
                 degree: "Exchange Student - Electrical & Computer Engineering",
@@ -139,7 +139,7 @@ const portfolioDataTranslations = {
                 date: "Jan – May 2025",
                 description: "Writer for Cornell Healthcare Review, focusing on AI applications in the healthcare industry at Cornell University. Explored topics on data science, ethical guidelines for engineers and strategic technology and management.",
                 link: "https://www.engineering.cornell.edu/ece/",
-                logo: "assets/icons/experience/cornell.png"
+                logo: "assets/icons/education/cornell.png"
             },
             {
                 degree: "BSc in Mathematical Engineering and AI",
@@ -149,7 +149,7 @@ const portfolioDataTranslations = {
                 description: "GPA: 8.75/10. Winner of UNIJES Social Tech Challenge for AI-powered autonomous wheelchair project. Strong foundation in mathematics and artificial intelligence.",
                 honors: "Honors in Probability & Statistics, Dynamic Systems, Big Data Architectures, Differential Geometry, Cybersecurity, Advanced Mathematics, and Computer Vision II.",
                 link: "https://www.comillas.edu/en/degrees/bachelors-degree-in-engineering-mathematics-and-artificial-intelligence/",
-                logo: "assets/icons/experience/comillas.png"
+                logo: "assets/icons/education/comillas.png"
             }
         ],
         projects: [
@@ -304,7 +304,7 @@ const portfolioDataTranslations = {
                 date: "Sep 2025 – 2026",
                 description: "Delegado de Clase y Miembro del Claustro Universitario. Ganador del X Hackathon de Industria Inteligente. Programa enfocado en Modelos Generativos Profundos, Geometría y Cálculo Diferencial, MLOps, Aprendizaje por Refuerzo Profundo, IA Probabilística y Explicabilidad.",
                 link: "https://www.comillas.edu/master-en-inteligencia-artificial-avanzada/",
-                logo: "assets/icons/experience/comillas.png"
+                logo: "assets/icons/education/comillas.png"
             },
             {
                 degree: "Estudiante de Intercambio - Electric & Computer Engineering",
@@ -313,7 +313,7 @@ const portfolioDataTranslations = {
                 date: "Ene – May 2025",
                 description: "Escritor para Cornell Healthcare Review, enfocándome en aplicaciones de IA en la industria de la salud. Estudié temas relacionados con la ciencia de datos, directrices éticas para ingenieros y gestión estratégica de la tecnología.",
                 link: "https://www.engineering.cornell.edu/ece/",
-                logo: "assets/icons/experience/cornell.png"
+                logo: "assets/icons/education/cornell.png"
             },
             {
                 degree: "Grado en Ingeniería Matemática e Inteligencia Artificial",
@@ -323,7 +323,7 @@ const portfolioDataTranslations = {
                 description: "Nota media: 8.75/10. Ganador del UNIJES SocialTech Challenge por un proyecto de silla de ruedas autónoma con IA integrada. Fundamentos teorico-prácticos en matemáticas e inteligencia artificial.",
                 honors: "Matrículas de Honor en Probabilidad y Estadística, Sistemas Dinámicos, Arquitecturas Big Data, Geometría Diferencial, Ciberseguridad, Matemáticas Avanzadas y Visión por Computador II.",
                 link: "https://www.comillas.edu/grado-en-ingenieria-matematica-e-inteligencia-artificial/",
-                logo: "assets/icons/experience/comillas.png"
+                logo: "assets/icons/education/comillas.png"
             }
         ],
         projects: [
