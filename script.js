@@ -265,6 +265,12 @@ function renderTimeline() {
     // Card min-width in px (must match CSS .tl-card min-width)
     const CARD_MIN_PX = 150;
     const CARD_GAP_PX = 16;
+    // Vertical space one lane of stacked bars takes up
+    const LANE_HEIGHT_PX = 82;
+    // Consecutive academic stints closer than this are joined by a connector
+    // bar, so "one right after the other" reads as a single continuous line.
+    // Longer gaps stay open — those are a real break, not a continuation.
+    const TL_BRIDGE_MAX_MONTHS = 12;
 
     // The real timeline pixel width we'll measure after first render.
     // For the initial DOM build we use an estimate (900 is our CSS min-width).
@@ -316,7 +322,7 @@ function renderTimeline() {
         const typeClass = `tl-${ev.type}`;
         const sideClass = `tl-${side}`;
         // Lane offset within the half (pushes bars away from center line)
-        const laneOffset = ev._lane * 82; // px per lane (reduced since no title anymore)
+        const laneOffset = ev._lane * LANE_HEIGHT_PX;
         const styleSide = side === 'top'
             ? `bottom: ${laneOffset}px;`
             : `top: ${laneOffset}px;`;
@@ -352,15 +358,49 @@ function renderTimeline() {
         `;
     };
 
+    // Fill the gap between back-to-back academic stints sharing a lane, so the
+    // academic path shows as unbroken. Purely decorative: no link, no dates.
+    const buildBridgesHTML = (prepared, side) => {
+        const lanes = new Map();
+        prepared
+            .filter(ev => ev.type === 'academic')
+            .forEach(ev => {
+                if (!lanes.has(ev._lane)) lanes.set(ev._lane, []);
+                lanes.get(ev._lane).push(ev);
+            });
+
+        const bridges = [];
+        lanes.forEach((list, lane) => {
+            list.sort((a, b) => a._start - b._start);
+            for (let i = 0; i < list.length - 1; i++) {
+                const gapStart = list[i]._end;
+                const gap = list[i + 1]._start - gapStart;
+                if (gap <= 0 || gap > TL_BRIDGE_MAX_MONTHS) continue;
+
+                const leftPct = (gapStart / totalMonths) * 100;
+                const widthPct = (gap / totalMonths) * 100;
+                const laneOffset = lane * LANE_HEIGHT_PX;
+                const styleSide = side === 'top'
+                    ? `bottom: ${laneOffset}px;`
+                    : `top: ${laneOffset}px;`;
+                bridges.push(
+                    `<div class="tl-bridge tl-${side}" aria-hidden="true" style="left: ${leftPct}%; width: ${widthPct}%; ${styleSide}"></div>`
+                );
+            }
+        });
+        return bridges.join('');
+    };
+
     const topBarsHTML = top.prepared.map(ev => buildBarHTML(ev, 'top')).join('');
     const bottomBarsHTML = bottom.prepared.map(ev => buildBarHTML(ev, 'bottom')).join('');
 
     // Height of each half derived from number of lanes
-    const topHeight = 20 + top.laneCount * 82;
-    const bottomHeight = 20 + bottom.laneCount * 82;
+    const topHeight = 20 + top.laneCount * LANE_HEIGHT_PX;
+    const bottomHeight = 20 + bottom.laneCount * LANE_HEIGHT_PX;
 
     container.innerHTML = `
         <div class="tl-half tl-half-top" style="height: ${topHeight}px;">
+            ${buildBridgesHTML(top.prepared, 'top')}
             ${topBarsHTML}
         </div>
         <div class="tl-axis">
@@ -538,9 +578,14 @@ function createProjectCard(project) {
     const imageHTML = project.image
         ? `<img src="${project.image}" alt="${project.title}" loading="lazy" decoding="async">`
         : `<div class="project-placeholder"></div>`;
-    
+
+    // Attribution for images taken from someone else's work
+    const creditHTML = project.imageCredit
+        ? `<a class="project-image-credit" href="${project.imageCredit.url}" target="_blank" rel="noopener nofollow">${project.imageCredit.text}</a>`
+        : '';
+
     card.innerHTML = `
-        <div class="project-image">${imageHTML}</div>
+        <div class="project-image">${imageHTML}${creditHTML}</div>
         <div class="project-content">
             <h3 class="project-title">${project.title}</h3>
             <p class="project-tech">${project.tech}</p>

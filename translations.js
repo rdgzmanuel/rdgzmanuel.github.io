@@ -130,7 +130,7 @@ const portfolioDataTranslations = {
                 company: "Audi AG",
                 location: "Ingolstadt, Germany",
                 date: "Jul – Nov 2026",
-                description: "Deep learning on 3D data — meshes, CAD models, and voxel representations — for automotive design and engineering at Audi's Ingolstadt headquarters, plus optimization of agentic AI workflows for internal development processes. Writing my Master's Thesis in parallel.",
+                description: "Deep learning on 3D data — meshes, CAD models, and voxel representations — for automotive design and engineering at Audi's Ingolstadt headquarters, plus optimization of agentic AI workflows for internal development processes.",
                 link: "https://www.audi.com/en.html",
                 logo: "assets/icons/experience/audi.png"
             },
@@ -212,6 +212,19 @@ const portfolioDataTranslations = {
                 imageId: "visual-slam"
             },
             {
+                title: "Geometric GNNs for Molecular Property Prediction",
+                tech: "PyTorch Geometric, Geometric Deep Learning, GNNs, Optimal Transport",
+                description: "How much does geometry buy you? A controlled comparison of GIN, distance-augmented GIN and E(3)-equivariant EGNN predicting four quantum properties of the ~134k molecules in QM9 — dipole moment, polarizability, HOMO–LUMO gap and heat capacity — measuring accuracy, robustness to coordinate noise, and how Ollivier–Ricci curvature explains over-squashing at graph bottlenecks.",
+                link: "https://github.com/manuel-rodriguezvillegas/molecular_prediction",
+                icon: "⚛️",
+                image: "assets/projects/molecular_gnn.png",
+                imageId: "molecular-gnn",
+                imageCredit: {
+                    text: "Image from TUM DAML — Fragment-Biases for Molecular GNNs",
+                    url: "https://www.cs.cit.tum.de/daml/fragment-biased-gnns/"
+                }
+            },
+            {
                 title: "Multi-Object Tracking System",
                 tech: "YOLO, Computer Vision, Optical Flow, PyTorch, ONNX",
                 description: "Real-time tracking system that automates camera control for sports broadcasts — YOLO detection, optical-flow tracking, ONNX deployment — plus an LLM + TTS match commentary generator. Developed from scratch at Azzulei Technologies.",
@@ -253,7 +266,7 @@ const portfolioDataTranslations = {
                 description: "Explainability analysis of traffic-sign recognition models: what the networks attend to when classifying, and how it affects their performance.",
                 link: "https://github.com/ICAI-IMAT-XAI/final-project-manuel-rodriguezvillegas",
                 icon: "🧠",
-                image: null,
+                image: "assets/projects/xai.png",
                 imageId: "xai"
             },  
         ],
@@ -268,6 +281,7 @@ const portfolioDataTranslations = {
                 "Deep Learning",
                 "Computer Vision",
                 "Natural Language Processing",
+                "Agentic AI",
                 "Probabilistic AI",
                 "Robotics",
                 "Deep Reinforcement Learning",
@@ -335,7 +349,7 @@ const portfolioDataTranslations = {
                 company: "Audi AG",
                 location: "Ingolstadt, Alemania",
                 date: "Jul – Nov 2026",
-                description: "Deep learning sobre datos 3D — mallas, modelos CAD y representaciones en vóxeles — para el diseño y la ingeniería del automóvil en la sede central de Audi en Ingolstadt, junto con la optimización de flujos de trabajo agénticos para procesos internos de desarrollo. En paralelo, desarrollo mi Trabajo de Fin de Máster.",
+                description: "Deep learning sobre datos 3D — mallas, modelos CAD y representaciones en vóxeles — para el diseño y la ingeniería del automóvil en la sede central de Audi en Ingolstadt, junto con la optimización de flujos de trabajo agénticos para procesos internos de desarrollo.",
                 link: "https://www.audi.com/en.html",
                 logo: "assets/icons/experience/audi.png"
             },
@@ -417,6 +431,19 @@ const portfolioDataTranslations = {
                 imageId: "visual-slam"
             },
             {
+                title: "GNNs Geométricas para Predicción de Propiedades Moleculares",
+                tech: "PyTorch Geometric, Aprendizaje Profundo Geométrico, GNNs, Transporte Óptimo",
+                description: "¿Cuánto aporta realmente la geometría? Comparativa controlada entre GIN, GIN con distancias interatómicas y EGNN equivariante E(3) para predecir cuatro propiedades cuánticas de las ~134k moléculas de QM9 — momento dipolar, polarizabilidad, gap HOMO–LUMO y capacidad calorífica — midiendo precisión, robustez al ruido en las coordenadas y cómo la curvatura de Ollivier–Ricci explica el over-squashing en los cuellos de botella del grafo.",
+                link: "https://github.com/manuel-rodriguezvillegas/molecular_prediction",
+                icon: "⚛️",
+                image: "assets/projects/molecular_gnn.png",
+                imageId: "molecular-gnn",
+                imageCredit: {
+                    text: "Imagen de TUM DAML — Fragment-Biases for Molecular GNNs",
+                    url: "https://www.cs.cit.tum.de/daml/fragment-biased-gnns/"
+                }
+            },
+            {
                 title: "Sistema de Seguimiento Multi-Objetivo",
                 tech: "PyTorch, YOLO, Visión por Computador, Flujo Óptico, ONNX",
                 description: "Sistema de seguimiento en tiempo real que automatiza el control de cámara en retransmisiones deportivas — detección con YOLO, seguimiento por flujo óptico, despliegue en ONNX — más un generador de comentarios con LLMs y TTS. Desarrollado desde cero en Azzulei Technologies.",
@@ -458,7 +485,7 @@ const portfolioDataTranslations = {
                 description: "Análisis de explicabilidad de modelos de reconocimiento de señales de tráfico: a qué atienden las redes al clasificar y cómo afecta a su rendimiento.",
                 link: "https://github.com/ICAI-IMAT-XAI/final-project-manuel-rodriguezvillegas",
                 icon: "🗺️",
-                image: null,
+                image: "assets/projects/xai.png",
                 imageId: "xai"
             },
         ],
@@ -473,6 +500,7 @@ const portfolioDataTranslations = {
                 "Deep Learning",
                 "Visión por Computador",
                 "Procesamiento del Lenguaje Natural (NLP)",
+                "IA Agéntica",
                 "IA Probabilística",
                 "Robótica",
                 "Aprendizaje por Refuerzo Profundo",
@@ -542,6 +570,9 @@ const portfolioDataTranslations = {
 // type: "academic" | "professional" | "exchange"
 // "exchange" events are rendered as academic (top) but with a distinct style.
 // Use end: "present" for ongoing events.
+// Consecutive "academic" events that share a lane and are less than a year apart
+// (e.g. bachelor's -> master's) are joined by a connector bar, so the academic
+// path reads as one continuous line. See TL_BRIDGE_MAX_MONTHS in script.js.
 const timelineData = {
     // Global range shown on the axis. Adjust when adding years.
     rangeStart: "2021-09",
@@ -553,7 +584,7 @@ const timelineData = {
                 title: "BE Mathematical Engineering & AI",
                 institution: "Comillas ICAI",
                 start: "2021-09",
-                end: "2025-06",
+                end: "2025-05",
                 logo: "assets/icons/education/comillas.png"
             },
             {
@@ -598,14 +629,6 @@ const timelineData = {
             },
             {
                 type: "professional",
-                title: "Teaching Assistant",
-                institution: "Comillas Pontifical University",
-                start: "2025-09",
-                end: "2026-04",
-                logo: "assets/icons/experience/comillas.png"
-            },
-            {
-                type: "professional",
                 title: "Geometric AI Intern",
                 institution: "Audi AG",
                 start: "2026-07",
@@ -619,7 +642,7 @@ const timelineData = {
                 title: "Grado en Ingeniería Matemática e IA",
                 institution: "Comillas ICAI",
                 start: "2021-09",
-                end: "2025-06",
+                end: "2025-05",
                 logo: "assets/icons/education/comillas.png"
             },
             {
@@ -661,14 +684,6 @@ const timelineData = {
                 start: "2025-06",
                 end: "2025-08",
                 logo: "assets/icons/experience/azzulei.png"
-            },
-            {
-                type: "professional",
-                title: "Asistente Docente",
-                institution: "Universidad Pontificia Comillas",
-                start: "2025-09",
-                end: "2026-04",
-                logo: "assets/icons/experience/comillas.png"
             },
             {
                 type: "professional",
