@@ -14,11 +14,11 @@
     <meta property="og:title" content="Manuel Rodríguez Villegas — AI Engineering Graduate Student">
     <meta property="og:description" content="MSc in Artificial Intelligence at Comillas ICAI. Geometric AI Intern at Audi AG — deep learning on 3D data (meshes, CAD, voxels).">
     <meta property="og:url" content="https://manuel-rodriguezvillegas.github.io/">
-    <meta property="og:image" content="https://manuel-rodriguezvillegas.github.io/assets/pictures/profile.png">
+    <meta property="og:image" content="https://manuel-rodriguezvillegas.github.io/assets/pictures/profile.jpg">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Manuel Rodríguez Villegas — AI Engineering Graduate Student">
     <meta name="twitter:description" content="MSc in Artificial Intelligence at Comillas ICAI. Geometric AI Intern at Audi AG — deep learning on 3D data (meshes, CAD, voxels).">
-    <meta name="twitter:image" content="https://manuel-rodriguezvillegas.github.io/assets/pictures/profile.png">
+    <meta name="twitter:image" content="https://manuel-rodriguezvillegas.github.io/assets/pictures/profile.jpg">
 
     <!-- Language alternates. The switcher keeps ?lang= in sync so either
          version can be linked and indexed on its own. -->
@@ -33,7 +33,7 @@
         "@type": "Person",
         "name": "Manuel Rodríguez Villegas",
         "url": "https://manuel-rodriguezvillegas.github.io/",
-        "image": "https://manuel-rodriguezvillegas.github.io/assets/pictures/profile.png",
+        "image": "https://manuel-rodriguezvillegas.github.io/assets/pictures/profile.jpg",
         "email": "manuel.rodriguezvillegas09@gmail.com",
         "jobTitle": "Geometric AI Intern",
         "worksFor": {
@@ -150,7 +150,13 @@
 
         <div class="hero-image">
             <div class="profile-pic">
-                <img src="assets/pictures/profile.png" alt="Manuel Rodríguez Villegas" fetchpriority="high" decoding="async">
+                <!-- 800px covers the 400px box at 2x. WebP for everything
+                     current, JPEG for the rest and for social crawlers. -->
+                <picture>
+                    <source srcset="assets/pictures/profile.webp" type="image/webp">
+                    <img src="assets/pictures/profile.jpg" alt="Manuel Rodríguez Villegas"
+                         width="800" height="800" fetchpriority="high" decoding="async">
+                </picture>
             </div>
         </div>
 
