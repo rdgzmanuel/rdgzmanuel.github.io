@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setupLanguageSwitcher();
     setupThemeToggle();
     setupReadingProgress();
+    setupJourneyLinking();
 });
 
 // ===================================
@@ -33,35 +34,62 @@ function setupThemeToggle() {
 // ===================================
 let currentLanguage = 'en';
 
+const SUPPORTED_LANGUAGES = ['en', 'es'];
+
 function initializeLanguage() {
-    // Check for saved language preference
+    // ?lang= wins, so either version can be linked, shared and indexed on its
+    // own. Then a previous choice, then the browser's preference.
+    const urlLang = new URLSearchParams(window.location.search).get('lang');
     const savedLang = localStorage.getItem('preferredLanguage');
-    if (savedLang && (savedLang === 'en' || savedLang === 'es')) {
+
+    if (SUPPORTED_LANGUAGES.includes(urlLang)) {
+        currentLanguage = urlLang;
+        localStorage.setItem('preferredLanguage', urlLang);
+        // An explicit ?lang= is the page being viewed — point canonical at it.
+        updateCanonicalLink();
+    } else if (SUPPORTED_LANGUAGES.includes(savedLang)) {
         currentLanguage = savedLang;
     } else {
-        // Detect browser language
         const browserLang = navigator.language.slice(0, 2);
         currentLanguage = (browserLang === 'es') ? 'es' : 'en';
     }
-    
+
     // Update active button
     updateLanguageButtons();
 }
 
 function setupLanguageSwitcher() {
     const langButtons = document.querySelectorAll('.lang-btn');
-    
+
     langButtons.forEach(btn => {
         btn.addEventListener('click', () => {
             const lang = btn.dataset.lang;
             if (lang !== currentLanguage) {
                 currentLanguage = lang;
                 localStorage.setItem('preferredLanguage', lang);
+                writeLanguageToUrl();
                 updateLanguageButtons();
                 updatePageLanguage();
             }
         });
     });
+}
+
+// Reflect the choice in the address bar without adding a history entry, so the
+// URL stays copy-pasteable. The clean root URL keeps serving the default.
+function writeLanguageToUrl() {
+    const url = new URL(window.location.href);
+    url.searchParams.set('lang', currentLanguage);
+    window.history.replaceState(null, '', url);
+    updateCanonicalLink();
+}
+
+function updateCanonicalLink() {
+    const canonical = document.querySelector('link[rel="canonical"]');
+    if (!canonical) return;
+    const url = new URL(canonical.href);
+    url.searchParams.set('lang', currentLanguage);
+    canonical.href = url.href;
 }
 
 function updateLanguageButtons() {
@@ -339,9 +367,11 @@ function renderTimeline() {
         // academic + exchange -> #education, professional -> #experience
         const target = ev.type === 'professional' ? '#experience' : '#education';
         const ariaLabel = `${ev.institution}, ${formatMonthYear(ev.start)} — ${endLabel}`;
+        // ref points at the matching experience/education card (see setupJourneyLinking)
+        const refAttr = ev.ref ? ` data-ref="${ev.ref}"` : '';
 
         return `
-            <a class="tl-event ${typeClass} ${sideClass}" href="${target}" aria-label="${ariaLabel}" style="left: ${leftPct}%; width: ${widthPct}%; ${styleSide}">
+            <a class="tl-event ${typeClass} ${sideClass}" href="${target}"${refAttr} aria-label="${ariaLabel}" style="left: ${leftPct}%; width: ${widthPct}%; ${styleSide}">
                 <div class="tl-bar">
                     <div class="tl-bar-fill"></div>
                 </div>
@@ -438,7 +468,8 @@ function renderExperience() {
 function createExperienceCard(exp) {
     const card = document.createElement('div');
     card.className = 'card';
-    
+    if (exp.id) card.dataset.itemId = exp.id;
+
     const linkText = translations[currentLanguage].links.viewWebsite;
     const linkHTML = exp.link 
         ? `<a href="${exp.link}" class="project-link" target="_blank" rel="noopener">${linkText}</a>`
@@ -483,7 +514,8 @@ function renderEducation() {
 function createEducationCard(edu) {
     const card = document.createElement('div');
     card.className = 'card';
-    
+    if (edu.id) card.dataset.itemId = edu.id;
+
     const linkText = translations[currentLanguage].links.viewProgram;
     const linkHTML = edu.link 
         ? `<a href="${edu.link}" class="project-link" target="_blank" rel="noopener">${linkText}</a>`
@@ -522,47 +554,122 @@ function createEducationCard(edu) {
 // ===================================
 const INITIAL_PROJECTS_COUNT = 4;
 
+// Chip order for the projects filter; labels live in translations.projectFilters
+// and the keys must match the tags on each project. Chips with nothing to show
+// are dropped, so adding a tag here before using it is harmless.
+const PROJECT_FILTERS = ['all', 'cv', 'geometric', 'nlp', 'math'];
+
+// Both survive a language switch — the keys are language-independent.
+let activeProjectFilter = 'all';
+let projectsExpanded = false;
+
 function renderProjects() {
     const container = document.getElementById('projects-container');
     const data = portfolioDataTranslations[currentLanguage].projects;
 
-    data.forEach((project, index) => {
+    data.forEach(project => {
         const card = createProjectCard(project);
         card.classList.add('reveal');
-        if (index >= INITIAL_PROJECTS_COUNT) {
-            card.classList.add('project-card-hidden');
-        }
+        card.dataset.tags = (project.tags || []).join(' ');
         container.appendChild(card);
     });
 
-    // Remove any previously inserted button (e.g. after language switch re-render)
-    const existingBtn = document.getElementById('show-all-projects-btn');
-    if (existingBtn) existingBtn.remove();
+    renderProjectFilters(data);
+    applyProjectFilter();
+}
 
-    // Add the "Show all" button only if there are more projects than initially shown
-    if (data.length > INITIAL_PROJECTS_COUNT) {
-        const btn = document.createElement('button');
+function renderProjectFilters(data) {
+    const container = document.getElementById('project-filters');
+    if (!container) return;
+    container.innerHTML = '';
+
+    const labels = translations[currentLanguage].projectFilters || {};
+    const usedTags = new Set(data.flatMap(p => p.tags || []));
+    const keys = PROJECT_FILTERS.filter(key => key === 'all' || usedTags.has(key));
+
+    // A lone "All" chip filters nothing — don't take up the space.
+    if (keys.length < 2) return;
+
+    keys.forEach(key => {
+        const chip = document.createElement('button');
+        chip.type = 'button';
+        chip.className = 'project-filter';
+        chip.dataset.filter = key;
+        chip.textContent = labels[key] || key;
+        const isActive = key === activeProjectFilter;
+        chip.classList.toggle('is-active', isActive);
+        chip.setAttribute('aria-pressed', String(isActive));
+
+        chip.addEventListener('click', () => {
+            if (activeProjectFilter === key) return;
+            activeProjectFilter = key;
+            container.querySelectorAll('.project-filter').forEach(other => {
+                const on = other.dataset.filter === activeProjectFilter;
+                other.classList.toggle('is-active', on);
+                other.setAttribute('aria-pressed', String(on));
+            });
+            applyProjectFilter(true);
+        });
+
+        container.appendChild(chip);
+    });
+}
+
+// Decides which cards are on screen and whether the "show all" button still has
+// a job. A narrowed filter always shows every match — the four-card limit only
+// applies to the unfiltered grid. Pass animate=true for user-driven changes, so
+// cards that the scroll observer will never see again still fade in.
+function applyProjectFilter(animate = false) {
+    const container = document.getElementById('projects-container');
+    if (!container) return;
+
+    const cards = [...container.querySelectorAll('.project-card')];
+    const isFiltering = activeProjectFilter !== 'all';
+    let shownCount = 0;
+
+    cards.forEach((card, index) => {
+        const tags = (card.dataset.tags || '').split(' ').filter(Boolean);
+        const matches = !isFiltering || tags.includes(activeProjectFilter);
+        const withinLimit = isFiltering || projectsExpanded || index < INITIAL_PROJECTS_COUNT;
+        const visible = matches && withinLimit;
+
+        card.classList.toggle('project-card-hidden', !visible);
+        if (visible) {
+            if (animate) {
+                card.style.transitionDelay = `${Math.min(shownCount, 6) * 60}ms`;
+                requestAnimationFrame(() => card.classList.add('is-visible'));
+            }
+            shownCount++;
+        }
+    });
+
+    const moreToShow = !isFiltering && !projectsExpanded && cards.length > INITIAL_PROJECTS_COUNT;
+    updateShowAllButton(moreToShow);
+}
+
+function updateShowAllButton(needed) {
+    const section = document.getElementById('projects-container').parentElement;
+    let btn = document.getElementById('show-all-projects-btn');
+
+    if (!needed) {
+        if (btn) btn.remove();
+        return;
+    }
+
+    if (!btn) {
+        btn = document.createElement('button');
         btn.id = 'show-all-projects-btn';
         btn.type = 'button';
         btn.className = 'btn btn-secondary show-all-projects-btn';
-        btn.textContent = translations[currentLanguage].links.showAllProjects;
         btn.addEventListener('click', () => {
-            const hiddenCards = container.querySelectorAll('.project-card-hidden');
-            hiddenCards.forEach((card, i) => {
-                card.classList.remove('project-card-hidden');
-                // Trigger the reveal animation with a small stagger so the
-                // newly shown cards fade/slide in instead of popping in.
-                card.style.transitionDelay = `${Math.min(i, 6) * 60}ms`;
-                // Next frame so the transition actually runs
-                requestAnimationFrame(() => {
-                    card.classList.add('is-visible');
-                });
-            });
-            btn.remove();
+            projectsExpanded = true;
+            applyProjectFilter(true);
         });
-        // Insert the button after the projects grid, inside the same section
-        container.parentElement.appendChild(btn);
+        // After the projects grid, inside the same section
+        section.appendChild(btn);
     }
+    // Re-label on language switch
+    btn.textContent = translations[currentLanguage].links.showAllProjects;
 }
 
 function createProjectCard(project) {
@@ -574,9 +681,14 @@ function createProjectCard(project) {
         ? `<a href="${project.link}" class="project-link" target="_blank" rel="noopener">${linkText}</a>`
         : '';
     
-    // Projects don't use icons anymore, only images
+    // Projects don't use icons anymore, only images.
+    // imagePosition frames diagrams whose subject isn't dead centre — the
+    // thumbnail is much wider than it is tall, so cover crops aggressively.
+    const positionAttr = project.imagePosition
+        ? ` style="object-position: ${project.imagePosition};"`
+        : '';
     const imageHTML = project.image
-        ? `<img src="${project.image}" alt="${project.title}" loading="lazy" decoding="async">`
+        ? `<img src="${project.image}" alt="${project.title}" loading="lazy" decoding="async"${positionAttr}>`
         : `<div class="project-placeholder"></div>`;
 
     // Attribution for images taken from someone else's work
@@ -611,22 +723,26 @@ function renderSkills() {
     });
 }
 
-// Mapping: skill name (normalized) -> simpleicons slug + official brand color.
-// All entries below are verified against the simple-icons npm package.
+// Mapping: skill name (normalized) -> icon file in assets/icons/tech.
+// These are simple-icons (CC0) served from this repo rather than a CDN: one
+// less third party in the critical path, works offline, and no visitor IPs
+// leaking to someone else's server. Brand colors are baked into each SVG.
 // Skills not in this map render as plain text tags — that's intentional for
 // abstract concepts (Deep Learning, Linear Algebra, Robotics, PINNs, etc.)
 // and for technologies without an official simple-icons logo (MATLAB, C#).
 const SKILL_ICONS = {
-    "python":      { slug: "python",    color: "3776AB" },
-    "r":           { slug: "r",         color: "276DC3" },
-    "sql":         { slug: "mysql",     color: "4479A1" },
-    "pytorch":     { slug: "pytorch",   color: "EE4C2C" },
-    "ros":         { slug: "ros",       color: "22314E" },
-    "opencv":      { slug: "opencv",    color: "5C3EE8" },
-    "git":         { slug: "git",       color: "F05032" },
-    "docker":      { slug: "docker",    color: "2496ED" },
-    "n8n":         { slug: "n8n",       color: "EA4B71" }
+    "python":      "python",
+    "r":           "r",
+    "sql":         "mysql",
+    "pytorch":     "pytorch",
+    "ros":         "ros",
+    "opencv":      "opencv",
+    "git":         "git",
+    "docker":      "docker",
+    "n8n":         "n8n"
 };
+
+const SKILL_ICON_PATH = 'assets/icons/tech';
 
 function getSkillIcon(skillName) {
     const lower = skillName.toLowerCase().trim();
@@ -636,15 +752,13 @@ function getSkillIcon(skillName) {
     const keys = Object.keys(SKILL_ICONS).sort((a, b) => b.length - a.length);
     for (const key of keys) {
         if (lower === key) {
-            const meta = SKILL_ICONS[key];
-            return `https://cdn.simpleicons.org/${meta.slug}/${meta.color}`;
+            return `${SKILL_ICON_PATH}/${SKILL_ICONS[key]}.svg`;
         }
         // Allow: "python (advanced)", "ros 2", "sql (postgres)"
         // Disallow: "robotics" matching "ros"
         const nextChar = lower.charAt(key.length);
         if (lower.startsWith(key) && (nextChar === ' ' || nextChar === '(' || /[0-9]/.test(nextChar))) {
-            const meta = SKILL_ICONS[key];
-            return `https://cdn.simpleicons.org/${meta.slug}/${meta.color}`;
+            return `${SKILL_ICON_PATH}/${SKILL_ICONS[key]}.svg`;
         }
     }
     return null;
@@ -732,13 +846,68 @@ function setupSmoothScrolling() {
             return;
         }
 
-        const targetElement = document.querySelector(targetId);
+        // A timeline bar goes to its own card rather than the section heading,
+        // and flags it on arrival. Falls back to the section if there's no ref.
+        const linkedCard = findLinkedCard(anchor.closest('.tl-event'));
+        const targetElement = linkedCard || document.querySelector(targetId);
+
         if (targetElement) {
             const navHeight = document.getElementById('navbar').offsetHeight;
-            const targetPosition = targetElement.offsetTop - navHeight - 20;
+            const targetPosition = offsetTopOf(targetElement) - navHeight - 20;
             window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+            if (linkedCard) flashLinkedCard(linkedCard);
         }
     });
+}
+
+// ===================================
+// Journey <-> card cross-linking
+// ===================================
+// Timeline events carry a "ref" matching the "id" of an experience/education
+// entry, so a bar and its card can find each other regardless of language.
+const LINK_FLASH_MS = 1800;
+let linkFlashTimer = null;
+
+function findLinkedCard(timelineEvent) {
+    const ref = timelineEvent && timelineEvent.dataset.ref;
+    return ref ? document.querySelector(`[data-item-id="${ref}"]`) : null;
+}
+
+// offsetTop is relative to the nearest positioned ancestor; cards sit inside
+// grids, so walk up to get a document-level offset.
+function offsetTopOf(el) {
+    let top = 0;
+    let node = el;
+    while (node) {
+        top += node.offsetTop;
+        node = node.offsetParent;
+    }
+    return top;
+}
+
+function flashLinkedCard(card) {
+    clearTimeout(linkFlashTimer);
+    document.querySelectorAll('.is-flash').forEach(el => el.classList.remove('is-flash'));
+    // The card may still be waiting on the scroll observer
+    card.classList.add('is-visible', 'is-flash');
+    linkFlashTimer = setTimeout(() => card.classList.remove('is-flash'), LINK_FLASH_MS);
+}
+
+// Hovering (or tabbing to) a timeline bar marks its card. Bound to the
+// container, which outlives the re-renders of its contents.
+function setupJourneyLinking() {
+    const container = document.getElementById('timeline-container');
+    if (!container) return;
+
+    const setHighlight = (on) => (e) => {
+        const card = findLinkedCard(e.target.closest('.tl-event'));
+        if (card) card.classList.toggle('is-linked', on);
+    };
+
+    container.addEventListener('mouseover', setHighlight(true));
+    container.addEventListener('mouseout', setHighlight(false));
+    container.addEventListener('focusin', setHighlight(true));
+    container.addEventListener('focusout', setHighlight(false));
 }
 
 // ===================================

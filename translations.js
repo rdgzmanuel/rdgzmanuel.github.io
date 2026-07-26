@@ -51,6 +51,14 @@ const translations = {
             viewAward: "Learn More →",
             showAllProjects: "Show all projects"
         },
+        // Keys must match the tags used on projects below (order lives in script.js)
+        projectFilters: {
+            all: "All",
+            cv: "Computer Vision",
+            geometric: "Geometric Deep Learning",
+            nlp: "NLP",
+            math: "Mathematics"
+        },
         currently: {
             title: "Currently",
             reading: "Reading",
@@ -109,6 +117,14 @@ const translations = {
             viewAward: "Más Información →",
             showAllProjects: "Mostrar todos los proyectos"
         },
+        // Las claves deben coincidir con las etiquetas de los proyectos
+        projectFilters: {
+            all: "Todos",
+            cv: "Visión por Computador",
+            geometric: "Aprendizaje Profundo Geométrico",
+            nlp: "NLP",
+            math: "Matemáticas"
+        },
         currently: {
             title: "Ahora mismo",
             reading: "Leyendo",
@@ -126,6 +142,7 @@ const portfolioDataTranslations = {
     en: {
         experience: [
             {
+                id: "audi",
                 title: "Geometric AI Intern",
                 company: "Audi AG",
                 location: "Ingolstadt, Germany",
@@ -135,6 +152,7 @@ const portfolioDataTranslations = {
                 logo: "assets/icons/experience/audi.png"
             },
             {
+                id: "comillas-ta",
                 title: "Teaching Assistant",
                 company: "Comillas Pontifical University",
                 location: "Madrid, Spain",
@@ -144,6 +162,7 @@ const portfolioDataTranslations = {
                 logo: "assets/icons/experience/comillas.png"
             },
             {
+                id: "azzulei",
                 title: "Computer Vision Intern",
                 company: "Azzulei Technologies",
                 location: "Madrid, Spain",
@@ -153,6 +172,7 @@ const portfolioDataTranslations = {
                 logo: "assets/icons/experience/azzulei.png"
             },
             {
+                id: "imperial-urop",
                 title: "Research Assistant",
                 company: "Imperial College London",
                 location: "Remote (London, UK)",
@@ -162,6 +182,7 @@ const portfolioDataTranslations = {
                 logo: "assets/icons/experience/imperial.png"
             },
             {
+                id: "endesa",
                 title: "Energy Data Analyst Intern",
                 company: "Endesa",
                 location: "Madrid, Spain",
@@ -173,6 +194,7 @@ const portfolioDataTranslations = {
         ],
         education: [
             {
+                id: "msc-ai",
                 degree: "Master's Degree in Artificial Intelligence",
                 institution: "Comillas Pontifical University, ETSI ICAI",
                 location: "Madrid, Spain",
@@ -182,6 +204,7 @@ const portfolioDataTranslations = {
                 logo: "assets/icons/education/comillas.png"
             },
             {
+                id: "cornell-exchange",
                 degree: "Exchange Student - Electrical & Computer Engineering",
                 institution: "Cornell University",
                 location: "Ithaca, NY, USA",
@@ -191,6 +214,7 @@ const portfolioDataTranslations = {
                 logo: "assets/icons/education/cornell.png"
             },
             {
+                id: "bsc-math-ai",
                 degree: "BE in Mathematical Engineering and AI",
                 institution: "Comillas Pontifical University, ETSI ICAI",
                 location: "Madrid, Spain",
@@ -203,6 +227,7 @@ const portfolioDataTranslations = {
         ],
         projects: [
             {
+                tags: ["cv", "nlp"],
                 title: "Visual Topological SLAM",
                 tech: "ROS2, PyTorch, Deep Learning, Computer Vision, NLP",
                 description: "Bachelor Thesis: voice-controlled indoor navigation for an autonomous wheelchair. Combines vision foundation models with NLP and graph theory for real-time topological mapping and autonomous navigation. Built for the UNIJES SocialTech Challenge.",
@@ -212,6 +237,8 @@ const portfolioDataTranslations = {
                 imageId: "visual-slam"
             },
             {
+                tags: ["geometric", "math"],
+                imagePosition: "center top",
                 title: "Geometric GNNs for Molecular Property Prediction",
                 tech: "PyTorch Geometric, Geometric Deep Learning, GNNs, Optimal Transport",
                 description: "How much does geometry buy you? A controlled comparison of GIN, distance-augmented GIN and E(3)-equivariant EGNN predicting four quantum properties of the ~134k molecules in QM9 — dipole moment, polarizability, HOMO–LUMO gap and heat capacity — measuring accuracy, robustness to coordinate noise, and how Ollivier–Ricci curvature explains over-squashing at graph bottlenecks.",
@@ -225,6 +252,7 @@ const portfolioDataTranslations = {
                 }
             },
             {
+                tags: ["cv"],
                 title: "Multi-Object Tracking System",
                 tech: "YOLO, Computer Vision, Optical Flow, PyTorch, ONNX",
                 description: "Real-time tracking system that automates camera control for sports broadcasts — YOLO detection, optical-flow tracking, ONNX deployment — plus an LLM + TTS match commentary generator. Developed from scratch at Azzulei Technologies.",
@@ -234,6 +262,7 @@ const portfolioDataTranslations = {
                 imageId: "multi-object-tracking"
             },
             {
+                tags: ["nlp"],
                 title: "Virtual Assistant for Train Operators",
                 tech: "PyTorch, Machine Learning, NLP",
                 description: "Winner of the 10th Smart Industry Hackathon: a fault-diagnosis assistant that maps symptoms described by train operators to the most likely faulty components and their repairs. Built in a single morning — first among 10 teams from Madrid and Seville.",
@@ -243,6 +272,7 @@ const portfolioDataTranslations = {
                 imageId: "hackathon"
             },     
             {
+                tags: ["cv", "math"],
                 title: "Image Processing via Calculus of Variations",
                 tech: "Python, Calculus of Variations, Image Processing",
                 description: "Variational methods for image denoising, applied to medical imaging (brain MRI, X-ray scans). Includes a full report on the mathematical foundations and implementation of each technique.",
@@ -252,6 +282,7 @@ const portfolioDataTranslations = {
                 imageId: "brain-tv"
             },      
             {
+                tags: ["geometric", "math"],
                 title: "Neural Networks on Riemannian Manifolds",
                 tech: "Differential Geometry, PyTorch, Deep Learning",
                 description: "Neural networks operating on Riemannian data and parameters, trained with natural-gradient optimization for markedly faster convergence. Includes a report on the underlying differential geometry.",
@@ -261,6 +292,7 @@ const portfolioDataTranslations = {
                 imageId: "grassmann"
             },
             {
+                tags: ["cv"],
                 title: "Explainability in Traffic Sign Recognition",
                 tech: "Computer Vision, PyTorch, Deep Learning, XAI",
                 description: "Explainability analysis of traffic-sign recognition models: what the networks attend to when classifying, and how it affects their performance.",
@@ -345,6 +377,7 @@ const portfolioDataTranslations = {
     es: {
         experience: [
             {
+                id: "audi",
                 title: "Becario en IA Geométrica",
                 company: "Audi AG",
                 location: "Ingolstadt, Alemania",
@@ -354,6 +387,7 @@ const portfolioDataTranslations = {
                 logo: "assets/icons/experience/audi.png"
             },
             {
+                id: "comillas-ta",
                 title: "Asistente de Profesorado",
                 company: "Universidad Pontificia Comillas",
                 location: "Madrid, España",
@@ -363,6 +397,7 @@ const portfolioDataTranslations = {
                 logo: "assets/icons/experience/comillas.png"
             },
             {
+                id: "azzulei",
                 title: "Becario en Visión por Computador",
                 company: "Azzulei Technologies",
                 location: "Madrid, España",
@@ -372,6 +407,7 @@ const portfolioDataTranslations = {
                 logo: "assets/icons/experience/azzulei.png"
             },
             {
+                id: "imperial-urop",
                 title: "Asistente de Investigación",
                 company: "Imperial College London",
                 location: "Remoto (Londres, Reino Unido)",
@@ -381,6 +417,7 @@ const portfolioDataTranslations = {
                 logo: "assets/icons/experience/imperial.png"
             },
             {
+                id: "endesa",
                 title: "Becario Analista de Datos Energéticos",
                 company: "Endesa",
                 location: "Madrid, España",
@@ -392,6 +429,7 @@ const portfolioDataTranslations = {
         ],
         education: [
             {
+                id: "msc-ai",
                 degree: "Máster en Inteligencia Artificial",
                 institution: "Universidad Pontificia Comillas, ETSI ICAI",
                 location: "Madrid, España",
@@ -401,6 +439,7 @@ const portfolioDataTranslations = {
                 logo: "assets/icons/education/comillas.png"
             },
             {
+                id: "cornell-exchange",
                 degree: "Estudiante de Intercambio - Electric & Computer Engineering",
                 institution: "Cornell University",
                 location: "Ithaca, NY, EE.UU.",
@@ -410,6 +449,7 @@ const portfolioDataTranslations = {
                 logo: "assets/icons/education/cornell.png"
             },
             {
+                id: "bsc-math-ai",
                 degree: "Grado en Ingeniería Matemática e Inteligencia Artificial",
                 institution: "Universidad Pontificia Comillas, ETSI ICAI",
                 location: "Madrid, España",
@@ -422,6 +462,7 @@ const portfolioDataTranslations = {
         ],
         projects: [
             {
+                tags: ["cv", "nlp"],
                 title: "SLAM Topológico Visual",
                 tech: "ROS2, PyTorch, Deep Learning, Visión por Computador, NLP",
                 description: "Trabajo de Fin de Grado: navegación interior controlada por voz para una silla de ruedas autónoma. Combina modelos fundacionales de visión con NLP y teoría de grafos para mapeo topológico en tiempo real y navegación autónoma. Desarrollado para el UNIJES SocialTech Challenge.",
@@ -431,6 +472,8 @@ const portfolioDataTranslations = {
                 imageId: "visual-slam"
             },
             {
+                tags: ["geometric", "math"],
+                imagePosition: "center top",
                 title: "GNNs Geométricas para Predicción de Propiedades Moleculares",
                 tech: "PyTorch Geometric, Aprendizaje Profundo Geométrico, GNNs, Transporte Óptimo",
                 description: "¿Cuánto aporta realmente la geometría? Comparativa controlada entre GIN, GIN con distancias interatómicas y EGNN equivariante E(3) para predecir cuatro propiedades cuánticas de las ~134k moléculas de QM9 — momento dipolar, polarizabilidad, gap HOMO–LUMO y capacidad calorífica — midiendo precisión, robustez al ruido en las coordenadas y cómo la curvatura de Ollivier–Ricci explica el over-squashing en los cuellos de botella del grafo.",
@@ -444,6 +487,7 @@ const portfolioDataTranslations = {
                 }
             },
             {
+                tags: ["cv"],
                 title: "Sistema de Seguimiento Multi-Objetivo",
                 tech: "PyTorch, YOLO, Visión por Computador, Flujo Óptico, ONNX",
                 description: "Sistema de seguimiento en tiempo real que automatiza el control de cámara en retransmisiones deportivas — detección con YOLO, seguimiento por flujo óptico, despliegue en ONNX — más un generador de comentarios con LLMs y TTS. Desarrollado desde cero en Azzulei Technologies.",
@@ -453,6 +497,7 @@ const portfolioDataTranslations = {
                 imageId: "multi-object-tracking"
             },
             {
+                tags: ["nlp"],
                 title: "Asistente Virtual para Operarios de Trenes",
                 tech: "PyTorch, Machine Learning, NLP",
                 description: "Ganador del X Hackathon de Industria Inteligente: un asistente de diagnóstico de averías que asocia los síntomas descritos por el operario con los componentes defectuosos más probables y sus reparaciones. Construido en una sola mañana — primero entre 10 equipos de Madrid y Sevilla.",
@@ -462,6 +507,7 @@ const portfolioDataTranslations = {
                 imageId: "hackathon"
             },
             {
+                tags: ["cv", "math"],
                 title: "Procesamiento de Imágenes mediante Cálculo de Variaciones",
                 tech: "Python, Cálculo de Variaciones, Procesamiento de Imágenes",
                 description: "Métodos variacionales para la eliminación de ruido en imágenes, aplicados a imagen médica (resonancias cerebrales y rayos X). Incluye un informe completo sobre los fundamentos matemáticos y la implementación de cada técnica.",
@@ -471,6 +517,7 @@ const portfolioDataTranslations = {
                 imageId: "brain-tv"
             },
             {
+                tags: ["geometric", "math"],
                 title: "Redes Neuronales en Variedades Riemannianas",
                 tech: "Geometría Diferencial, PyTorch, Deep Learning",
                 description: "Redes neuronales que operan con datos y parámetros riemannianos, entrenadas con optimización de gradiente natural para una convergencia notablemente más rápida. Incluye un informe sobre la geometría diferencial subyacente.",
@@ -480,6 +527,7 @@ const portfolioDataTranslations = {
                 imageId: "grassmann"
             },
             {
+                tags: ["cv"],
                 title: "Explicabilidad en Reconocimiento de Señales de Tráfico",
                 tech: "PyTorch, Deep Learning, Visión por Computador, XAI",
                 description: "Análisis de explicabilidad de modelos de reconocimiento de señales de tráfico: a qué atienden las redes al clasificar y cómo afecta a su rendimiento.",
@@ -581,6 +629,7 @@ const timelineData = {
         en: [
             {
                 type: "academic",
+                ref: "bsc-math-ai",
                 title: "BE Mathematical Engineering & AI",
                 institution: "Comillas ICAI",
                 start: "2021-09",
@@ -589,6 +638,7 @@ const timelineData = {
             },
             {
                 type: "exchange",
+                ref: "cornell-exchange",
                 title: "Exchange — ECE",
                 institution: "Cornell University",
                 start: "2025-01",
@@ -597,6 +647,7 @@ const timelineData = {
             },
             {
                 type: "academic",
+                ref: "msc-ai",
                 title: "Master's Degree in Artificial Intelligence",
                 institution: "Comillas ICAI",
                 start: "2025-09",
@@ -605,6 +656,7 @@ const timelineData = {
             },
             {
                 type: "professional",
+                ref: "endesa",
                 title: "Energy Data Analyst Intern",
                 institution: "Endesa",
                 start: "2023-06",
@@ -613,6 +665,7 @@ const timelineData = {
             },
             {
                 type: "professional",
+                ref: "imperial-urop",
                 title: "Research Assistant (UROP)",
                 institution: "Imperial College London",
                 start: "2024-06",
@@ -621,6 +674,7 @@ const timelineData = {
             },
             {
                 type: "professional",
+                ref: "azzulei",
                 title: "Computer Vision Intern",
                 institution: "Azzulei Technologies",
                 start: "2025-06",
@@ -629,6 +683,7 @@ const timelineData = {
             },
             {
                 type: "professional",
+                ref: "audi",
                 title: "Geometric AI Intern",
                 institution: "Audi AG",
                 start: "2026-07",
@@ -639,6 +694,7 @@ const timelineData = {
         es: [
             {
                 type: "academic",
+                ref: "bsc-math-ai",
                 title: "Grado en Ingeniería Matemática e IA",
                 institution: "Comillas ICAI",
                 start: "2021-09",
@@ -647,6 +703,7 @@ const timelineData = {
             },
             {
                 type: "exchange",
+                ref: "cornell-exchange",
                 title: "Intercambio — ECE",
                 institution: "Cornell University",
                 start: "2025-01",
@@ -655,6 +712,7 @@ const timelineData = {
             },
             {
                 type: "academic",
+                ref: "msc-ai",
                 title: "Máster en Inteligencia Artificial",
                 institution: "Comillas ICAI",
                 start: "2025-09",
@@ -663,6 +721,7 @@ const timelineData = {
             },
             {
                 type: "professional",
+                ref: "endesa",
                 title: "Prácticas en Análisis de Datos Energéticos",
                 institution: "Endesa",
                 start: "2023-06",
@@ -671,6 +730,7 @@ const timelineData = {
             },
             {
                 type: "professional",
+                ref: "imperial-urop",
                 title: "Asistente de Investigación (UROP)",
                 institution: "Imperial College London",
                 start: "2024-06",
@@ -679,6 +739,7 @@ const timelineData = {
             },
             {
                 type: "professional",
+                ref: "azzulei",
                 title: "Prácticas en Visión por Computador",
                 institution: "Azzulei Technologies",
                 start: "2025-06",
@@ -687,6 +748,7 @@ const timelineData = {
             },
             {
                 type: "professional",
+                ref: "audi",
                 title: "Becario en IA Geométrica",
                 institution: "Audi AG",
                 start: "2026-07",

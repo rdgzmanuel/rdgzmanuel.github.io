@@ -47,6 +47,11 @@
     filter: invert(1);
 }
 
+/* The ROS brand navy (#22314E) all but disappears on a dark card */
+:root[data-theme="dark"] img[src*="tech/ros.svg"] {
+    filter: brightness(2.4);
+}
+
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     background-color: var(--bg-primary);
@@ -486,6 +491,26 @@ section {
     box-shadow: 0 8px 30px var(--shadow);
 }
 
+/* Marked from the journey timeline: is-linked while a bar is hovered/focused,
+   is-flash for a moment after clicking through to this card. */
+.card.is-linked,
+.card.is-flash {
+    box-shadow: 0 8px 30px var(--shadow), inset 0 0 0 2px var(--accent);
+}
+
+.card.is-flash {
+    animation: card-flash 1.8s ease-out;
+}
+
+@keyframes card-flash {
+    0%, 55% {
+        background: var(--card-bg-hover);
+    }
+    100% {
+        background: var(--card-bg);
+    }
+}
+
 .card-header {
     display: flex;
     justify-content: space-between;
@@ -561,6 +586,43 @@ section {
     display: none !important;
 }
 
+/* Topic filter chips above the grid */
+.project-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-bottom: 2rem;
+}
+
+.project-filter {
+    font-family: inherit;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    background: var(--card-bg);
+    border: 1px solid rgba(184, 147, 95, 0.28);
+    border-radius: 999px;
+    padding: 0.45rem 1rem;
+    cursor: pointer;
+    transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.project-filter:hover {
+    color: var(--text-primary);
+    border-color: var(--accent);
+}
+
+.project-filter.is-active {
+    color: #fff;
+    background: var(--accent-dark);
+    border-color: var(--accent-dark);
+}
+
+.project-filter:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+}
+
 .show-all-projects-btn {
     display: block;
     margin: 2.5rem auto 0;
@@ -612,8 +674,22 @@ section {
     transform: scale(1.05);
 }
 
+/* Dark mode: most project thumbnails are white-background diagrams, which glow
+   against the warm dark theme. A faint scrim plus an inset edge settles them
+   without visibly touching the darker photographs. */
+:root[data-theme="dark"] .project-image::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    background: rgba(20, 17, 13, 0.14);
+    box-shadow: inset 0 0 0 1px rgba(236, 231, 221, 0.08);
+}
+
 /* Source credit for borrowed images, pinned to the bottom of the thumbnail */
 .project-image-credit {
+    z-index: 2;
     position: absolute;
     left: 0;
     right: 0;
@@ -1151,12 +1227,19 @@ footer p {
     );
 }
 
-/* Connector filling the gap between back-to-back academic stints */
+/* Connector filling the gap between back-to-back academic stints. Reads as one
+   unbroken line: it picks up the colour the previous bar ends on and hands off
+   the colour the next one starts with, and the negative margin tucks it under
+   the neighbouring rounded ends so no notch shows at the joins. */
 .tl-bridge {
     position: absolute;
     height: 8px;
-    background: linear-gradient(90deg, var(--accent) 0%, var(--accent-dark) 100%);
-    opacity: 0.45;
+    /* content-box so the padding below actually widens the element past the
+       inline width the layout code sets (the global reset is border-box) */
+    box-sizing: content-box;
+    margin-left: -5px;
+    padding-right: 10px;
+    background: linear-gradient(90deg, var(--accent-dark) 0%, var(--accent) 100%);
     pointer-events: none;
     transform-origin: left center;
     animation: tl-grow 1s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
@@ -1330,6 +1413,14 @@ footer p {
         transition: none;
         opacity: 1;
         transform: none;
+    }
+
+    /* Bars, the connector between them, and the card flash all end up in the
+       same place without the motion — just skip straight to the final state. */
+    .tl-bar-fill,
+    .tl-bridge,
+    .card.is-flash {
+        animation: none;
     }
 }
 

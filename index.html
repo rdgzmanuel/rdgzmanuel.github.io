@@ -20,7 +20,55 @@
     <meta name="twitter:description" content="MSc in Artificial Intelligence at Comillas ICAI. Geometric AI Intern at Audi AG — deep learning on 3D data (meshes, CAD, voxels).">
     <meta name="twitter:image" content="https://manuel-rodriguezvillegas.github.io/assets/pictures/profile.png">
 
-    <link rel="preconnect" href="https://cdn.simpleicons.org" crossorigin>
+    <!-- Language alternates. The switcher keeps ?lang= in sync so either
+         version can be linked and indexed on its own. -->
+    <link rel="canonical" href="https://manuel-rodriguezvillegas.github.io/">
+    <link rel="alternate" hreflang="en" href="https://manuel-rodriguezvillegas.github.io/?lang=en">
+    <link rel="alternate" hreflang="es" href="https://manuel-rodriguezvillegas.github.io/?lang=es">
+    <link rel="alternate" hreflang="x-default" href="https://manuel-rodriguezvillegas.github.io/">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Manuel Rodríguez Villegas",
+        "url": "https://manuel-rodriguezvillegas.github.io/",
+        "image": "https://manuel-rodriguezvillegas.github.io/assets/pictures/profile.png",
+        "email": "manuel.rodriguezvillegas09@gmail.com",
+        "jobTitle": "Geometric AI Intern",
+        "worksFor": {
+            "@type": "Organization",
+            "name": "Audi AG",
+            "url": "https://www.audi.com/en.html"
+        },
+        "alumniOf": [
+            {
+                "@type": "CollegeOrUniversity",
+                "name": "Comillas Pontifical University, ETSI ICAI",
+                "url": "https://www.comillas.edu/en/"
+            },
+            {
+                "@type": "CollegeOrUniversity",
+                "name": "Cornell University",
+                "url": "https://www.cornell.edu/"
+            }
+        ],
+        "knowsAbout": [
+            "Geometric Deep Learning",
+            "Computer Vision",
+            "Graph Neural Networks",
+            "Agentic AI",
+            "Robotics",
+            "Differential Geometry"
+        ],
+        "knowsLanguage": ["Spanish", "English", "German"],
+        "sameAs": [
+            "https://www.linkedin.com/in/mrodriguezvillegas",
+            "https://github.com/manuel-rodriguezvillegas"
+        ]
+    }
+    </script>
+
     <link rel="stylesheet" href="styles.css">
     <script>
         // Set theme before first paint to avoid a light-mode flash
@@ -169,6 +217,9 @@
     <!-- Projects Section -->
     <section id="projects">
         <h2 class="section-title">Featured Projects</h2>
+        <div class="project-filters" id="project-filters" role="group" aria-label="Filter projects by topic">
+            <!-- Filter chips will be dynamically loaded from translations.js -->
+        </div>
         <div class="projects-grid" id="projects-container">
             <!-- Project cards will be dynamically loaded from translations.js -->
         </div>
