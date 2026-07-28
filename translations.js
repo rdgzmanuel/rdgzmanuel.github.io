@@ -40,7 +40,7 @@ const translations = {
             present: "Present"
         },
         about: {
-            p1: "Hi! I'm Manuel, Master's Degree student in Artificial Intelligence at Comillas Pontifical University (Madrid) with a BE in Mathematical Engineering and AI. My academic journey has taken me from Madrid to <strong>Cornell University</strong> and <strong>Imperial College London</strong>, where I've worked on computer vision, robotics, and generative AI systems.",
+            p1: "Hi! I'm Manuel, Master's Degree student in Artificial Intelligence at Comillas Pontifical University (Madrid) with a BE in Mathematical Engineering and AI. My academic journey has taken me from Madrid to <strong>Cornell University</strong> and <strong>Imperial College London</strong>, where I've worked on computer vision, robotics, and generative AI systems. I am currently working as an intern at Audi, in their Ingolstadt (Germany) headquarters.",
             p2: "My background combines deep mathematical foundations with state-of-the-art AI systems. I believe the full potential of today's technologies can only be unlocked — and tomorrow's built — by understanding them from first principles.",
             p3: "Beyond my professional interests, I enjoy fitness, nature, and reading. I consider these essential to living a balanced life, especially when shared with others."
         },
@@ -106,7 +106,7 @@ const translations = {
             present: "Actualidad"
         },
         about: {
-            p1: "¡Hola! Soy Manuel, estudiante de Máster en Inteligencia Artificial en la Universidad Pontificia Comillas (Madrid) con un Grado en Ingeniería Matemática e IA. Mi trayectoria académica me ha llevado de Madrid a <strong>Cornell University</strong> (Nueva York) e <strong>Imperial College London</strong>, donde he trabajado con diferentes arquitecturas en visión por computador, robótica e IA generativa.",
+            p1: "¡Hola! Soy Manuel, estudiante de Máster en Inteligencia Artificial en la Universidad Pontificia Comillas (Madrid) con un Grado en Ingeniería Matemática e IA. Mi trayectoria académica me ha llevado de Madrid a <strong>Cornell University</strong> (Nueva York) e <strong>Imperial College London</strong>, donde he trabajado con diferentes arquitecturas en visión por computador, robótica e IA generativa. Ahora mismo estoy trabajando como becario en Audi, en las oficinas centrales de Ingolstadt (Alemania).",
             p2: "Mi formación combina fundamentos matemáticos profundos con sistemas de IA de última generación. Creo que el potencial de las tecnologías actuales solo se aprovecha — y las del futuro solo se construyen — entendiéndolas desde sus principios fundamentales.",
             p3: "Más allá de mis intereses profesionales, disfruto del deporte, la naturaleza y la lectura, actividades que considero esenciales para vivir una vida equilibrada, especialmente cuando se comparten con otros."
         },
@@ -240,8 +240,8 @@ const portfolioDataTranslations = {
                 tags: ["geometric", "math"],
                 imagePosition: "center top",
                 title: "Geometric GNNs for Molecular Property Prediction",
-                tech: "PyTorch Geometric, Geometric Deep Learning, GNNs, Optimal Transport",
-                description: "How much does geometry buy you? A controlled comparison of GIN, distance-augmented GIN and E(3)-equivariant EGNN predicting four quantum properties of the ~134k molecules in QM9 — dipole moment, polarizability, HOMO–LUMO gap and heat capacity — measuring accuracy, robustness to coordinate noise, and how Ollivier–Ricci curvature explains over-squashing at graph bottlenecks.",
+                tech: "PyTorch Geometric, Geometric Deep Learning, GNNs",
+                description: "How much does geometry buy you? A controlled comparison of GIN, distance-augmented GIN and E(3)-equivariant EGNN predicting four quantum properties and measuring accuracy, robustness to coordinate noise, and how Ollivier–Ricci curvature explains over-squashing at graph bottlenecks.",
                 link: "https://github.com/manuel-rodriguezvillegas/molecular_prediction",
                 icon: "⚛️",
                 image: "assets/projects/molecular_gnn.png",
@@ -382,7 +382,7 @@ const portfolioDataTranslations = {
                 company: "Audi AG",
                 location: "Ingolstadt, Alemania",
                 date: "Jul – Nov 2026",
-                description: "Deep learning sobre datos 3D — mallas, modelos CAD y representaciones en vóxeles — para el diseño y la ingeniería del automóvil en la sede central de Audi en Ingolstadt, junto con la optimización de flujos de trabajo agénticos para procesos internos de desarrollo.",
+                description: "Deep learning sobre datos 3D (mallas, modelos CAD y representaciones en vóxeles) para el diseño y fabricación de automóviles en la sede central de Audi (Ingolstadt, Alemania), junto con la optimización de procesos internos de desarrollo mediante flujos agénticos.",
                 link: "https://www.audi.com/en.html",
                 logo: "assets/icons/experience/audi.png"
             },
@@ -392,7 +392,7 @@ const portfolioDataTranslations = {
                 company: "Universidad Pontificia Comillas",
                 location: "Madrid, España",
                 date: "Sep 2025 – Abr 2026",
-                description: "Colaboré en el diseño y despliegue de un clúster de GPUs que hoy utilizan los estudiantes de IA en sus asignaturas de deep learning.",
+                description: "Colaboré en el despliegue de un clúster de GPUs utilizado por estudiantes de toda la universidad en sus asignaturas de deep learning.",
                 link: "https://www.comillas.edu/",
                 logo: "assets/icons/experience/comillas.png"
             },
@@ -422,7 +422,7 @@ const portfolioDataTranslations = {
                 company: "Endesa",
                 location: "Madrid, España",
                 date: "Jun – Ago 2023",
-                description: "Construí modelos de regresión y MLP que estiman los costes diarios de servicios auxiliares ibéricos con >90% de precisión, empleados en la predicción del mercado energético de una de las mayores eléctricas de España.",
+                description: "Construí modelos de regresión y MLP que estiman los costes diarios de servicios auxiliares en la Península Ibérica, consiguiendo >90% de precisión.",
                 link: "https://www.endesa.com/",
                 logo: "assets/icons/experience/endesa.png"
             }
@@ -444,7 +444,7 @@ const portfolioDataTranslations = {
                 institution: "Cornell University",
                 location: "Ithaca, NY, EE.UU.",
                 date: "Ene – May 2025",
-                description: "Escritor para Cornell Healthcare Review, enfocándome en aplicaciones de IA en la industria de la salud. Estudié temas relacionados con la ciencia de datos, directrices éticas para ingenieros y gestión estratégica de la tecnología.",
+                description: "Escritor para la Cornell Healthcare Review, enfocándome en aplicaciones de IA en la industria de la salud. Además, estudié temas relacionados con la ciencia de datos, directrices éticas para ingenieros y gestión estratégica de la tecnología.",
                 link: "https://www.engineering.cornell.edu/ece/",
                 logo: "assets/icons/education/cornell.png"
             },
@@ -476,7 +476,7 @@ const portfolioDataTranslations = {
                 imagePosition: "center top",
                 title: "GNNs Geométricas para Predicción de Propiedades Moleculares",
                 tech: "PyTorch Geometric, Aprendizaje Profundo Geométrico, GNNs, Transporte Óptimo",
-                description: "¿Cuánto aporta realmente la geometría? Comparativa controlada entre GIN, GIN con distancias interatómicas y EGNN equivariante E(3) para predecir cuatro propiedades cuánticas de las ~134k moléculas de QM9 — momento dipolar, polarizabilidad, gap HOMO–LUMO y capacidad calorífica — midiendo precisión, robustez al ruido en las coordenadas y cómo la curvatura de Ollivier–Ricci explica el over-squashing en los cuellos de botella del grafo.",
+                description: "¿Cuánto aporta realmente la geometría? Comparativa controlada entre GIN, GIN con distancias interatómicas y EGNN equivariante E(3) para predecir cuatro propiedades cuánticas. Para ello medí precisión, robustez al ruido en las coordenadas y cómo la curvatura de Ollivier–Ricci explica el over-squashing en los cuellos de botella del grafo.",
                 link: "https://github.com/manuel-rodriguezvillegas/molecular_prediction",
                 icon: "⚛️",
                 image: "assets/projects/molecular_gnn.png",
