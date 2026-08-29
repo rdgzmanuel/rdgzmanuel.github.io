@@ -5,8 +5,8 @@
 const translations = {
     en: {
         meta: {
-            title: "Manuel Rodríguez Villegas - AI Engineering Graduate Student",
-            description: "MSc in Artificial Intelligence at Comillas ICAI. Geometric AI Intern at Audi AG — deep learning on 3D data (meshes, CAD, voxels). Projects in computer vision, robotics and geometric deep learning."
+            title: "Manuel Rodríguez Villegas - Geometric AI Engineer",
+            description: "Geometric AI Intern at Audi AG, building AI systems for geometry, computer vision and robotics. Selected work in visual topological mapping and geometric deep learning."
         },
         nav: {
             about: "About",
@@ -17,8 +17,8 @@ const translations = {
             skills: "Skills"
         },
         hero: {
-            subtitle: "Master's Degree in Artificial Intelligence @ ICAI",
-            description: "Curious mind focused on AI for human benefit, deep learning and the pursuit of elegant, efficient solutions.",
+            subtitle: "Geometric AI Intern @ Audi AG",
+            description: "I build AI systems for geometry, vision and robotics — from first principles, with a bias toward simple and efficient solutions.",
             contactBtn: "Get in Touch",
             projectsBtn: "View Projects",
             cvBtn: "View CV"
@@ -47,23 +47,8 @@ const translations = {
         links: {
             viewWebsite: "Visit Website →",
             viewProgram: "View Program →",
-            viewProject: "View Project →",
-            viewAward: "Learn More →",
-            showAllProjects: "Show all projects"
-        },
-        // Keys must match the tags used on projects below (order lives in script.js)
-        projectFilters: {
-            all: "All",
-            cv: "Computer Vision",
-            geometric: "Geometric Deep Learning",
-            nlp: "NLP",
-            math: "Mathematics"
-        },
-        currently: {
-            title: "Currently",
-            reading: "Reading",
-            building: "Building",
-            focus: "Focused on"
+            viewProject: "Explore repository →",
+            viewAward: "Learn More →"
         },
         footer: {
             rights: "All rights reserved."
@@ -71,8 +56,8 @@ const translations = {
     },
     es: {
         meta: {
-            title: "Manuel Rodríguez Villegas - Estudiante de Máster en IA",
-            description: "Máster en Inteligencia Artificial en Comillas ICAI. Becario en IA Geométrica en Audi AG — deep learning sobre datos 3D (mallas, CAD, vóxeles). Proyectos de visión por computador, robótica y aprendizaje profundo geométrico."
+            title: "Manuel Rodríguez Villegas - IA geométrica, visión y robótica",
+            description: "Geometric AI Intern en Audi AG. Desarrollo sistemas de IA para geometría, visión por computador y robótica."
         },
         nav: {
             about: "Sobre mí",
@@ -83,53 +68,38 @@ const translations = {
             skills: "Habilidades"
         },
         hero: {
-            subtitle: "Máster en Inteligencia Artificial @ ICAI",
-            description: "Estudiante curioso y proactivo enfocado en la IA para el beneficio humano, el aprendizaje profundo y la búsqueda de soluciones elegantes y eficientes.",
+            subtitle: "Geometric AI Intern @ Audi AG",
+            description: "Trabajo en sistemas de IA para geometría, visión y robótica, intentando entender cada problema desde la base y resolverlo de la forma más simple y eficiente posible.",
             contactBtn: "Contactar",
             projectsBtn: "Ver Proyectos",
             cvBtn: "Ver CV"
         },
         sections: {
             about: "Sobre mí",
-            journey: "Mi Trayectoria",
+            journey: "Mi trayectoria",
             experience: "Experiencia",
             education: "Educación",
-            projects: "Proyectos Destacados",
-            skills: "Habilidades y Tecnologías",
-            awards: "Premios y Reconocimientos"
+            projects: "Proyectos destacados",
+            skills: "Tecnologías y conocimientos",
+            awards: "Premios y reconocimientos"
         },
         journey: {
-            subtitle: "Un mapa visual de mi trayectoria académica y profesional.",
-            academic: "Académico",
-            professional: "Profesional",
-            exchange: "Estancia / Internacional",
+            subtitle: "Un recorrido por mi formación y experiencia profesional.",
+            academic: "Formación",
+            professional: "Experiencia",
+            exchange: "Estancia internacional",
             present: "Actualidad"
         },
         about: {
-            p1: "¡Hola! Soy Manuel, estudiante de Máster en Inteligencia Artificial en la Universidad Pontificia Comillas (Madrid) con un Grado en Ingeniería Matemática e IA. Mi trayectoria académica me ha llevado de Madrid a <strong>Cornell University</strong> (Nueva York) e <strong>Imperial College London</strong>, donde he trabajado con diferentes arquitecturas en visión por computador, robótica e IA generativa. Ahora mismo estoy trabajando como becario en Audi, en las oficinas centrales de Ingolstadt (Alemania).",
-            p2: "Mi formación combina fundamentos matemáticos profundos con sistemas de IA de última generación. Creo que el potencial de las tecnologías actuales solo se aprovecha — y las del futuro solo se construyen — entendiéndolas desde sus principios fundamentales.",
-            p3: "Más allá de mis intereses profesionales, disfruto del deporte, la naturaleza y la lectura, actividades que considero esenciales para vivir una vida equilibrada, especialmente cuando se comparten con otros."
+            p1: "Soy Manuel, graduado en Ingeniería Matemática e Inteligencia Artificial y estudiante del Máster en Inteligencia Artificial de Comillas ICAI. He estudiado en Madrid y en <strong>Cornell University</strong>, he colaborado en investigación con <strong>Imperial College London</strong> y actualmente trabajo como becario en Audi, en Ingolstadt.",
+            p2: "Me gusta combinar una base matemática sólida con sistemas de IA actuales. Intento entender los problemas desde sus principios fundamentales y buscar soluciones sencillas, eficientes y bien justificadas.",
+            p3: "Fuera del trabajo disfruto del deporte, la naturaleza y la lectura. Para mí son una parte esencial de una vida equilibrada, especialmente cuando puedo compartirlas con otras personas."
         },
         links: {
-            viewWebsite: "Visitar Web →",
-            viewProgram: "Ver Programa →",
-            viewProject: "Ver Proyecto →",
-            viewAward: "Más Información →",
-            showAllProjects: "Mostrar todos los proyectos"
-        },
-        // Las claves deben coincidir con las etiquetas de los proyectos
-        projectFilters: {
-            all: "Todos",
-            cv: "Visión por Computador",
-            geometric: "Aprendizaje Profundo Geométrico",
-            nlp: "NLP",
-            math: "Matemáticas"
-        },
-        currently: {
-            title: "Ahora mismo",
-            reading: "Leyendo",
-            building: "Construyendo",
-            focus: "Enfocado en"
+            viewWebsite: "Visitar web →",
+            viewProgram: "Ver programa →",
+            viewProject: "Explorar repositorio →",
+            viewAward: "Más información →"
         },
         footer: {
             rights: "Todos los derechos reservados."
@@ -227,24 +197,31 @@ const portfolioDataTranslations = {
         ],
         projects: [
             {
-                tags: ["cv", "nlp"],
-                title: "Visual Topological SLAM",
-                tech: "ROS2, PyTorch, Deep Learning, Computer Vision, NLP",
-                description: "Bachelor Thesis: voice-controlled indoor navigation for an autonomous wheelchair. Combines vision foundation models with NLP and graph theory for real-time topological mapping and autonomous navigation. Built for the UNIJES SocialTech Challenge.",
+                title: "TopoSIGMA",
+                tech: "ROS 2 · DINOv2 · Computer Vision · Robotics · Information Geometry",
+                description: "An online, training-free visual topological mapping system that separates place discovery from covariance-aware loop closure. It represents each place as a directional distribution of DINOv2 descriptors and builds compact, queryable graphs from RGB and wheel odometry.",
                 link: "https://github.com/manuel-rodriguezvillegas/visual_topological_slam",
-                icon: "🗺️",
-                image: "assets/projects/tfg_map.png",
-                imageId: "visual-slam"
+                image: "assets/projects/toposigma.png",
+                imageWebp: "assets/projects/toposigma.webp",
+                imageWebpSrcset: "assets/projects/toposigma_720.webp 720w, assets/projects/toposigma.webp 1569w",
+                imageWidth: 1569,
+                imageHeight: 1137,
+                imageAlt: "Visual topological graph of an indoor route, with places grouped by room and loop-closure edges highlighted.",
+                imageId: "toposigma",
+                imageFit: "contain"
             },
             {
-                tags: ["geometric", "math"],
                 imagePosition: "center top",
                 title: "Geometric GNNs for Molecular Property Prediction",
-                tech: "PyTorch Geometric, Geometric Deep Learning, GNNs",
-                description: "How much does geometry buy you? A controlled comparison of GIN, distance-augmented GIN and E(3)-equivariant EGNN predicting four quantum properties and measuring accuracy, robustness to coordinate noise, and how Ollivier–Ricci curvature explains over-squashing at graph bottlenecks.",
+                tech: "PyTorch Geometric · GIN · EGNN · QM9",
+                description: "A controlled study of how 3D geometry changes molecular GNNs: topology-only GIN, distance-aware GIN and E(3)-equivariant EGNN. It evaluates four quantum properties, robustness to coordinate noise and the relationship between Ollivier–Ricci curvature and over-squashing.",
                 link: "https://github.com/manuel-rodriguezvillegas/molecular_prediction",
-                icon: "⚛️",
                 image: "assets/projects/molecular_gnn.png",
+                imageWebp: "assets/projects/molecular_gnn.webp",
+                imageWebpSrcset: "assets/projects/molecular_gnn_720.webp 720w, assets/projects/molecular_gnn.webp 1600w",
+                imageWidth: 2847,
+                imageHeight: 1805,
+                imageAlt: "Molecular graph illustrating messages exchanged between atoms and functional groups.",
                 imageId: "molecular-gnn",
                 imageCredit: {
                     text: "Image from TUM DAML — Fragment-Biases for Molecular GNNs",
@@ -252,63 +229,49 @@ const portfolioDataTranslations = {
                 }
             },
             {
-                tags: ["cv"],
+                title: "Resource-Efficient LLM Fine-Tuning",
+                tech: "Mistral 7B · QLoRA · PEFT · NF4 · Hugging Face",
+                description: "A resource-constrained study of instruction tuning for Mistral-7B on a single 24 GB consumer GPU. QLoRA, NF4 quantization and a paged 8-bit optimizer reduced training to about 21 million parameters—just 0.29% of the model—while making the quality–memory–compute trade-off explicit. Its most valuable outcome was diagnosing why the model learned the wrong behavior, tracing it to data construction and EOS masking.",
+                image: "assets/projects/llm_finetuning.jpg",
+                imageWebp: "assets/projects/llm_finetuning.webp",
+                imageWebpSrcset: "assets/projects/llm_finetuning_720.webp 720w, assets/projects/llm_finetuning.webp 1920w",
+                imageWidth: 1920,
+                imageHeight: 1080,
+                imageAlt: "NVIDIA Jetson computing board and module on a dark background.",
+                imageId: "efficient-llm-finetuning",
+                imageCredit: {
+                    text: "Image: NVIDIA",
+                    url: "https://nvidianews.nvidia.com/multimedia/autonomous-machines/jetson"
+                }
+            },
+            {
                 title: "Multi-Object Tracking System",
-                tech: "YOLO, Computer Vision, Optical Flow, PyTorch, ONNX",
-                description: "Real-time tracking system that automates camera control for sports broadcasts — YOLO detection, optical-flow tracking, ONNX deployment — plus an LLM + TTS match commentary generator. Developed from scratch at Azzulei Technologies.",
+                tech: "YOLOv8 · Optical Flow · PyTorch · ONNX",
+                description: "A real-time multi-object tracking system for automated sports-camera control, combining YOLOv8 detection with optical flow and ONNX deployment. It also includes a prototype match-commentary pipeline using open-source LLMs and text-to-speech. Developed at Azzulei Technologies.",
                 link: "https://github.com/manuel-rodriguezvillegas/ai_camera",
-                icon: "🎥",
                 image: "assets/projects/azzulei.png",
+                imageWebp: "assets/projects/azzulei.webp",
+                imageWebpSrcset: "assets/projects/azzulei_720.webp 720w, assets/projects/azzulei.webp 1200w",
+                imageWidth: 1200,
+                imageHeight: 665,
+                imageAlt: "Football broadcast frame with players detected and tracked by the automated camera system.",
                 imageId: "multi-object-tracking"
             },
             {
-                tags: ["nlp"],
-                title: "Virtual Assistant for Train Operators",
-                tech: "PyTorch, Machine Learning, NLP",
-                description: "Winner of the 10th Smart Industry Hackathon: a fault-diagnosis assistant that maps symptoms described by train operators to the most likely faulty components and their repairs. Built in a single morning — first among 10 teams from Madrid and Seville.",
-                link: "https://github.com/manuel-rodriguezvillegas/hackathon_kearney",
-                icon: "🚂",
-                image: "assets/projects/hackathon.png",
-                imageId: "hackathon"
-            },     
-            {
-                tags: ["cv", "math"],
-                title: "Image Processing via Calculus of Variations",
-                tech: "Python, Calculus of Variations, Image Processing",
-                description: "Variational methods for image denoising, applied to medical imaging (brain MRI, X-ray scans). Includes a full report on the mathematical foundations and implementation of each technique.",
-                link: "https://github.com/manuel-rodriguezvillegas/image_processing",
-                icon: "🖼️",
-                image: "assets/projects/brain_tv.png",
-                imageId: "brain-tv"
-            },      
-            {
-                tags: ["geometric", "math"],
-                title: "Neural Networks on Riemannian Manifolds",
-                tech: "Differential Geometry, PyTorch, Deep Learning",
-                description: "Neural networks operating on Riemannian data and parameters, trained with natural-gradient optimization for markedly faster convergence. Includes a report on the underlying differential geometry.",
-                link: "https://github.com/manuel-rodriguezvillegas/riemannian_geometry",
-                icon: "🧠",
-                image: "assets/projects/grassmann.png",
-                imageId: "grassmann"
-            },
-            {
-                tags: ["cv"],
-                title: "Explainability in Traffic Sign Recognition",
-                tech: "Computer Vision, PyTorch, Deep Learning, XAI",
-                description: "Explainability analysis of traffic-sign recognition models: what the networks attend to when classifying, and how it affects their performance.",
-                link: "https://github.com/ICAI-IMAT-XAI/final-project-manuel-rodriguezvillegas",
-                icon: "🧠",
-                image: "assets/projects/xai.png",
-                imageId: "xai"
-            },  
+                title: "Deep RL Car Agent",
+                tech: "PPO · PyTorch · Gymnasium · Stable-Baselines3",
+                description: "A car agent trained with PPO to navigate custom 2D tracks directly from RGB frames. The project includes a custom Gymnasium simulator, continuous steering and throttle, stacked visual observations, a residual CNN, multi-track training, Optuna tuning and saliency maps for interpreting the learned policy.",
+                link: "https://github.com/NatLey30/CarGameRL",
+                image: "assets/projects/car_game_rl.png",
+                imageWebp: "assets/projects/car_game_rl.webp",
+                imageWebpSrcset: "assets/projects/car_game_rl_720.webp 720w, assets/projects/car_game_rl.webp 1178w",
+                imageWidth: 1178,
+                imageHeight: 1148,
+                imageAlt: "Saliency map showing which pixels influence the deep-RL driving policy on a curved track.",
+                imageId: "deep-rl-car-agent"
+            }
         ],
         skills: {
-            "Programming Languages": [
-                "Python (Advanced)",
-                "R",
-                "C#",
-                "SQL"
-            ],
             "AI & Machine Learning": [
                 "Deep Learning",
                 "Computer Vision",
@@ -320,6 +283,7 @@ const portfolioDataTranslations = {
                 "Physics-Informed NNs"
             ],
             "Tools & Frameworks": [
+                "Python",
                 "PyTorch",
                 "ROS 2",
                 "OpenCV",
@@ -378,51 +342,51 @@ const portfolioDataTranslations = {
         experience: [
             {
                 id: "audi",
-                title: "Becario en IA Geométrica",
+                title: "Geometric AI Intern",
                 company: "Audi AG",
                 location: "Ingolstadt, Alemania",
                 date: "Jul – Nov 2026",
-                description: "Deep learning sobre datos 3D (mallas, modelos CAD y representaciones en vóxeles) para el diseño y fabricación de automóviles en la sede central de Audi (Ingolstadt, Alemania), junto con la optimización de procesos internos de desarrollo mediante flujos agénticos.",
+                description: "Trabajo con deep learning sobre datos 3D —mallas, modelos CAD y representaciones en vóxeles— para aplicaciones de diseño e ingeniería del automóvil. También optimizo procesos internos de desarrollo mediante flujos de trabajo basados en agentes de IA.",
                 link: "https://www.audi.com/en.html",
                 logo: "assets/icons/experience/audi.png"
             },
             {
                 id: "comillas-ta",
-                title: "Asistente de Profesorado",
+                title: "Ayudante de docencia",
                 company: "Universidad Pontificia Comillas",
                 location: "Madrid, España",
                 date: "Sep 2025 – Abr 2026",
-                description: "Colaboré en el despliegue de un clúster de GPUs utilizado por estudiantes de toda la universidad en sus asignaturas de deep learning.",
+                description: "Participé en el diseño y despliegue de un clúster de GPUs que ahora utilizan los alumnos de Inteligencia Artificial en sus asignaturas de deep learning.",
                 link: "https://www.comillas.edu/",
                 logo: "assets/icons/experience/comillas.png"
             },
             {
                 id: "azzulei",
-                title: "Becario en Visión por Computador",
+                title: "Prácticas de Visión por Computador",
                 company: "Azzulei Technologies",
                 location: "Madrid, España",
                 date: "Jun – Ago 2025",
-                description: "Desarrollé un sistema de seguimiento multi-objeto en tiempo real (YOLO) que automatiza el control de cámara en retransmisiones deportivas, sustituyendo la operación manual. También prototipé un generador automático de comentarios con LLMs de código abierto y modelos text-to-speech.",
+                description: "Desarrollé un sistema de seguimiento multiobjeto en tiempo real con YOLO para automatizar el control de cámara en retransmisiones deportivas. También construí un prototipo para generar comentarios de partido con LLMs de código abierto y síntesis de voz.",
                 link: "https://azzulei.com/",
                 logo: "assets/icons/experience/azzulei.png"
             },
             {
                 id: "imperial-urop",
-                title: "Asistente de Investigación",
+                title: "Asistente de investigación",
                 company: "Imperial College London",
                 location: "Remoto (Londres, Reino Unido)",
                 date: "Jun – Ago 2024",
-                description: "Modelé sistemas dinámicos complejos (Lotka–Volterra, SIR, Lorenz) con Neural ODEs y Physics-Informed Neural Networks dentro del programa de investigación UROP, construyendo modelos en PyTorch que generalizaban ante distintas condiciones iniciales junto a un equipo internacional de doctorandos.",
+                description: "Durante el programa UROP modelé sistemas dinámicos complejos —Lotka–Volterra, SIR y Lorenz— mediante Neural ODEs y Physics-Informed Neural Networks. Desarrollé en PyTorch modelos capaces de generalizar entre distintas condiciones iniciales junto a un equipo internacional de doctorandos.",
                 link: "https://www.imperial.ac.uk/urop/",
                 logo: "assets/icons/experience/imperial.png"
             },
             {
                 id: "endesa",
-                title: "Becario Analista de Datos Energéticos",
+                title: "Prácticas de Análisis de Datos Energéticos",
                 company: "Endesa",
                 location: "Madrid, España",
                 date: "Jun – Ago 2023",
-                description: "Construí modelos de regresión y MLP que estiman los costes diarios de servicios auxiliares en la Península Ibérica, consiguiendo >90% de precisión.",
+                description: "Construí modelos de regresión y redes MLP para estimar los costes diarios de los servicios auxiliares del sistema eléctrico de la Península Ibérica, con una precisión superior al 90 %.",
                 link: "https://www.endesa.com/",
                 logo: "assets/icons/experience/endesa.png"
             }
@@ -434,17 +398,17 @@ const portfolioDataTranslations = {
                 institution: "Universidad Pontificia Comillas, ETSI ICAI",
                 location: "Madrid, España",
                 date: "Sep 2025 – 2026",
-                description: "Delegado de Clase y Miembro del Claustro Universitario. Ganador del X Hackathon de Industria Inteligente. Programa enfocado en Modelos Generativos Profundos, Geometría y Cálculo Diferencial, MLOps, Aprendizaje por Refuerzo Profundo, Aprendizaje Profundo Geométrico, IA Probabilística y Explicabilidad.",
+                description: "Representante de clase y miembro del Claustro Universitario. Ganador del X Hackathon de Industria Inteligente. El programa se centra en modelos generativos profundos, geometría y cálculo diferencial, MLOps, aprendizaje por refuerzo profundo, deep learning geométrico, IA probabilística y explicabilidad.",
                 link: "https://www.comillas.edu/master-en-inteligencia-artificial-avanzada/",
                 logo: "assets/icons/education/comillas.png"
             },
             {
                 id: "cornell-exchange",
-                degree: "Estudiante de Intercambio - Electric & Computer Engineering",
+                degree: "Intercambio en Electrical & Computer Engineering",
                 institution: "Cornell University",
                 location: "Ithaca, NY, EE.UU.",
                 date: "Ene – May 2025",
-                description: "Escritor para la Cornell Healthcare Review, enfocándome en aplicaciones de IA en la industria de la salud. Además, estudié temas relacionados con la ciencia de datos, directrices éticas para ingenieros y gestión estratégica de la tecnología.",
+                description: "Escribí para la Cornell Healthcare Review sobre aplicaciones de la IA en el sector sanitario. También cursé asignaturas de ciencia de datos, ética para ingenieros y gestión estratégica de la tecnología.",
                 link: "https://www.engineering.cornell.edu/ece/",
                 logo: "assets/icons/education/cornell.png"
             },
@@ -454,7 +418,7 @@ const portfolioDataTranslations = {
                 institution: "Universidad Pontificia Comillas, ETSI ICAI",
                 location: "Madrid, España",
                 date: "2021 – 2025",
-                description: "Nota media: 8.75/10. Ganador del UNIJES SocialTech Challenge por un proyecto de silla de ruedas autónoma con IA integrada. Fundamentos teorico-prácticos en matemáticas e inteligencia artificial.",
+                description: "Nota media: 8,75/10. Ganador del UNIJES SocialTech Challenge con un proyecto de silla de ruedas autónoma controlada por voz. Formación sólida, teórica y práctica, en matemáticas e inteligencia artificial.",
                 honors: "Matrículas de Honor en Probabilidad y Estadística, Sistemas Dinámicos, Arquitecturas Big Data, Geometría Diferencial, Ciberseguridad, Matemáticas Avanzadas y Visión por Computador II.",
                 link: "https://www.comillas.edu/grado-en-ingenieria-matematica-e-inteligencia-artificial/",
                 logo: "assets/icons/education/comillas.png"
@@ -462,24 +426,31 @@ const portfolioDataTranslations = {
         ],
         projects: [
             {
-                tags: ["cv", "nlp"],
-                title: "SLAM Topológico Visual",
-                tech: "ROS2, PyTorch, Deep Learning, Visión por Computador, NLP",
-                description: "Trabajo de Fin de Grado: navegación interior controlada por voz para una silla de ruedas autónoma. Combina modelos fundacionales de visión con NLP y teoría de grafos para mapeo topológico en tiempo real y navegación autónoma. Desarrollado para el UNIJES SocialTech Challenge.",
+                title: "TopoSIGMA",
+                tech: "ROS 2 · DINOv2 · Visión por Computador · Robótica · Geometría de la Información",
+                description: "Un sistema de mapeo topológico visual que construye el mapa sobre la marcha y no requiere entrenamiento. Detecta lugares a partir de descriptores DINOv2, gestiona los cierres de bucle teniendo en cuenta la incertidumbre y genera grafos compactos a partir de imágenes RGB y odometría de ruedas.",
                 link: "https://github.com/manuel-rodriguezvillegas/visual_topological_slam",
-                icon: "🗺️",
-                image: "assets/projects/tfg_map.png",
-                imageId: "visual-slam"
+                image: "assets/projects/toposigma.png",
+                imageWebp: "assets/projects/toposigma.webp",
+                imageWebpSrcset: "assets/projects/toposigma_720.webp 720w, assets/projects/toposigma.webp 1569w",
+                imageWidth: 1569,
+                imageHeight: 1137,
+                imageAlt: "Grafo topológico visual de un recorrido interior, con los lugares agrupados por estancia y los cierres de bucle resaltados.",
+                imageId: "toposigma",
+                imageFit: "contain"
             },
             {
-                tags: ["geometric", "math"],
                 imagePosition: "center top",
-                title: "GNNs Geométricas para Predicción de Propiedades Moleculares",
-                tech: "PyTorch Geometric, Aprendizaje Profundo Geométrico, GNNs, Transporte Óptimo",
-                description: "¿Cuánto aporta realmente la geometría? Comparativa controlada entre GIN, GIN con distancias interatómicas y EGNN equivariante E(3) para predecir cuatro propiedades cuánticas. Para ello medí precisión, robustez al ruido en las coordenadas y cómo la curvatura de Ollivier–Ricci explica el over-squashing en los cuellos de botella del grafo.",
+                title: "GNNs geométricas para predicción molecular",
+                tech: "PyTorch Geometric · GIN · EGNN · QM9",
+                description: "Un estudio controlado sobre lo que aporta la geometría 3D a las GNN moleculares. Compara una GIN basada solo en la topología, otra que incorpora distancias y una EGNN equivariante E(3), evaluando cuatro propiedades cuánticas, la robustez al ruido en las coordenadas y su relación con el over-squashing.",
                 link: "https://github.com/manuel-rodriguezvillegas/molecular_prediction",
-                icon: "⚛️",
                 image: "assets/projects/molecular_gnn.png",
+                imageWebp: "assets/projects/molecular_gnn.webp",
+                imageWebpSrcset: "assets/projects/molecular_gnn_720.webp 720w, assets/projects/molecular_gnn.webp 1600w",
+                imageWidth: 2847,
+                imageHeight: 1805,
+                imageAlt: "Grafo molecular que representa los mensajes intercambiados entre átomos y grupos funcionales.",
                 imageId: "molecular-gnn",
                 imageCredit: {
                     text: "Imagen de TUM DAML — Fragment-Biases for Molecular GNNs",
@@ -487,74 +458,61 @@ const portfolioDataTranslations = {
                 }
             },
             {
-                tags: ["cv"],
-                title: "Sistema de Seguimiento Multi-Objetivo",
-                tech: "PyTorch, YOLO, Visión por Computador, Flujo Óptico, ONNX",
-                description: "Sistema de seguimiento en tiempo real que automatiza el control de cámara en retransmisiones deportivas — detección con YOLO, seguimiento por flujo óptico, despliegue en ONNX — más un generador de comentarios con LLMs y TTS. Desarrollado desde cero en Azzulei Technologies.",
+                title: "Fine-tuning eficiente de un LLM",
+                tech: "Mistral 7B · QLoRA · PEFT · NF4 · Hugging Face",
+                description: "Un proyecto de instruction tuning para Mistral-7B diseñado desde el principio para entrenar con una única GPU de consumo de 24 GB. Combinamos QLoRA, cuantización NF4 y un optimizador paginado de 8 bits para entrenar unos 21 millones de parámetros, solo el 0,29 % del modelo, haciendo explícito el equilibrio entre calidad, memoria y coste. El resultado más valioso fue entender por qué el modelo había aprendido el comportamiento equivocado y rastrearlo hasta la construcción de los datos y el enmascarado del token EOS.",
+                image: "assets/projects/llm_finetuning.jpg",
+                imageWebp: "assets/projects/llm_finetuning.webp",
+                imageWebpSrcset: "assets/projects/llm_finetuning_720.webp 720w, assets/projects/llm_finetuning.webp 1920w",
+                imageWidth: 1920,
+                imageHeight: 1080,
+                imageAlt: "Placa y módulo de computación NVIDIA Jetson sobre un fondo oscuro.",
+                imageId: "efficient-llm-finetuning",
+                imageCredit: {
+                    text: "Imagen: NVIDIA",
+                    url: "https://nvidianews.nvidia.com/multimedia/autonomous-machines/jetson"
+                }
+            },
+            {
+                title: "Sistema de seguimiento multiobjeto",
+                tech: "YOLOv8 · Flujo Óptico · PyTorch · ONNX",
+                description: "Un sistema de seguimiento multiobjeto en tiempo real para automatizar el control de cámara en retransmisiones deportivas. Combina detección con YOLOv8, flujo óptico y despliegue en ONNX. También desarrollé un prototipo para generar comentarios de partido con LLMs de código abierto y síntesis de voz durante mis prácticas en Azzulei Technologies.",
                 link: "https://github.com/manuel-rodriguezvillegas/ai_camera",
-                icon: "🎥",
                 image: "assets/projects/azzulei.png",
+                imageWebp: "assets/projects/azzulei.webp",
+                imageWebpSrcset: "assets/projects/azzulei_720.webp 720w, assets/projects/azzulei.webp 1200w",
+                imageWidth: 1200,
+                imageHeight: 665,
+                imageAlt: "Retransmisión de fútbol con los jugadores detectados y seguidos por el sistema automático de cámara.",
                 imageId: "multi-object-tracking"
             },
             {
-                tags: ["nlp"],
-                title: "Asistente Virtual para Operarios de Trenes",
-                tech: "PyTorch, Machine Learning, NLP",
-                description: "Ganador del X Hackathon de Industria Inteligente: un asistente de diagnóstico de averías que asocia los síntomas descritos por el operario con los componentes defectuosos más probables y sus reparaciones. Construido en una sola mañana — primero entre 10 equipos de Madrid y Sevilla.",
-                link: "https://github.com/manuel-rodriguezvillegas/hackathon_kearney",
-                icon: "🚂",
-                image: "assets/projects/hackathon.png",
-                imageId: "hackathon"
-            },
-            {
-                tags: ["cv", "math"],
-                title: "Procesamiento de Imágenes mediante Cálculo de Variaciones",
-                tech: "Python, Cálculo de Variaciones, Procesamiento de Imágenes",
-                description: "Métodos variacionales para la eliminación de ruido en imágenes, aplicados a imagen médica (resonancias cerebrales y rayos X). Incluye un informe completo sobre los fundamentos matemáticos y la implementación de cada técnica.",
-                link: "https://github.com/manuel-rodriguezvillegas/image_processing",
-                icon: "🖼️",
-                image: "assets/projects/brain_tv.png",
-                imageId: "brain-tv"
-            },
-            {
-                tags: ["geometric", "math"],
-                title: "Redes Neuronales en Variedades Riemannianas",
-                tech: "Geometría Diferencial, PyTorch, Deep Learning",
-                description: "Redes neuronales que operan con datos y parámetros riemannianos, entrenadas con optimización de gradiente natural para una convergencia notablemente más rápida. Incluye un informe sobre la geometría diferencial subyacente.",
-                link: "https://github.com/manuel-rodriguezvillegas/riemannian_geometry",
-                icon: "🧠",
-                image: "assets/projects/grassmann.png",
-                imageId: "grassmann"
-            },
-            {
-                tags: ["cv"],
-                title: "Explicabilidad en Reconocimiento de Señales de Tráfico",
-                tech: "PyTorch, Deep Learning, Visión por Computador, XAI",
-                description: "Análisis de explicabilidad de modelos de reconocimiento de señales de tráfico: a qué atienden las redes al clasificar y cómo afecta a su rendimiento.",
-                link: "https://github.com/ICAI-IMAT-XAI/final-project-manuel-rodriguezvillegas",
-                icon: "🗺️",
-                image: "assets/projects/xai.png",
-                imageId: "xai"
-            },
+                title: "Deep RL Car Agent",
+                tech: "PPO · PyTorch · Gymnasium · Stable-Baselines3",
+                description: "Un agente entrenado con PPO para recorrer circuitos 2D utilizando únicamente imágenes RGB. El proyecto incluye un simulador propio compatible con Gymnasium, control continuo de dirección y acelerador, apilado de fotogramas, una CNN residual, entrenamiento en varios circuitos, ajuste de hiperparámetros con Optuna y mapas de saliencia para entender qué había aprendido la política.",
+                link: "https://github.com/NatLey30/CarGameRL",
+                image: "assets/projects/car_game_rl.png",
+                imageWebp: "assets/projects/car_game_rl.webp",
+                imageWebpSrcset: "assets/projects/car_game_rl_720.webp 720w, assets/projects/car_game_rl.webp 1178w",
+                imageWidth: 1178,
+                imageHeight: 1148,
+                imageAlt: "Mapa de saliencia que muestra qué píxeles influyen en la política de conducción por deep RL en una curva.",
+                imageId: "deep-rl-car-agent"
+            }
         ],
         skills: {
-            "Lenguajes de Programación": [
-                "Python (Avanzado)",
-                "R",
-                "C#",
-                "SQL"
-            ],
             "IA y Machine Learning": [
                 "Deep Learning",
                 "Visión por Computador",
                 "Procesamiento del Lenguaje Natural (NLP)",
-                "IA Agéntica",
+                "Agentes de IA",
                 "IA Probabilística",
                 "Robótica",
                 "Aprendizaje por Refuerzo Profundo",
-                "Redes Neuronales Informadas por Física (PINNs)"
+                "Redes neuronales informadas por física (PINNs)"
             ],
             "Herramientas y Frameworks": [
+                "Python",
                 "PyTorch",
                 "ROS 2",
                 "OpenCV",
@@ -587,7 +545,7 @@ const portfolioDataTranslations = {
                 link: "https://github.com/manuel-rodriguezvillegas/hackathon_kearney"
             },
             {
-                title: "Ganador de UNIJES SocialTech Challenge",
+                title: "Ganador del UNIJES SocialTech Challenge",
                 year: "2024",
                 description: "Proyecto de silla de ruedas autónoma controlada por voz",
                 icon: "assets/icons/awards/trophy.png",
@@ -596,14 +554,14 @@ const portfolioDataTranslations = {
             {
                 title: "Beca de Excelencia Académica",
                 year: "2021, 2023, 2024",
-                description: "Estudiantes con mejores notas de la Comunidad de Madrid",
+                description: "Concedida a los universitarios con mejor expediente académico de la Comunidad de Madrid",
                 icon: "assets/icons/awards/madrid.png",
                 link: "https://www.comunidad.madrid/servicios/educacion/becas-excelencia-universitarios"
             },
             {
                 title: "Mención Honorífica de Bachillerato",
                 year: "2021",
-                description: "2ª nota más alta de la Comunidad de Madrid",
+                description: "Segunda mejor calificación de la Comunidad de Madrid",
                 icon: "assets/icons/awards/madrid.png",
                 link: null
             }
@@ -749,7 +707,7 @@ const timelineData = {
             {
                 type: "professional",
                 ref: "audi",
-                title: "Becario en IA Geométrica",
+                title: "Geometric AI Intern",
                 institution: "Audi AG",
                 start: "2026-07",
                 end: "2026-11",
@@ -759,24 +717,7 @@ const timelineData = {
     }
 };
 
-// ===================================
-// "Currently" block (footer)
-// ===================================
-// Update these values whenever you want. The UI pulls from here.
-const currentlyData = {
-    en: {
-        reading: "The Godfather - Mario Puzo",
-        building: "Master's Thesis",
-        focus: "Geometric AI @ Audi AG (Ingolstadt)"
-    },
-    es: {
-        reading: "El Padrino - Mario Puzo",
-        building: "Trabajo de Fin de Máster",
-        focus: "IA Geométrica en Audi AG (Ingolstadt)"
-    }
-};
-
 // Export for use in script.js
 if (typeof module !== 'undefined' && module.exports) {
-    module.exports = { translations, portfolioDataTranslations, timelineData, currentlyData };
+    module.exports = { translations, portfolioDataTranslations, timelineData };
 }

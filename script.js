@@ -144,7 +144,6 @@ function updatePageLanguage() {
     
     // Update footer
     updateFooter();
-    updateCurrently();
 
     // Re-bind scroll reveals for newly rendered cards
     reobserveReveals();
@@ -215,25 +214,6 @@ function updateFooter() {
     const year = new Date().getFullYear();
     const rights = translations[currentLanguage].footer.rights;
     document.querySelector('footer p').textContent = `© ${year} Manuel Rodríguez Villegas. ${rights}`;
-}
-
-function updateCurrently() {
-    const t = translations[currentLanguage].currently;
-    const data = currentlyData[currentLanguage] || currentlyData.en;
-    const titleEl = document.querySelector('.currently-title');
-    if (titleEl) titleEl.textContent = t.title;
-    const labels = document.querySelectorAll('.currently-label');
-    if (labels.length >= 3) {
-        labels[0].textContent = t.reading;
-        labels[1].textContent = t.building;
-        labels[2].textContent = t.focus;
-    }
-    const readingEl = document.querySelector('[data-currently="reading"]');
-    const buildingEl = document.querySelector('[data-currently="building"]');
-    const focusEl = document.querySelector('[data-currently="focus"]');
-    if (readingEl) readingEl.textContent = data.reading;
-    if (buildingEl) buildingEl.textContent = data.building;
-    if (focusEl) focusEl.textContent = data.focus;
 }
 
 // ===================================
@@ -552,17 +532,6 @@ function createEducationCard(edu) {
 // ===================================
 // Render Projects Section
 // ===================================
-const INITIAL_PROJECTS_COUNT = 4;
-
-// Chip order for the projects filter; labels live in translations.projectFilters
-// and the keys must match the tags on each project. Chips with nothing to show
-// are dropped, so adding a tag here before using it is harmless.
-const PROJECT_FILTERS = ['all', 'cv', 'geometric', 'nlp', 'math'];
-
-// Both survive a language switch — the keys are language-independent.
-let activeProjectFilter = 'all';
-let projectsExpanded = false;
-
 function renderProjects() {
     const container = document.getElementById('projects-container');
     const data = portfolioDataTranslations[currentLanguage].projects;
@@ -570,106 +539,8 @@ function renderProjects() {
     data.forEach(project => {
         const card = createProjectCard(project);
         card.classList.add('reveal');
-        card.dataset.tags = (project.tags || []).join(' ');
         container.appendChild(card);
     });
-
-    renderProjectFilters(data);
-    applyProjectFilter();
-}
-
-function renderProjectFilters(data) {
-    const container = document.getElementById('project-filters');
-    if (!container) return;
-    container.innerHTML = '';
-
-    const labels = translations[currentLanguage].projectFilters || {};
-    const usedTags = new Set(data.flatMap(p => p.tags || []));
-    const keys = PROJECT_FILTERS.filter(key => key === 'all' || usedTags.has(key));
-
-    // A lone "All" chip filters nothing — don't take up the space.
-    if (keys.length < 2) return;
-
-    keys.forEach(key => {
-        const chip = document.createElement('button');
-        chip.type = 'button';
-        chip.className = 'project-filter';
-        chip.dataset.filter = key;
-        chip.textContent = labels[key] || key;
-        const isActive = key === activeProjectFilter;
-        chip.classList.toggle('is-active', isActive);
-        chip.setAttribute('aria-pressed', String(isActive));
-
-        chip.addEventListener('click', () => {
-            if (activeProjectFilter === key) return;
-            activeProjectFilter = key;
-            container.querySelectorAll('.project-filter').forEach(other => {
-                const on = other.dataset.filter === activeProjectFilter;
-                other.classList.toggle('is-active', on);
-                other.setAttribute('aria-pressed', String(on));
-            });
-            applyProjectFilter(true);
-        });
-
-        container.appendChild(chip);
-    });
-}
-
-// Decides which cards are on screen and whether the "show all" button still has
-// a job. A narrowed filter always shows every match — the four-card limit only
-// applies to the unfiltered grid. Pass animate=true for user-driven changes, so
-// cards that the scroll observer will never see again still fade in.
-function applyProjectFilter(animate = false) {
-    const container = document.getElementById('projects-container');
-    if (!container) return;
-
-    const cards = [...container.querySelectorAll('.project-card')];
-    const isFiltering = activeProjectFilter !== 'all';
-    let shownCount = 0;
-
-    cards.forEach((card, index) => {
-        const tags = (card.dataset.tags || '').split(' ').filter(Boolean);
-        const matches = !isFiltering || tags.includes(activeProjectFilter);
-        const withinLimit = isFiltering || projectsExpanded || index < INITIAL_PROJECTS_COUNT;
-        const visible = matches && withinLimit;
-
-        card.classList.toggle('project-card-hidden', !visible);
-        if (visible) {
-            if (animate) {
-                card.style.transitionDelay = `${Math.min(shownCount, 6) * 60}ms`;
-                requestAnimationFrame(() => card.classList.add('is-visible'));
-            }
-            shownCount++;
-        }
-    });
-
-    const moreToShow = !isFiltering && !projectsExpanded && cards.length > INITIAL_PROJECTS_COUNT;
-    updateShowAllButton(moreToShow);
-}
-
-function updateShowAllButton(needed) {
-    const section = document.getElementById('projects-container').parentElement;
-    let btn = document.getElementById('show-all-projects-btn');
-
-    if (!needed) {
-        if (btn) btn.remove();
-        return;
-    }
-
-    if (!btn) {
-        btn = document.createElement('button');
-        btn.id = 'show-all-projects-btn';
-        btn.type = 'button';
-        btn.className = 'btn btn-secondary show-all-projects-btn';
-        btn.addEventListener('click', () => {
-            projectsExpanded = true;
-            applyProjectFilter(true);
-        });
-        // After the projects grid, inside the same section
-        section.appendChild(btn);
-    }
-    // Re-label on language switch
-    btn.textContent = translations[currentLanguage].links.showAllProjects;
 }
 
 function createProjectCard(project) {
@@ -681,15 +552,26 @@ function createProjectCard(project) {
         ? `<a href="${project.link}" class="project-link" target="_blank" rel="noopener">${linkText}</a>`
         : '';
     
-    // Projects don't use icons anymore, only images.
-    // imagePosition frames diagrams whose subject isn't dead centre — the
-    // thumbnail is much wider than it is tall, so cover crops aggressively.
     const positionAttr = project.imagePosition
         ? ` style="object-position: ${project.imagePosition};"`
         : '';
-    const imageHTML = project.image
-        ? `<img src="${project.image}" alt="${project.title}" loading="lazy" decoding="async"${positionAttr}>`
+    const loading = project.priority ? 'eager' : 'lazy';
+    const priority = project.priority ? ' fetchpriority="high"' : '';
+    const dimensions = project.imageWidth && project.imageHeight
+        ? ` width="${project.imageWidth}" height="${project.imageHeight}"`
+        : '';
+    const imageAlt = project.imageAlt || project.title;
+    const imageElement = project.image
+        ? `<img src="${project.image}" alt="${imageAlt}" loading="${loading}" decoding="async"${priority}${dimensions}${positionAttr}>`
         : `<div class="project-placeholder"></div>`;
+    const webpSrcset = project.imageWebpSrcset || project.imageWebp;
+    const imageSizes = project.imageSizes || '(max-width: 768px) calc(100vw - 2rem), 520px';
+    const responsiveImageHTML = project.imageWebp
+        ? `<picture><source srcset="${webpSrcset}" sizes="${imageSizes}" type="image/webp">${imageElement}</picture>`
+        : imageElement;
+    const imageClass = project.imageFit === 'contain'
+        ? 'project-image is-contain'
+        : 'project-image';
 
     // Attribution for images taken from someone else's work
     const creditHTML = project.imageCredit
@@ -697,7 +579,7 @@ function createProjectCard(project) {
         : '';
 
     card.innerHTML = `
-        <div class="project-image">${imageHTML}${creditHTML}</div>
+        <div class="${imageClass}">${responsiveImageHTML}${creditHTML}</div>
         <div class="project-content">
             <h3 class="project-title">${project.title}</h3>
             <p class="project-tech">${project.tech}</p>
@@ -732,8 +614,6 @@ function renderSkills() {
 // and for technologies without an official simple-icons logo (MATLAB, C#).
 const SKILL_ICONS = {
     "python":      "python",
-    "r":           "r",
-    "sql":         "mysql",
     "pytorch":     "pytorch",
     "ros":         "ros",
     "opencv":      "opencv",
@@ -951,8 +831,8 @@ function setupScrollAnimations() {
     if (revealObserver) revealObserver.disconnect();
 
     const observerOptions = {
-        threshold: 0.08,
-        rootMargin: '0px 0px -40px 0px'
+        threshold: 0.01,
+        rootMargin: '0px 0px 140px 0px'
     };
 
     const observer = new IntersectionObserver((entries) => {
@@ -961,7 +841,7 @@ function setupScrollAnimations() {
                 const parent = entry.target.parentElement;
                 const siblings = parent ? [...parent.children].filter(c => c.classList.contains('reveal')) : [];
                 const idx = siblings.indexOf(entry.target);
-                entry.target.style.transitionDelay = `${Math.min(idx, 6) * 60}ms`;
+                entry.target.style.transitionDelay = `${Math.min(idx, 3) * 30}ms`;
                 entry.target.classList.add('is-visible');
                 observer.unobserve(entry.target);
             }
@@ -975,15 +855,15 @@ function setupScrollAnimations() {
 
     // Safety: if for any reason the observer never fires for some elements
     // (e.g., print view, headless screenshot, prefers-reduced-motion already applied),
-    // reveal anything still hidden after 1.5s.
+    // reveal anything still hidden after a short fallback interval.
     setTimeout(() => {
         document.querySelectorAll('.reveal:not(.is-visible)').forEach(el => {
             const rect = el.getBoundingClientRect();
-            if (rect.top < window.innerHeight * 1.2) {
+            if (rect.top < window.innerHeight * 1.35) {
                 el.classList.add('is-visible');
             }
         });
-    }, 1500);
+    }, 600);
 }
 
 // Re-run on language change because clearContainers / renderX rebuild DOM
