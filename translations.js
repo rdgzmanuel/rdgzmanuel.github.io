@@ -62,7 +62,7 @@ const translations = {
         },
         hero: {
             subtitle: "Geometric AI Intern @ Audi AG",
-            description: "Trabajo en sistemas de IA para geometría, visión y robótica, intentando entender cada problema desde la base y resolverlo de la forma más simple y eficiente posible.",
+            description: "Trabajo en sistemas de IA para geometría, visión y robótica, intentando aplicar la filosofía de first principles y resolverlo de la forma más simple y eficiente posible.",
             personal: "Fuera del trabajo, me gusta mucho leer, hacer deporte y pasar todo el tiempo que puedo al aire libre.",
             contactBtn: "Contactar",
             projectsBtn: "Ver Proyectos",
