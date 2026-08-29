@@ -133,9 +133,6 @@ function updatePageLanguage() {
     // Update hero section
     updateHeroSection();
     
-    // Update about section
-    updateAboutSection();
-    
     // Update journey section
     updateJourneySection();
     
@@ -177,23 +174,15 @@ function updateHeroSection() {
     const t = translations[currentLanguage].hero;
     document.querySelector('.hero-content .subtitle').textContent = t.subtitle;
     document.querySelector('.hero-content .hero-description').textContent = t.description;
+    document.querySelector('.hero-content .hero-personal').textContent = t.personal;
     document.querySelector('.btn-primary').textContent = t.contactBtn;
     document.querySelector('.cta-buttons .btn-secondary:not(.btn-cv)').textContent = t.projectsBtn;
     document.querySelector('.btn-cv').textContent = t.cvBtn;
 }
 
-function updateAboutSection() {
-    const about = translations[currentLanguage].about;
-    const descriptions = document.querySelectorAll('#about .card-description');
-    descriptions[0].innerHTML = about.p1;
-    descriptions[1].innerHTML = about.p2;
-    descriptions[2].innerHTML = about.p3;
-}
-
 function updateSectionTitles() {
     const sections = translations[currentLanguage].sections;
     document.querySelector('#journey .section-title').textContent = sections.journey;
-    document.querySelector('#about .section-title').textContent = sections.about;
     document.querySelector('#experience .section-title').textContent = sections.experience;
     document.querySelector('#education .section-title').textContent = sections.education;
     document.querySelector('#projects .section-title').textContent = sections.projects;

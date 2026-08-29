@@ -9,7 +9,6 @@ const translations = {
             description: "Geometric AI Intern at Audi AG, building AI systems for geometry, computer vision and robotics. Selected work in visual topological mapping and geometric deep learning."
         },
         nav: {
-            about: "About",
             journey: "Journey",
             experience: "Experience",
             education: "Education",
@@ -19,12 +18,12 @@ const translations = {
         hero: {
             subtitle: "Geometric AI Intern @ Audi AG",
             description: "I build AI systems for geometry, vision and robotics — from first principles, with a bias toward simple and efficient solutions.",
+            personal: "Outside of work, I enjoy reading, fitness, and spending as much time outdoors as I can.",
             contactBtn: "Get in Touch",
             projectsBtn: "View Projects",
             cvBtn: "View CV"
         },
         sections: {
-            about: "About Me",
             journey: "My Journey",
             experience: "Experience",
             education: "Education",
@@ -38,11 +37,6 @@ const translations = {
             professional: "Professional",
             exchange: "Exchange / Abroad",
             present: "Present"
-        },
-        about: {
-            p1: "Hi! I'm Manuel, Master's Degree student in Artificial Intelligence at Comillas Pontifical University (Madrid) with a BE in Mathematical Engineering and AI. My academic journey has taken me from Madrid to <strong>Cornell University</strong> and <strong>Imperial College London</strong>, where I've worked on computer vision, robotics, and generative AI systems. I am currently working as an intern at Audi, in their Ingolstadt (Germany) headquarters.",
-            p2: "My background combines deep mathematical foundations with state-of-the-art AI systems. I believe the full potential of today's technologies can only be unlocked — and tomorrow's built — by understanding them from first principles.",
-            p3: "Beyond my professional interests, I enjoy fitness, nature, and reading. I consider these essential to living a balanced life, especially when shared with others."
         },
         links: {
             viewWebsite: "Visit Website →",
@@ -60,7 +54,6 @@ const translations = {
             description: "Geometric AI Intern en Audi AG. Desarrollo sistemas de IA para geometría, visión por computador y robótica."
         },
         nav: {
-            about: "Sobre mí",
             journey: "Trayectoria",
             experience: "Experiencia",
             education: "Educación",
@@ -70,12 +63,12 @@ const translations = {
         hero: {
             subtitle: "Geometric AI Intern @ Audi AG",
             description: "Trabajo en sistemas de IA para geometría, visión y robótica, intentando entender cada problema desde la base y resolverlo de la forma más simple y eficiente posible.",
+            personal: "Fuera del trabajo, me gusta mucho leer, hacer deporte y pasar todo el tiempo que puedo al aire libre.",
             contactBtn: "Contactar",
             projectsBtn: "Ver Proyectos",
             cvBtn: "Ver CV"
         },
         sections: {
-            about: "Sobre mí",
             journey: "Mi trayectoria",
             experience: "Experiencia",
             education: "Educación",
@@ -89,11 +82,6 @@ const translations = {
             professional: "Experiencia",
             exchange: "Estancia internacional",
             present: "Actualidad"
-        },
-        about: {
-            p1: "Soy Manuel, graduado en Ingeniería Matemática e Inteligencia Artificial y estudiante del Máster en Inteligencia Artificial de Comillas ICAI. He estudiado en Madrid y en <strong>Cornell University</strong>, he colaborado en investigación con <strong>Imperial College London</strong> y actualmente trabajo como becario en Audi, en Ingolstadt.",
-            p2: "Me gusta combinar una base matemática sólida con sistemas de IA actuales. Intento entender los problemas desde sus principios fundamentales y buscar soluciones sencillas, eficientes y bien justificadas.",
-            p3: "Fuera del trabajo disfruto del deporte, la naturaleza y la lectura. Para mí son una parte esencial de una vida equilibrada, especialmente cuando puedo compartirlas con otras personas."
         },
         links: {
             viewWebsite: "Visitar web →",

@@ -87,18 +87,6 @@ nav.is-scrolled {
     align-items: center;
 }
 
-.logo {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--text-primary);
-    text-decoration: none;
-    transition: var(--transition);
-}
-
-.logo:hover {
-    color: var(--accent-dark);
-}
-
 .nav-links {
     display: flex;
     gap: 2rem;
@@ -137,6 +125,7 @@ nav.is-scrolled {
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    margin-left: auto;
 }
 
 .lang-btn {
@@ -280,9 +269,14 @@ nav.is-scrolled {
 
 .hero-content .hero-description {
     color: var(--text-secondary);
-    margin-bottom: 2rem;
+    margin-bottom: 0.65rem;
     font-size: 1.1rem;
     animation: fadeInUp 0.8s ease 0.4s backwards;
+}
+
+.hero-content .hero-personal {
+    margin-bottom: 2rem;
+    animation-delay: 0.5s;
 }
 
 .cta-buttons {
@@ -408,7 +402,6 @@ section {
    Every main section gets a soft faded band. The Journey section has its own
    stronger treatment (defined elsewhere); these are the subtle ones.
    The tint wraps out to full width via an absolute ::before pseudo-element. */
-#about::before,
 #experience::before,
 #education::before,
 #projects::before,
@@ -426,7 +419,6 @@ section {
 }
 
 /* Tinted sections (alternating) get a soft beige band that fades in/out vertically */
-#about::before,
 #projects::before,
 #awards::before {
     background: linear-gradient(180deg,
@@ -449,7 +441,6 @@ section {
 }
 
 /* Lift content above the tint */
-#about > *,
 #experience > *,
 #education > *,
 #projects > *,
